@@ -1,11 +1,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Yuhe&#39;s Blog</title>
-        <link>https://MichaelYuhe.github.io/</link>
-        <description>夏宇航的个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 05 Sep 2021 16:34:10 &#43;0800</lastBuildDate>
-            <atom:link href="https://MichaelYuhe.github.io/index.xml" rel="self" type="application/rss+xml" />
-        <item>
+        <title>Program - 分类 - Yuhe&#39;s Blog</title>
+        <link>https://MichaelYuhe.github.io/categories/program/</link>
+        <description>Program - 分类 - Yuhe&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 05 Sep 2021 16:34:10 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/categories/program/" rel="self" type="application/rss+xml" /><item>
     <title>持续更新的LeetCode笔记</title>
     <link>https://MichaelYuhe.github.io/leetcode/</link>
     <pubDate>Sun, 05 Sep 2021 16:34:10 &#43;0800</pubDate>
