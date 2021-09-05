@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>我的全新 Hugo 网站</title>
+        <link>https://MichaelYuhe.github.io/</link>
+        <description>这是我的全新 Hugo 网站</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 05 Sep 2021 11:17:02 &#43;0800</lastBuildDate>
+            <atom:link href="https://MichaelYuhe.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>First_post</title>
+    <link>https://MichaelYuhe.github.io/first_post/</link>
+    <pubDate>Sun, 05 Sep 2021 11:17:02 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/first_post/</guid>
+    <description><![CDATA[title ]]></description>
+</item></channel>
+</rss>
