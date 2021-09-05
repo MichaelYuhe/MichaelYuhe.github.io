@@ -21,7 +21,7 @@
   }
   ```
 
-- 打开Hugo主题目录下的 static/asserts/style.css，在其中加入上面的代码
+- 打开Hugo主题目录下的 static/asserts/_custom.scss，在其中加入上面的代码
 
 - 准备好按钮的图标，前往[Font Awesome](https://fontawesome.com/v5.15/icons)找到心仪的图标，下载其SVG文件，打开后全部复制
 
@@ -44,7 +44,7 @@
 
   ```html
   {{- define "main" -}}
-  <a href="#top" class="backtop">{{ partial "arrow.html" . }}</a>
+  <a href="#top" class="backtop">{{ partial "back2top.html" . }}</a>
   ```
 
 - 大功告成！
