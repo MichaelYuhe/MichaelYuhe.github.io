@@ -11,6 +11,6 @@
     <pubDate>Sun, 05 Sep 2021 16:34:10 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://MichaelYuhe.github.io/leetcode/</guid>
-    <description><![CDATA[LeetCode刷题记录 动态规划 121. 买卖股票的最佳时机 思路： 动态规划题 minPrice保存前i天的最低价格，用第i天的现价去减这个最小值，就得]]></description>
+    <description><![CDATA[LeetCode刷题记录 动态规划 121.买卖股票的最佳时机 思路： 动态规划题 minPrice保存前i天的最低价格，用第i天的现价去减这个最小值]]></description>
 </item></channel>
 </rss>

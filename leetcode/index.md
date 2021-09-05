@@ -5,9 +5,9 @@
 
 ## 动态规划
 
-### 121. 买卖股票的最佳时机
+### [121.买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)
 
-![image-20210731125130219](E:\myBlog\content\posts\LeetCode.assets\image-20210731125130219.png)
+![image-20210905170242931](/images/LeetCode/image-20210905170242931.png)
 
 #### 思路：
 
@@ -54,9 +54,9 @@ class Solution:
         return maxprofit
 ```
 
-### 53.最大子序和
+### [53.最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
 
-![image-20210716215047144](E:\myBlog\content\posts\LeetCode.assets\image-20210716215047144.png)
+![image-20210905170213381](/images/LeetCode/image-20210905170213381.png)
 
 #### 思路：
 
@@ -81,9 +81,9 @@ var maxSubArray = function(nums) {
 
 foreach：对数组的每个元素执行一次给定的函数。
 
-### 70. 爬楼梯
+### [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)
 
-![image-20210805101716819](E:\myBlog\content\posts\LeetCode.assets\image-20210805101716819.png)
+![image-20210905170343945](/images/LeetCode/image-20210905170343945.png)
 
 #### 思路：
 
@@ -134,11 +134,11 @@ var climbStairs = function(n) {
 };
 ```
 
-### 198. 打家劫舍
+### [198. 打家劫舍](https://leetcode-cn.com/problems/house-robber/)
 
-![image-20210818152540019](E:\myBlog\content\posts\LeetCode.assets\image-20210818152540019.png)
+![image-20210905170422059](/images/LeetCode/image-20210905170422059.png)
 
-#### 思路
+#### 思路：
 
 - 小偷身处第 i 间房子时，知道自己在 “ 只偷到(k - 2)间时最多能偷到的钱 i1 ” 和 “ 只偷到(k - 1)间时最多能偷到的钱 i2 ”
 - 第 i 间房子的钱加上 i1 比 i2 大的话，就偷，然后到了下一间房子后，i1 变成了之前的 i2 ， i2 变成了现在的sum
@@ -197,19 +197,21 @@ class Solution {
 }
 ```
 
-### 213. 打家劫舍Ⅱ
+### [213. 打家劫舍Ⅱ](https://leetcode-cn.com/problems/house-robber-ii/)
 
-![image-20210818153256924](E:\myBlog\content\posts\LeetCode.assets\image-20210818153256924.png)
+![image-20210905170456256](/images/LeetCode/image-20210905170456256.png)
 
 #### 思路
 
 #### 官方题解
 
+
+
 ## 二分法
 
-### 搜索插入位置
+### [35.搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/)
 
-![image-20210717211240719](E:\myBlog\content\posts\LeetCode.assets\image-20210717211240719.png)
+![image-20210905170547626](/images/LeetCode/image-20210905170547626.png)
 
 #### 思路：
 
@@ -249,55 +251,72 @@ class Solution {
 #### 官方题解：
 
 ```js
-var searchInsert = function(nums, target) {    const n = nums.length;    let left = 0, right = n - 1, ans = n;    while (left <= right) {        let mid = ((right - left) >> 1) + left;        if (target <= nums[mid]) {            ans = mid;            right = mid - 1;        } else {            left = mid + 1;        }    }    return ans;};
+var searchInsert = function(nums, target) {
+    const n = nums.length;
+    let left = 0, right = n - 1, ans = n;
+    while (left <= right) {
+        let mid = ((right - left) >> 1) + left;
+        if (target <= nums[mid]) {
+            ans = mid;
+            right = mid - 1;
+        } else {
+            left = mid + 1;
+        }
+    }
+    return ans;
+};
 ```
 
 和自己思路类似，自己的觉得更简洁直白
 
-### 剑指offer-53-统计数字出现次数
+### [34. 在排序数组中查找元素的第一个和最后一个位置]()
 
-![image-20210716175647387](E:\myBlog\content\posts\LeetCode.assets\image-20210716175647387.png)
+![image-20210905170712820](/images/LeetCode/image-20210905170712820.png)
 
 #### 思路：
-
-二分法，先找到一个target，然后向左右找它的边界
-
-```js
-var search = function(nums, target) {    const len = nums.length;    if(len==0) return 0;    let left = 0, right = len-1;     while(left<=right){        let mid = parseInt(left + (right-left)/2);        if(nums[mid]<target){            left = mid + 1;        }        else if(nums[mid]>target){            right = mid - 1;        }        else{            left = right = mid;            while(1){                if(nums[left]!=target && nums[right]!=target){                    break;                }                if(nums[left]==target){                    left--;                }                if(num[right]==target){                    right++;                }            }            return (right-left-1);        }    }    return 0;};
-```
-
-时间复杂度：O(n)：二分查找法的复杂度是logn，但后面还查找了左右边界，考虑最坏的情况，全都是target，则要完整遍历。
-
-空间复杂度：
-
-执行用时：72ms，击败了94.54%的用户
-
-内存消耗：38.8MB，击败了83.01%的用户
-
-优化：某一边界可以不用动的。
-
-#### 官方题解：
-
-```js
-const binarySearch = (nums, target, lower) => {    let left = 0, right = nums.length - 1, ans = nums.length;    while (left <= right) {        const mid = Math.floor((left + right) / 2);        if (nums[mid] > target || (lower && nums[mid] >= target)) {            right = mid - 1;            ans = mid;        } else {            left = mid + 1;        }    }    return ans;}var search = function(nums, target) {    let ans = 0;    const leftIdx = binarySearch(nums, target, true);    const rightIdx = binarySearch(nums, target, false) - 1;    if (leftIdx <= rightIdx && rightIdx < nums.length && nums[leftIdx] === target && nums[rightIdx] === target) {        ans = rightIdx - leftIdx + 1;    }     return ans;};
-```
-
-直接查找左右边界，相当于两次二分，O(logn)
-
-
-
-### 34. 在排序数组中查找元素的第一个和最后一个位置
-
-![image-20210728234709579](E:\myBlog\content\posts\LeetCode.assets\image-20210728234709579.png)
-
-#### 思路
 
 - 用二分法，找一个target
 - 如果没找到，则直接返回-1，-1
 - 找到了的话，从mid开始两头找start和end
 
 ```js
-var searchRange = function(nums, target) {    const len = nums.length;    let left = 0, right = len - 1, start = -1, end = -1;    let mid = parseInt(left + (right - left) / 2);    while(left <= right){        if(nums[mid] > target){            right = mid - 1;            mid = parseInt(left + (right - left) / 2);        }        else if(nums[mid] < target){            left = mid + 1;            mid = parseInt(left + (right - left) / 2);        }        else{            break; /* 找到了 */        }    }    /* 如果是因为left大于right而跳出的循环，则证明没有找到 */    /* 如果left仍未大于right，则证明找到了，需要继续找 */    if(left > right){        return [start,end]; /* 直接返回[-1,-1] */    }     let i = 0, j = 0;    while(++i){        if(nums[mid-i] != target || (mid-i) < left){            start = mid - i + 1;            break;        }    }    while(++j){        if(nums[mid+j] != target || (mid+j) > right){            end = mid + j - 1;            break;        }    }    return [start,end];};
+var searchRange = function(nums, target) {
+    const len = nums.length;
+    let left = 0, right = len - 1, start = -1, end = -1;
+    let mid = parseInt(left + (right - left) / 2);
+    while(left <= right){
+        if(nums[mid] > target){
+            right = mid - 1;
+            mid = parseInt(left + (right - left) / 2);
+        }
+        else if(nums[mid] < target){
+            left = mid + 1;
+            mid = parseInt(left + (right - left) / 2);
+        }
+        else{
+            break; /* 找到了 */
+        }
+    }
+    /* 如果是因为left大于right而跳出的循环，则证明没有找到 */
+    /* 如果left仍未大于right，则证明找到了，需要继续找 */
+    if(left > right){
+        return [start,end]; /* 直接返回[-1,-1] */
+    } 
+    let i = 0, j = 0;
+    while(++i){
+        if(nums[mid-i] != target || (mid-i) < left){
+            start = mid - i + 1;
+            break;
+        }
+    }
+    while(++j){
+        if(nums[mid+j] != target || (mid+j) > right){
+            end = mid + j - 1;
+            break;
+        }
+    }
+    return [start,end];
+};
 ```
 
 时间复杂度：O(n)
@@ -313,27 +332,96 @@ var searchRange = function(nums, target) {    const len = nums.length;    let le
 **改进版**
 
 ```js
-var searchRange = function(nums, target) {    const len = nums.length;    let left = 0, right = len - 1, start = -1, end = -1;    let mid = parseInt(left + (right - left) / 2);    while(left <= right){        if(nums[mid] > target){            right = mid - 1;            mid = parseInt(left + (right - left) / 2);        }        else if(nums[mid] < target){            left = mid + 1;            mid = parseInt(left + (right - left) / 2);        }        else{            break; /* 找到了 */        }    }    /* 如果是因为left大于right而跳出的循环，则证明没有找到 */    /* 如果left仍未大于right，则证明找到了，需要继续找 */    if(left > right){        return [start,end]; /* 直接返回[-1,-1] */    } 
+var searchRange = function(nums, target) {
+    const len = nums.length;
+    let left = 0, right = len - 1, start = -1, end = -1;
+    let mid = parseInt(left + (right - left) / 2);
+    while(left <= right){
+        if(nums[mid] > target){
+            right = mid - 1;
+            mid = parseInt(left + (right - left) / 2);
+        }
+        else if(nums[mid] < target){
+            left = mid + 1;
+            mid = parseInt(left + (right - left) / 2);
+        }
+        else{
+            break; /* 找到了 */
+        }
+    }
+    /* 如果是因为left大于right而跳出的循环，则证明没有找到 */
+    /* 如果left仍未大于right，则证明找到了，需要继续找 */
+    if(left > right){
+        return [start,end]; /* 直接返回[-1,-1] */
+    } 
 ```
-
-
 
 #### 官方题解
 
 ```js
-const binarySearch = (nums, target, lower) => {    let left = 0, right = nums.length - 1, ans = nums.length;    while (left <= right) {        const mid = Math.floor((left + right) / 2);        if (nums[mid] > target || (lower && nums[mid] >= target)) {            right = mid - 1;            ans = mid;        } else {            left = mid + 1;        }    }    return ans;}var searchRange = function(nums, target) {    let ans = [-1, -1];    const leftIdx = binarySearch(nums, target, true);    const rightIdx = binarySearch(nums, target, false) - 1;    if (leftIdx <= rightIdx && rightIdx < nums.length && nums[leftIdx] === target && nums[rightIdx] === target) {        ans = [leftIdx, rightIdx];    }     return ans;};
+const binarySearch = (nums, target, lower) => {
+    let left = 0, right = nums.length - 1, ans = nums.length;
+    while (left <= right) {
+        const mid = Math.floor((left + right) / 2);
+        if (nums[mid] > target || (lower && nums[mid] >= target)) {
+            right = mid - 1;
+            ans = mid;
+        } else {
+            left = mid + 1;
+        }
+    }
+    return ans;
+}
+
+var searchRange = function(nums, target) {
+    let ans = [-1, -1];
+    const leftIdx = binarySearch(nums, target, true);
+    const rightIdx = binarySearch(nums, target, false) - 1;
+    if (leftIdx <= rightIdx && rightIdx < nums.length && nums[leftIdx] === target && nums[rightIdx] === target) {
+        ans = [leftIdx, rightIdx];
+    } 
+    return ans;
+};
 ```
 
-### 4. 寻找两个正序数组的中位数
+### [4. 寻找两个正序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)
 
-![image-20210830103759155](E:\myBlog\content\posts\LeetCode.assets\image-20210830103759155.png)
+![image-20210905170806814](/images/LeetCode/image-20210905170806814.png)
 
 #### 思路：
 
 - 归并排序，根据长度返回中位数
 
 ```js
-var findMedianSortedArrays = function(nums1, nums2) {    let len1 = nums1.length, len2 = nums2.length;    let res = 1.0, i = 0, j = 0;    let nums = [];    while(i < len1 || j < len2) {        if(i >= len1) {            nums.push(nums2[j++]);        }        else if(j >= len2) {            nums.push(nums1[i++]);        }        else {            if(nums1[i] >= nums2[j]) {                nums.push(nums2[j++]);            }            else {                nums.push(nums1[i++]);            }        }    }    let len = nums.length;    if(len % 2) {        res = nums[Math.floor(len / 2)];    }    else {        res = (nums[len / 2] + nums[len / 2 - 1]) / 2    }    return res;};
+var findMedianSortedArrays = function(nums1, nums2) {
+    let len1 = nums1.length, len2 = nums2.length;
+    let res = 1.0, i = 0, j = 0;
+    let nums = [];
+    while(i < len1 || j < len2) {
+        if(i >= len1) {
+            nums.push(nums2[j++]);
+        }
+        else if(j >= len2) {
+            nums.push(nums1[i++]);
+        }
+        else {
+            if(nums1[i] >= nums2[j]) {
+                nums.push(nums2[j++]);
+            }
+            else {
+                nums.push(nums1[i++]);
+            }
+        }
+    }
+    let len = nums.length;
+    if(len % 2) {
+        res = nums[Math.floor(len / 2)];
+    }
+    else {
+        res = (nums[len / 2] + nums[len / 2 - 1]) / 2
+    }
+    return res;
+};
 ```
 
 时间复杂度：O(m+n)
@@ -378,24 +466,25 @@ var findMedianSortedArrays = function(nums1, nums2) {    let len1 = nums1.length
 
 
 
-
-
-
-
-
-
 ## 栈
 
-### 剑指offer  06  从尾到头打印链表
+### [剑指offer  06  从尾到头打印链表](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/)
 
-![image-20210722165113565](E:\myBlog\content\posts\LeetCode.assets\image-20210722165113565.png)
+![image-20210905170903007](/images/LeetCode/image-20210905170903007.png)
 
-#### 思路
+#### 思路：
 
 遍历链表，依此在头部添加val
 
 ```js
- var reversePrint = function(head) {    let res = new Array();    while(head!==null){        res.unshift(head.val);        head = head.next;    }     return res;};
+ var reversePrint = function(head) {
+    let res = new Array();
+    while(head!==null){
+        res.unshift(head.val);
+        head = head.next;
+    }
+     return res;
+};
 ```
 
 时间复杂度：O(n)
@@ -412,13 +501,11 @@ var findMedianSortedArrays = function(nums1, nums2) {    let len1 = nums1.length
 
 ​		栈的特点是后进先出，即最后压入栈的元素最先弹出。考虑到栈的这一特点，使用栈将链表元素顺序倒置。从链表的头节点开始，依次将每个节点压入栈内，然后依次弹出栈内的元素并存储到数组中。
 
-
-
 ## 树
 
-### 671. 二叉树中第二小的节点
+### [671. 二叉树中第二小的节点]()(https://leetcode-cn.com/problems/second-minimum-node-in-a-binary-tree/)
 
-![image-20210727232648702](E:\myBlog\content\posts\LeetCode.assets\image-20210727232648702.png)
+![image-20210905171016582](/images/LeetCode/image-20210905171016582.png)
 
 #### 思路：
 
@@ -441,7 +528,27 @@ var findMedianSortedArrays = function(nums1, nums2) {    let len1 = nums1.length
 #### 官方题解
 
 ```js
-var findSecondMinimumValue = function(root){    let ans = -1;    const rootValue = root.val;    const dfs = (node) => {        if(node === null){            return;        }        if(ans !== -1 && node.val >= ans){            return;        }        if(node.val > rootValue){            ans = node.val;        }        dfs(node.left);        dfs(node.right);    }    dfs(root);    return ans;}
+var findSecondMinimumValue = function(root){
+    let ans = -1;
+    const rootValue = root.val;
+
+    const dfs = (node) => {
+        if(node === null){
+            return;
+        }
+        if(ans !== -1 && node.val >= ans){
+            return;
+        }
+        if(node.val > rootValue){
+            ans = node.val;
+        }
+        dfs(node.left);
+        dfs(node.right);
+    }
+
+    dfs(root);
+    return ans;
+}
 ```
 
 **const dfs = (node) => {} **
@@ -450,9 +557,9 @@ var findSecondMinimumValue = function(root){    let ans = -1;    const rootValue
 
 ## 摩尔投票法
 
-### 面试题17.10.主要元素
+### [面试题17.10.主要元素](https://leetcode-cn.com/problems/find-majority-element-lcci/)
 
-![image-20210710131227637](E:\myBlog\content\posts\LeetCode.assets\image-20210710131227637.png)
+![image-20210905171110786](/images/LeetCode/image-20210905171110786.png)
 
 #### 思路：
 
@@ -461,7 +568,19 @@ var findSecondMinimumValue = function(root){    let ans = -1;    const rootValue
 3. 若遍历到一半还没出现，则证明没有主要元素。
 
 ```js
-var majorityElement = function(nums) {    l = parseInt(nums.length/2);    if(!l){        return nums[0];    }    nums.sort();     for(let i = 0; i <= l; i++){        if(nums[i] == nums[i+l]){            return nums[i];        }    }    return -1;};
+var majorityElement = function(nums) {
+    l = parseInt(nums.length/2);
+    if(!l){
+        return nums[0];
+    }
+    nums.sort(); 
+    for(let i = 0; i <= l; i++){
+        if(nums[i] == nums[i+l]){
+            return nums[i];
+        }
+    }
+    return -1;
+};
 ```
 
 时间复杂度：O(nlogn)。排序复杂度超出了要求
@@ -487,22 +606,44 @@ Boyer-Moore 投票算法的基本思想是：在每一轮投票过程中，从�
 【== 和 === 的区别： == 会先将两边的值进行强制类型转换】 
 
 ```js
-null == undefined //truenull === undefined //false55 == '55' //true55 === '55' //false  //因此推荐使用===
+null == undefined //true
+null === undefined //false
+55 == '55' //true
+55 === '55' //false  //因此推荐使用===
 ```
 
-
-
 ```js
-var majorityElement = function(nums) {    let candidate = -1; //候选主要元素，初始可以是任意值    let count = 0; //候选主要元素出现的次数    for (const num of nums) {        if (count === 0) {            candidate = num;        }        if (num === candidate) {            count++;        } else {            count--;        }    }    count = 0;    const length = nums.length;    for (const num of nums) {        if (num === candidate) {            count++;        }    }    return count * 2 > length ? candidate : -1;};
+var majorityElement = function(nums) {
+    let candidate = -1; //候选主要元素，初始可以是任意值
+    let count = 0; //候选主要元素出现的次数
+    for (const num of nums) {
+        if (count === 0) {
+            candidate = num;
+        }
+        if (num === candidate) {
+            count++;
+        } else {
+            count--;
+        }
+    }
+    count = 0;
+    const length = nums.length;
+    for (const num of nums) {
+        if (num === candidate) {
+            count++;
+        }
+    }
+    return count * 2 > length ? candidate : -1;
+};
 ```
 
 
 
 ## 双指针 || 滑动窗口
 
-### 3. 无重复字符的最长字串
+### [3. 无重复字符的最长字串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
 
-![image-20210730110011760](E:\myBlog\content\posts\LeetCode.assets\image-20210730110011760.png)
+![image-20210905171211988](/images/LeetCode/image-20210905171211988.png)
 
 #### 思路
 
@@ -511,7 +652,19 @@ var majorityElement = function(nums) {    let candidate = -1; //候选主要元�
 - 改进成：遇到一个重复元素，则将pre中的该重复元素及其之前的元素截取掉
 
 ```js
- var lengthOfLongestSubstring = function(s) {    let pre = [], counts = 0;    let len = s.length;    for(let i = 0; i < len; i++){        let index = pre.indexOf(s[i]);        if(index !== -1){            pre.splice(0,(index + 1)); //截取数组，把前面的重复元素及其之前的元素删掉        }        pre.push(s[i]);        counts = Math.max(counts,pre.length);    }    return counts;};
+ var lengthOfLongestSubstring = function(s) {
+    let pre = [], counts = 0;
+    let len = s.length;
+    for(let i = 0; i < len; i++){
+        let index = pre.indexOf(s[i]);
+        if(index !== -1){
+            pre.splice(0,(index + 1)); //截取数组，把前面的重复元素及其之前的元素删掉
+        }
+        pre.push(s[i]);
+        counts = Math.max(counts,pre.length);
+    }
+    return counts;
+};
 ```
 
 时间复杂度：O(n)，遍历一次
@@ -525,7 +678,27 @@ var majorityElement = function(nums) {    let candidate = -1; //候选主要元�
 #### 官方题解
 
 ```js
-var lengthOfLongestSubstring = function(s) {    // 哈希集合，记录每个字符是否出现过    const occ = new Set();    const n = s.length;    // 右指针，初始值为 -1，相当于我们在字符串的左边界的左侧，还没有开始移动    let rk = -1, ans = 0;    for (let i = 0; i < n; ++i) {        if (i != 0) {            // 左指针向右移动一格，移除一个字符            occ.delete(s.charAt(i - 1));        }        while (rk + 1 < n && !occ.has(s.charAt(rk + 1))) {            // 不断地移动右指针            occ.add(s.charAt(rk + 1));            ++rk;        }        // 第 i 到 rk 个字符是一个极长的无重复字符子串        ans = Math.max(ans, rk - i + 1);    }    return ans;};
+var lengthOfLongestSubstring = function(s) {
+    // 哈希集合，记录每个字符是否出现过
+    const occ = new Set();
+    const n = s.length;
+    // 右指针，初始值为 -1，相当于我们在字符串的左边界的左侧，还没有开始移动
+    let rk = -1, ans = 0;
+    for (let i = 0; i < n; ++i) {
+        if (i != 0) {
+            // 左指针向右移动一格，移除一个字符
+            occ.delete(s.charAt(i - 1));
+        }
+        while (rk + 1 < n && !occ.has(s.charAt(rk + 1))) {
+            // 不断地移动右指针
+            occ.add(s.charAt(rk + 1));
+            ++rk;
+        }
+        // 第 i 到 rk 个字符是一个极长的无重复字符子串
+        ans = Math.max(ans, rk - i + 1);
+    }
+    return ans;
+};
 ```
 
 该做法称为“滑动窗口”
@@ -533,16 +706,26 @@ var lengthOfLongestSubstring = function(s) {    // 哈希集合，记录每个�
 - 使用两个指针表示字符串的某个子串（窗口）的左右边界
 - 每一步的操作中，将左指针向右移动一格，表示开始枚举下一个字符作为起始位置，然后不断地向右移动右指针，记下长度
 
-### 26.删除有序数组中的重复元素
+### [26.删除有序数组中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
 
-![image-20210715160527803](E:\myBlog\content\posts\LeetCode.assets\image-20210715160527803.png)
+![image-20210905171301864](/images/LeetCode/image-20210905171301864.png)
 
 #### 思路：
 
 因为数组是有序的，所以遍历数组，当某元素和前一个元素不等，则代表它没出现过，把他放到第n个位置，n为出现过的元素个数
 
 ```js
-var removeDuplicates = function(nums) {    let len = nums.length;    let res = 0;    for(let i=0; i<len; i++){        if(nums[i+1] != nums[i]){            res++;            nums[res] = nums[i+1];        }    }    return res;};
+var removeDuplicates = function(nums) {
+    let len = nums.length;
+    let res = 0;
+    for(let i=0; i<len; i++){
+        if(nums[i+1] != nums[i]){
+            res++;
+            nums[res] = nums[i+1];
+        }
+    }
+    return res;
+};
 ```
 
 时间复杂度：O(n)
@@ -558,21 +741,42 @@ var removeDuplicates = function(nums) {    let len = nums.length;    let res = 0
 快慢指针，实际思想与自己无异
 
 ```js
-var removeDuplicates = function(nums) {    const n = nums.length;    if (n === 0) {        return 0;    }    let fast = 1, slow = 1;    while (fast < n) {        if (nums[fast] !== nums[fast - 1]) {            nums[slow] = nums[fast];            ++slow;        }        ++fast;    }    return slow;};
+var removeDuplicates = function(nums) {
+    const n = nums.length;
+    if (n === 0) {
+        return 0;
+    }
+    let fast = 1, slow = 1;
+    while (fast < n) {
+        if (nums[fast] !== nums[fast - 1]) {
+            nums[slow] = nums[fast];
+            ++slow;
+        }
+        ++fast;
+    }
+    return slow;
+};
 ```
 
+### [27.移除指定元素](https://leetcode-cn.com/problems/remove-element/)
 
-
-### 27.移除指定元素
-
-![image-20210715161358118](E:\myBlog\content\posts\LeetCode.assets\image-20210715161358118.png)
+![image-20210905171351567](/images/LeetCode/image-20210905171351567.png)
 
 #### 思路：
 
 跟26题几乎一样，不一样的只是res的起点
 
 ```js
-var removeElement = function(nums, val) {    let res = 0;    let len = nums.length;    for(let i=0; i<len; i++){        if(nums[i] !== val){            nums[res++] = nums[i];        }    }    return res;};
+var removeElement = function(nums, val) {
+    let res = 0;
+    let len = nums.length;
+    for(let i=0; i<len; i++){
+        if(nums[i] !== val){
+            nums[res++] = nums[i];
+        }
+    }
+    return res;
+};
 ```
 
 时间复杂度：O(n)
@@ -588,17 +792,40 @@ var removeElement = function(nums, val) {    let res = 0;    let len = nums.leng
 除了快慢指针，还可以使用左右指针，在val元素数量小时很有效，**避免了需要保留的元素的重复赋值操作**。
 
 ```js
-var removeElement = function(nums, val) {    let left = 0, right = nums.length;    while (left < right) {        if (nums[left] === val) {            nums[left] = nums[right - 1];            right--;        } else {            left++;        }    }    return left;};
+var removeElement = function(nums, val) {
+    let left = 0, right = nums.length;
+    while (left < right) {
+        if (nums[left] === val) {
+            nums[left] = nums[right - 1];
+            right--;
+        } else {
+            left++;
+        }
+    }
+    return left;
+};
 ```
 
-### 剑指offer52 两个链表的第一个公共节点
+### [剑指offer52 两个链表的第一个公共节点](https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/)
 
-![image-20210721192450842](E:\myBlog\content\posts\LeetCode.assets\image-20210721192450842.png)
+![image-20210905171438009](/images/LeetCode/image-20210905171438009.png)
 
 #### 官方题解
 
 ```js
- var getIntersectionNode = function(headA, headB) {    if(headA===null || headB===null){        return null;    } /* 有一个为空，则没有交集 */    let pA = headA;    let pB = headB;    while(pA!==pB){ /* 当他们没有相遇 */        pA = (pA===null) ? headB : pA.next;         pB = (pB===null) ? headA : pB.next;    }    return pA;};
+ var getIntersectionNode = function(headA, headB) {
+    if(headA===null || headB===null){
+        return null;
+    } /* 有一个为空，则没有交集 */
+    let pA = headA;
+    let pB = headB;
+    while(pA!==pB){ /* 当他们没有相遇 */
+        pA = (pA===null) ? headB : pA.next; 
+        pB = (pB===null) ? headA : pB.next;
+    }
+    return pA;
+
+};
 ```
 
 有点没看懂问什么＋刚搬完寝室无心学习，直接看官方题解了
@@ -607,24 +834,47 @@ var removeElement = function(nums, val) {    let left = 0, right = nums.length; 
 
 ### 141. 环形链表
 
-![image-20210723162813305](E:\myBlog\content\posts\LeetCode.assets\image-20210723162813305.png)
+![image-20210905171523851](/images/LeetCode/image-20210905171523851.png)
 
 #### 思路
 
 - val值有限定范围    	小聪明，但值得注意的是，面试时应先问清楚面试官题目细节，如果刻意透露了限定条件，则利用反而会加分
 
 ```js
-var hasCycle = function(head) {    while(head){        if(head.val==100001){            return true;        }        else{            head.val = 100001;        }        head = head.next;     }    return false;};
+var hasCycle = function(head) {
+    while(head){
+        if(head.val==100001){
+            return true;
+        }
+        else{
+            head.val = 100001;
+        }
+        head = head.next; 
+    }
+    return false;
+};
 ```
 
 - 快慢指针，快的一次走两步，慢的一次走一步，快的能反过来追上慢的就有环
 
 ```js
- var hasCycle = function(head) {    if(head==null || head.next==null){ //没环        return false;    }    let fast = head.next, slow = head;    while(fast){ //如果没环，fast会先到尾        if(fast == slow){            return true;        }        if(fast.next==null){            return false;        }        fast = fast.next.next;        slow = slow.next;    }    return false;};
-```
-
-```js
-var removeDuplicates = function(nums) {    let len = nums.length;    let res = 0;    for(let i=0; i<len; i++){        if(nums[i+1] != nums[i]){            res++;            nums[res] = nums[i+1];        }    }    return res;};
+ var hasCycle = function(head) {
+    if(head==null || head.next==null){ //没环
+        return false;
+    }
+    let fast = head.next, slow = head;
+    while(fast){ //如果没环，fast会先到尾
+        if(fast == slow){
+            return true;
+        }
+        if(fast.next==null){
+            return false;
+        }
+        fast = fast.next.next;
+        slow = slow.next;
+    }
+    return false;
+};
 ```
 
 时间复杂度：O(n)
@@ -640,14 +890,36 @@ var removeDuplicates = function(nums) {    let len = nums.length;    let res = 0
 1. 哈希表，用集合存储访问过的节点
 2. 快慢指针
 
-### 611. 有效三角形的个数
+### [611. 有效三角形的个数](https://leetcode-cn.com/problems/valid-triangle-number/)
+
+![image-20210905171641662](/images/LeetCode/image-20210905171641662.png)
 
 #### 思路
 
 - 暴力
 
 ```js
-var triangleNumber = function(nums) {    nums.sort((a, b) => a - b); /* sort方法仅适用于字符串，对数字需要这样操作 */    let len = nums.length;    let res = 0;    for(let i = 0; i < len - 2; i++){        if(nums[i] <= 0){            continue; /* 三角形边长都是正数 */        }        for(let j = i + 1; j < len - 1; j++){            for(let k = j + 1; k < len; k++){                if(nums[i] + nums[j] > nums[k]){                    res++;                }                else{                    break;                }            }        }    }    return res;};
+var triangleNumber = function(nums) {
+    nums.sort((a, b) => a - b); /* sort方法仅适用于字符串，对数字需要这样操作 */
+    let len = nums.length;
+    let res = 0;
+    for(let i = 0; i < len - 2; i++){
+        if(nums[i] <= 0){
+            continue; /* 三角形边长都是正数 */
+        }
+        for(let j = i + 1; j < len - 1; j++){
+            for(let k = j + 1; k < len; k++){
+                if(nums[i] + nums[j] > nums[k]){
+                    res++;
+                }
+                else{
+                    break;
+                }
+            }
+        }
+    }
+    return res;
+};
 ```
 
 时间复杂度：O(N3)
@@ -660,9 +932,9 @@ var triangleNumber = function(nums) {    nums.sort((a, b) => a - b); /* sort方�
 
 
 
-### 881. 救生艇
+### [881. 救生艇](https://leetcode-cn.com/problems/boats-to-save-people/)
 
-![image-20210826092706754](E:\myBlog\content\posts\LeetCode.assets\image-20210826092706754.png)
+![image-20210905171743589](/images/LeetCode/image-20210905171743589.png)
 
 #### 思路：
 
@@ -671,7 +943,19 @@ var triangleNumber = function(nums) {    nums.sort((a, b) => a - b); /* sort方�
 - 每次循环都将右指针前移一位，船数也加一
 
 ```js
-var numRescueBoats = function(people, limit) {    let res = 0;    people.sort((a,b) => (a-b));    let left = 0, right = people.length - 1;    while(left <= right) {        if(people[left] + people[right] <= limit) {            left++;        }        right--;        res++;    }    return res;};
+var numRescueBoats = function(people, limit) {
+    let res = 0;
+    people.sort((a,b) => (a-b));
+    let left = 0, right = people.length - 1;
+    while(left <= right) {
+        if(people[left] + people[right] <= limit) {
+            left++;
+        }
+        right--;
+        res++;
+    }
+    return res;
+};
 ```
 
 时间复杂度：O(nlogn) 排序
@@ -684,39 +968,9 @@ var numRescueBoats = function(people, limit) {    let res = 0;    people.sort((a
 
 ## 基础线性表 || 矩阵 
 
-### 645.错误的集合
+### [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
 
-![image-20210704230538545](E:\myBlog\content\posts\LeetCode.assets\image-20210704230538545.png)
-
-#### 思路：
-
-1. 类似于之前找数组中消失的数字（448），因为数组元素在1--n，所以将每个元素-1即一一对应下标；
-2. 遍历，每个数对应的索引值索引的数字若大于0，则代表还没有进行过变负操作，则 *= -1；若小于0，则代表已经操作过，也就是说第二次遇到，证明该索引值出现了两次
-3. 遍历结束后，因为有一个数没出现过，所以数组还有一个正数，它的索引值就对应这个正数。
-
-```js
-var findErrorNums = function(nums) {    var res = new Array(2);    for(let i=0; i<nums.length; i++){        let x = Math.abs(nums[i]) - 1;        if(nums[x] < 0){            res[0] = x + 1;        }        else{            nums[x] *= -1;        }    }    for(let i=0; i<nums.length; i++){        if(nums[i] > 0){            res[1] = i + 1;            break;        }    }    return res;};
-```
-
-时间复杂度：O(2n) 遍历了两次
-
-空间复杂度：O(1) 没有用到多余空间
-
-执行用时：96mx，击败了82.30%的用户
-
-内存消耗：40.4MB，击败了97.33%的用户
-
-#### 官方题解：
-
-```js
-var findErrorNums = function(nums) {    const errorNums = new Array(2).fill(0);    const n = nums.length;    const map = new Map();    for (const num of nums) {        map.set(num, (map.get(num) || 0) + 1);    }    for (let i = 1; i <= n; i++) {        const count = map.get(i) || 0;        if (count === 2) {            errorNums[0] = i;        } else if (count === 0) {            errorNums[1] = i;        }    }    return errorNums;};
-```
-
-哈希表
-
-### 2. 两数相加
-
-![image-20210729085021197](E:\myBlog\content\posts\LeetCode.assets\image-20210729085021197.png)
+![image-20210905171849815](/images/LeetCode/image-20210905171849815.png)
 
 #### 思路
 
@@ -725,7 +979,34 @@ var findErrorNums = function(nums) {    const errorNums = new Array(2).fill(0); 
 - 如果用一个为空，另一个还未到结束，则空的那部分都是0
 
 ```js
- var addTwoNumbers = function(l1, l2) {    let carry = 0; /* 第一次一定没有进位 */    let head = null, tail = null;    while(l1 || l2){        const num1 = l1 ? l1.val : 0;        const num2 = l2 ? l2.val : 0;        const sum = num1 + num2 + carry;        if(!head){            head = tail = new ListNode(sum % 10);        }        else{            tail.next = new ListNode(sum % 10);            tail = tail.next;        }        carry = (sum >= 10) ? 1 : 0;        if(l1){            l1 = l1.next;        }        if(l2){            l2=l2.next;        }    }    if(carry == 1){        tail.next = new ListNode(1);        tail = tail.next;    }    return head;};
+ var addTwoNumbers = function(l1, l2) {
+    let carry = 0; /* 第一次一定没有进位 */
+    let head = null, tail = null;
+    while(l1 || l2){
+        const num1 = l1 ? l1.val : 0;
+        const num2 = l2 ? l2.val : 0;
+        const sum = num1 + num2 + carry;
+        if(!head){
+            head = tail = new ListNode(sum % 10);
+        }
+        else{
+            tail.next = new ListNode(sum % 10);
+            tail = tail.next;
+        }
+        carry = (sum >= 10) ? 1 : 0;
+        if(l1){
+            l1 = l1.next;
+        }
+        if(l2){
+            l2=l2.next;
+        }
+    }
+    if(carry == 1){
+        tail.next = new ListNode(1);
+        tail = tail.next;
+    }
+    return head;
+};
 ```
 
 时间复杂度：O(max(m,n))
@@ -742,9 +1023,9 @@ var findErrorNums = function(nums) {    const errorNums = new Array(2).fill(0); 
 一样
 ```
 
-### 21.合并两个有序链表
+### [21.合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)
 
-![image-20210703093933512](E:\myBlog\content\posts\LeetCode.assets\image-20210703093933512.png)
+![image-20210905171920563](/images/LeetCode/image-20210905171920563.png)
 
 #### 思路：
 
@@ -753,7 +1034,39 @@ var findErrorNums = function(nums) {    const errorNums = new Array(2).fill(0); 
 3. 都不为空的话，head指向小的那个list，然后进入while循环，根据val值决定tail延伸方向，有一个为空即跳出循环
 
 ```c
-struct ListNode* mergeTwoLists(struct ListNode* l1, struct ListNode* l2){    struct ListNode *head, *tail;    if(l1 && l2){        if(l1->val < l2->val){            head = l1;            l1 = l1->next;        }        else{            head = l2;            l2 = l2->next;        }        tail = head;        while(l1 && l2){            if(l1->val<l2->val){                tail->next = l1;                l1 = l1->next;            }            else{                tail->next = l2;                l2 = l2->next;            }            tail = tail->next;        }        tail->next = l1?l1:l2;    }    else if(l1){        return l1;    }    else if(l2){        return l2;    }    return head;}
+struct ListNode* mergeTwoLists(struct ListNode* l1, struct ListNode* l2){
+    struct ListNode *head, *tail;
+    if(l1 && l2){
+        if(l1->val < l2->val){
+            head = l1;
+            l1 = l1->next;
+        }
+        else{
+            head = l2;
+            l2 = l2->next;
+        }
+        tail = head;
+        while(l1 && l2){
+            if(l1->val<l2->val){
+                tail->next = l1;
+                l1 = l1->next;
+            }
+            else{
+                tail->next = l2;
+                l2 = l2->next;
+            }
+            tail = tail->next;
+        }
+        tail->next = l1?l1:l2;
+    }
+    else if(l1){
+        return l1;
+    }
+    else if(l2){
+        return l2;
+    }
+    return head;
+}
 ```
 
 时间复杂度：O(n+m)
@@ -767,19 +1080,29 @@ struct ListNode* mergeTwoLists(struct ListNode* l1, struct ListNode* l2){    str
 #### 官方递归解法：
 
 ```C
-struct ListNode* mergeTwoLists(struct ListNode* l1, struct ListNode* l2) {    if(l1==NULL)        return l2;    if(l2==NULL)        return l1;    if(l1->val < l2->val){        l1->next = mergeTwoLists(l1->next,l2);        return l1;    }else{        l2->next = mergeTwoLists(l1,l2->next);        return l2;    }}
+struct ListNode* mergeTwoLists(struct ListNode* l1, struct ListNode* l2) {
+    if(l1==NULL)
+        return l2;
+    if(l2==NULL)
+        return l1;
+    if(l1->val < l2->val){
+        l1->next = mergeTwoLists(l1->next,l2);
+        return l1;
+    }else{
+        l2->next = mergeTwoLists(l1,l2->next);
+        return l2;
+    }
+}
 ```
-
-![image-20210703094317366](E:\myBlog\content\posts\LeetCode.assets\image-20210703094317366.png)
 
 #### 递归：
 
 - 必须要有边界条件，否则递归无法停止将会出错
 - 递归函数通过不断调用自身，直至遇到边界条件后进行回溯，返回最终答案。
 
-### 448.找到消失的数字
+### [448.找到消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/)
 
-![image-20210701142813192](E:\myBlog\content\posts\LeetCode.assets\image-20210701142813192.png)
+![image-20210905172035800](/images/LeetCode/image-20210905172035800.png)
 
 #### 	思路：
 
@@ -789,7 +1112,22 @@ struct ListNode* mergeTwoLists(struct ListNode* l1, struct ListNode* l2) {    if
 4. 则仍未正数的元素的下标，就是代表没有出现的数字 - 1
 
 ```javascript
-var findDisappearedNumbers = function(nums) {    len = nums.length; //获取数组长度    var res = new Array(); //存放答案的新数组    for(let i=0;i<len;i++){        let num = Math.abs(nums[i]) - 1; //项数        if(nums[num] > 0){            nums[num] *= -1; //包含的项变负        }    }    for(let i=0;i<len;i++){        if(nums[i]>0){            res.push(i+1); //添加正数        }    }    return res;};
+var findDisappearedNumbers = function(nums) {
+    len = nums.length; //获取数组长度
+    var res = new Array(); //存放答案的新数组
+    for(let i=0;i<len;i++){
+        let num = Math.abs(nums[i]) - 1; //项数
+        if(nums[num] > 0){
+            nums[num] *= -1; //包含的项变负
+        }
+    }
+    for(let i=0;i<len;i++){
+        if(nums[i]>0){
+            res.push(i+1); //添加正数
+        }
+    }
+    return res;
+};
 ```
 
 时间复杂度：O(n)
@@ -805,19 +1143,58 @@ var findDisappearedNumbers = function(nums) {    len = nums.length; //获取数�
 每遇到一次x，就让nums[x-1]加上n，最后数组里仍处在[1,n]范围内的项，下标加一就是消失的数字。
 
 ```js
-var findDisappearedNumbers = function(nums) {    const n = nums.length;    for (const num of nums) {        const x = (num - 1) % n; // %n很重要        nums[x] += n;    }    const ret = [];    for (const [i, num] of nums.entries()) {        if (num <= n) {            ret.push(i + 1);        }    }    return ret;};
+var findDisappearedNumbers = function(nums) {
+    const n = nums.length;
+    for (const num of nums) {
+        const x = (num - 1) % n; // %n很重要
+        nums[x] += n;
+    }
+    const ret = [];
+    for (const [i, num] of nums.entries()) {
+        if (num <= n) {
+            ret.push(i + 1);
+        }
+    }
+    return ret;
+};
 ```
 
-### 54. 螺旋矩阵
+### [54. 螺旋矩阵](https://leetcode-cn.com/problems/spiral-matrix/)
 
-![image-20210723104623959](E:\myBlog\content\posts\LeetCode.assets\image-20210723104623959.png)
+![image-20210905172127345](/images/LeetCode/image-20210905172127345.png)
 
 #### 思路：
 
 一层层剥开矩阵，用矩阵的四个边界控制，每走一圈（每剥开一层），矩阵缩小一次
 
 ```js
- var spiralOrder = function(matrix) {    const rows = matrix.length; /* 行数 */    const columns = matrix[0].length; /* 列数 */    let res = [];    if(rows==0 || columns==0){        return res;    }    let left = 0, right = columns - 1, top = 0, bottom = rows - 1;    while(left<=right && top<=bottom){        for(let j=left; j<=right; j++){            res.push(matrix[top][j]);        }        for(let i=top+1; i<=bottom; i++){            res.push(matrix[i][right]);        }        if(left<right && top<bottom){            for(let j=right-1; j>left; j--){                res.push(matrix[bottom][j]);            }            for(let i=bottom; i>top; i--){                res.push(matrix[i][left]);            }        }        [left,right,top,bottom] = [left + 1, right - 1, top + 1, bottom - 1];    }    return res;};
+ var spiralOrder = function(matrix) {
+    const rows = matrix.length; /* 行数 */
+    const columns = matrix[0].length; /* 列数 */
+    let res = [];
+    if(rows==0 || columns==0){
+        return res;
+    }
+    let left = 0, right = columns - 1, top = 0, bottom = rows - 1;
+    while(left<=right && top<=bottom){
+        for(let j=left; j<=right; j++){
+            res.push(matrix[top][j]);
+        }
+        for(let i=top+1; i<=bottom; i++){
+            res.push(matrix[i][right]);
+        }
+        if(left<right && top<bottom){
+            for(let j=right-1; j>left; j--){
+                res.push(matrix[bottom][j]);
+            }
+            for(let i=bottom; i>top; i--){
+                res.push(matrix[i][left]);
+            }
+        }
+        [left,right,top,bottom] = [left + 1, right - 1, top + 1, bottom - 1];
+    }
+    return res;
+};
 ```
 
 时间复杂度：O(mn)，遍历矩阵
@@ -832,20 +1209,43 @@ var findDisappearedNumbers = function(nums) {    const n = nums.length;    for (
 
 一样
 
-**难得做出来的中等题，重点在于不要重复输出**
-
 ## 贪心
 
-### 1736. 替换隐藏数字得到的最晚时间
+### [1736. 替换隐藏数字得到的最晚时间](https://leetcode-cn.com/problems/latest-time-by-replacing-hidden-digits/)
 
-![image-20210724155128624](E:\myBlog\content\posts\LeetCode.assets\image-20210724155128624.png)
+![image-20210905172213963](/images/LeetCode/image-20210905172213963.png)
 
 #### 思路:
 
 从第一位开始判断：因为第一位最重要，直接if else枚举
 
 ```js
- var maximumTime = function(time) {    const arr = Array.from(time); //Array.from:从一个类似数组或可迭代对象创建一个新的、浅拷贝的数组实例    if(arr[0]=='?'){        if(arr[1]<=4 || arr[1]=='?'){            arr[0] = 2;        }        else{            arr[0] = 1;        }    }    if(arr[1]=='?'){        if(arr[0]=='?' || arr[1]==2){            arr[1] = 4;        }        else{            arr[1] = 9;        }    }    if(arr[3]=='?'){        arr[3] = 5;    }    if(arr[4]=='?'){        arr[4] = 9;    }    return arr.join(''); //用join方法来将各元素连接};
+ var maximumTime = function(time) {
+    const arr = Array.from(time); //Array.from:从一个类似数组或可迭代对象创建一个新的、浅拷贝的数组实例
+    if(arr[0]=='?'){
+        if(arr[1]<=4 || arr[1]=='?'){
+            arr[0] = 2;
+        }
+        else{
+            arr[0] = 1;
+        }
+    }
+    if(arr[1]=='?'){
+        if(arr[0]=='?' || arr[1]==2){
+            arr[1] = 4;
+        }
+        else{
+            arr[1] = 9;
+        }
+    }
+    if(arr[3]=='?'){
+        arr[3] = 5;
+    }
+    if(arr[4]=='?'){
+        arr[4] = 9;
+    }
+    return arr.join(''); //用join方法来将各元素连接
+};
 ```
 
 时间复杂度：O(1)
@@ -859,7 +1259,22 @@ var findDisappearedNumbers = function(nums) {    const n = nums.length;    for (
 #### 官方题解
 
 ```js
-var maximumTime = function(time) {    const arr = Array.from(time);    if (arr[0] === '?') {        arr[0] = ('4' <= arr[1] && arr[1] <= '9') ? '1' : '2';    }    if (arr[1] === '?') {        arr[1] = (arr[0] == '2') ? '3' : '9';    }    if (arr[3] === '?') {        arr[3] = '5';    }    if (arr[4] === '?') {        arr[4] = '9';    }    return arr.join('');};
+var maximumTime = function(time) {
+    const arr = Array.from(time);
+    if (arr[0] === '?') {
+        arr[0] = ('4' <= arr[1] && arr[1] <= '9') ? '1' : '2';
+    }
+    if (arr[1] === '?') {
+        arr[1] = (arr[0] == '2') ? '3' : '9';
+    }
+    if (arr[3] === '?') {
+        arr[3] = '5';
+    }
+    if (arr[4] === '?') {
+        arr[4] = '9';
+    }
+    return arr.join('');
+};
 ```
 
 思路一致，官方代码利用正则表达式，更加简洁
@@ -868,27 +1283,92 @@ var maximumTime = function(time) {    const arr = Array.from(time);    if (arr[0
 
 ## 哈希表
 
-### 705. 设计哈希集合
+### [705. 设计哈希集合](https://leetcode-cn.com/problems/design-hashset/)
 
-![image-20210903103044378](E:\myBlog\content\posts\LeetCode.assets\image-20210903103044378.png)
-
-```js
-var MyHashSet = function() {    this.BASE = 769; // 哈希函数用的取模方法，选取一个较大质数    this.data = new Array(this.BASE).fill(0).map(() => new Array());};MyHashSet.prototype.add = function(key) {    const h = key % this.BASE;    const it = this.data[h];    for(let i = 0; i < it.length; i++) {        if(it[i] === key) {            return; // 已经存在，不添加        }    }    it.push(key);};MyHashSet.prototype.remove = function(key) {    const h = key % this.BASE;    const it = this.data[h];    for(let i = 0; i < it.length; i++) {        if(it[i] === key) {            it.splice(i, 1); // 删除            return;        }    }};MyHashSet.prototype.contains = function(key) {    const h = key % this.BASE;    const it = this.data[h];    for(let i = 0; i < it.length; i++) {        if(it[i] === key) {            return true;        }    }    return false;}
-```
-
-### 706. 设计哈希映射
-
-![image-20210903103629731](E:\myBlog\content\posts\LeetCode.assets\image-20210903103629731.png)
+![image-20210905172258007](/images/LeetCode/image-20210905172258007.png)
 
 ```js
-var MyHashMap = function() {    this.BASE = 769;    this.data = new Array(this.BASE).fill(0).map(() => new Array());};MyHashMap.prototype.put = function(key, value) {    const h = this.hash(key);    for(let it of this.data[h]) {        if(it[0] === key) {            it[1] = value;            return;        }    }    this.data[h].push([key, value]);};MyHashMap.prototype.get = function(key) {    const h = this.hash(key);    for(let it of this.data[h]) {        if(it[0] === key) {            return it[1];        }    }    return -1};MyHashMap.prototype.remove = function(key) {    const h = this.hash(key);    for(let it of this.data[h]) {        if(it[0] === key) {            this.data[h].splice(this.data[h].indexOf(it), 1);            return;        }    }};MyHashMap.prototype.hash = function(key) {    return key % this.BASE;};
+var MyHashSet = function() {
+    this.BASE = 769; // 哈希函数用的取模方法，选取一个较大质数
+    this.data = new Array(this.BASE).fill(0).map(() => new Array());
+};
+MyHashSet.prototype.add = function(key) {
+    const h = key % this.BASE;
+    const it = this.data[h];
+    for(let i = 0; i < it.length; i++) {
+        if(it[i] === key) {
+            return; // 已经存在，不添加
+        }
+    }
+    it.push(key);
+};
+MyHashSet.prototype.remove = function(key) {
+    const h = key % this.BASE;
+    const it = this.data[h];
+    for(let i = 0; i < it.length; i++) {
+        if(it[i] === key) {
+            it.splice(i, 1); // 删除
+            return;
+        }
+    }
+};
+MyHashSet.prototype.contains = function(key) {
+    const h = key % this.BASE;
+    const it = this.data[h];
+    for(let i = 0; i < it.length; i++) {
+        if(it[i] === key) {
+            return true;
+        }
+    }
+    return false;
+}
 ```
 
+### [706. 设计哈希映射](https://leetcode-cn.com/problems/design-hashmap/)
 
+![image-20210905172332695](/images/LeetCode/image-20210905172332695.png)
 
-### 1.两数之和
+```js
+var MyHashMap = function() {
+    this.BASE = 769;
+    this.data = new Array(this.BASE).fill(0).map(() => new Array());
+};
+MyHashMap.prototype.put = function(key, value) {
+    const h = this.hash(key);
+    for(let it of this.data[h]) {
+        if(it[0] === key) {
+            it[1] = value;
+            return;
+        }
+    }
+    this.data[h].push([key, value]);
+};
+MyHashMap.prototype.get = function(key) {
+    const h = this.hash(key);
+    for(let it of this.data[h]) {
+        if(it[0] === key) {
+            return it[1];
+        }
+    }
+    return -1
+};
+MyHashMap.prototype.remove = function(key) {
+    const h = this.hash(key);
+    for(let it of this.data[h]) {
+        if(it[0] === key) {
+            this.data[h].splice(this.data[h].indexOf(it), 1);
+            return;
+        }
+    }
+};
+MyHashMap.prototype.hash = function(key) {
+    return key % this.BASE;
+};
+```
 
-![image-20210817090806614](E:\myBlog\content\posts\LeetCode.assets\image-20210817090806614.png)
+### [1.两数之和](https://leetcode-cn.com/problems/two-sum/)
+
+![image-20210905172415655](/images/LeetCode/image-20210905172415655.png)
 
 #### 思路：
 
@@ -896,122 +1376,16 @@ var MyHashMap = function() {    this.BASE = 769;    this.data = new Array(this.B
 - 哈希表
 
 ```js
-var twoSum = function(nums, target) {    let hashMap = {};    for(let i = 0; i < nums.length; i++){        if(hashMap[target - nums[i]] !== undefined){            return [i, hashMap[target - nums[i]]];        }        hashMap[nums[i]] = i; //存放的是该元素的索引值    }    return [];};
+var twoSum = function(nums, target) {
+    let hashMap = {};
+    for(let i = 0; i < nums.length; i++){
+        if(hashMap[target - nums[i]] !== undefined){
+            return [i, hashMap[target - nums[i]]];
+        }
+        hashMap[nums[i]] = i; //存放的是该元素的索引值
+    }
+    return [];
+};
 ```
-
-## 数组
-
-### 350. 两个数组的交集
-
-![image-20210818141339584](E:\myBlog\content\posts\LeetCode.assets\image-20210818141339584.png)
-
-#### 思路：
-
-- 对两数组排序，然后i1和i2双指针，起点分别是两个数组第一个元素。相等时添加元素，不等时，较小的那个指针往后走
-
-```js
-var intersect = function(nums1, nums2) {    nums1.sort((a,b) => a - b);    nums2.sort((a,b) => a - b);    let i1 = i2 = 0;    let res = [];    while(i1 < nums1.length && i2 < nums2.length){        if(nums1[i1] === nums2[i2]){            res.push(nums1[i1]);            i1++;             i2++;        }        else if(nums1[i1] < nums2[i2]){            i1++;        }        else{            i2++;        }    }    return res;};
-```
-
-时间复杂度：O(n1logn1 + n2logn2) ：排序
-
-空间复杂度：O( min(n1,n2) ) 一个额外的数组
-
-执行用时：68ms，击败了95.76%的用户
-
-内存消耗：39.6 MB，击败了45.65%的用户
-
-#### 官方题解
-
-1. 和自己一样，排序＋双指针
-
-2. 哈希表，首先遍历第一个数组，并在哈希表中记录第一个数组中的每个数字以及对应出现的次数，然后遍历第二个数组，对于第二个数组中的每个数字，如果在哈希表中存在这个数字，则将该数字添加到答案，并减少哈希表中该数字出现的次
-
-   ```python
-   class Solution:    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:        if len(nums1) > len(nums2):            return self.intersect(nums2, nums1)                m = collections.Counter()        for num in nums1:            m[num] += 1               intersection = list()        for num in nums2:            if (count := m.get(num, 0)) > 0:                intersection.append(num)                m[num] -= 1                if m[num] == 0:                    m.pop(num)                return intersection
-   ```
-
-
-
-
-### 73. 矩阵置零
-
-![image-20210820131030053](E:\myBlog\content\posts\LeetCode.assets\image-20210820131030053.png)
-
-#### 思路：
-
-标记数组，先遍历一遍数组，遇到0，则标记它的行数和列数。缺点是用了O（m+n）的额外空间
-
-```js
-var setZeroes = function(matrix) {    const m = matrix.length, n = matrix[0].length;    let row = new Array(m).fill(false), column = new Array(n).fill(false);    for(let i = 0; i < m; i++){        for(let j = 0; j < n; j++){            if(matrix[i][j] === 0){                row[i] = true;                column[j] = true;            }        }    }    for(let i = 0; i < m; i++){        for(let j = 0; j < n; j++){            if(row[i] || column[j]){                matrix[i][j] = 0;            }        }    } };
-```
-
-时间复杂度：O(n*m)
-
-空间复杂度：O(m+n)
-
-执行用时：76ms，击败了99.41%的用户
-
-内存消耗：40.3MB，击败了24.73%的用户
-
-#### 官方题解
-
-1. 使用两个标记变量：用矩阵的第一行和第一列代替上述两个保存0位置的数组，但这会导致第一行和第一列无法修改，于是需要两个额外的标记变量来标记第一行和第一列是否有0 。所以只需要先不看第一行和第一列，拿他们来存放0的位置，再补上两个标记变量，最后用第一行第一列来处理整个矩阵
-
-2. 可以优化到只用一个标记变量。标记第一列是否有0，第一列的第一个元素可以看出第一行是否有0 。 但为了防止每一列的第一个元素被提前更新，要从最后一行开始倒序处理
-
-   ```js
-   var setZeroes = function(matrix) {    const m = matrix.length, n = matrix[0].length;    let flagCol0 = false;    for (let i = 0; i < m; i++) {        if (matrix[i][0] === 0) {            flagCol0 = true;        }        for (let j = 1; j < n; j++) {            if (matrix[i][j] === 0) {                matrix[i][0] = matrix[0][j] = 0;            }        }    }    for (let i = m - 1; i >= 0; i--) {        for (let j = 1; j < n; j++) {            if (matrix[i][0] === 0 || matrix[0][j] === 0) {                matrix[i][j] = 0;            }        }        if (flagCol0) {            matrix[i][0] = 0;        }    }};
-   ```
-
-## 其他
-
-### 1893. 检查区域内所有整数是否被覆盖
-
-![image-20210723092021992](E:\myBlog\content\posts\LeetCode.assets\image-20210723092021992.png)
-
-#### 思路：
-
-- 两边缩进，有点像二分法
-- 当left超过starti，则直接将left赋为endi+1与left自身中较大的那个
-- 同理，对right进行同样的操作
-- 当最后left比right大，则代表包含了所有
-
-```js
- var isCovered = function(ranges, left, right) {     ranges.sort(function(x,y){         return x[0]-y[0];         });    for(let i=0; i<ranges.length; i++){        if(left>=ranges[i][0]){            left = (ranges[i][1]+1) > left ? (ranges[i][1]+1) : left;        }        if(right<=ranges[i][1]){            right = (ranges[i][0]-1) < right ? (ranges[i][0]-1) : right;        }        if(left > right){            return true;        }    }    return false;};
-```
-
-时间复杂度：O(n)
-
-空间复杂度：
-
-执行用时：64ms，击败了100%的用户
-
-内存消耗：38.8 MB，击败了84.00%的用户
-
-#### 官方题解
-
-```js
-var isCovered = function(ranges, left, right) {    const diff = new Array(52).fill(0); // 差分数组    for (const [l, r] of ranges) {        diff[l]++;        diff[r + 1]--;    }    // 前缀和    let curr = 0;    for (let i = 1; i < 51; i++) {        curr += diff[i];        if (left <= i && i <= right && curr <= 0) {            return false;        }    }    return true;};
-```
-
-差分数组：对每一个整数x，计算覆盖它的区间个数
-
-
-
-### 189.旋转数组
-
-![image-20210816143308690](E:\myBlog\content\posts\LeetCode.assets\image-20210816143308690.png)
-
-#### 思路：
-
-1. 一个额外的数组来存放移动后的数组，空间复杂度为O(n)
-2. 全部翻转，再分别翻转，空间复杂度为O(1)；
-
-```js
-/** * @param {number[]} nums * @param {number} k * @return {void} Do not return anything, modify nums in-place instead. */const myReverse = (nums, left, right) => {        while (left < right) {            const temp = nums[left];            nums[left] = nums[right];            nums[right] = temp;            left++;            right--;        }    }var rotate = function(nums, k) {    const len = nums.length;    k %= len    /*let res = [];    for(let i = 0; i < len; i++){        res[(i+k) % len] = nums[i];    }    for(let i = 0; i < len; i++){        nums[i] = res[i];    }   方法一  */    myReverse(nums, 0, len - 1);    myReverse(nums, 0, k - 1);    myReverse(nums, k, len - 1);};
-```
-
-
 
 
