@@ -7,7 +7,9 @@
 
 &ensp;&ensp;本文以**Hugo**框架，**LoveIt**主题为例。
 
-- 在CSS中，定义**返回顶部按钮**的样式
+- ### 添加样式
+
+  在CSS中，定义**返回顶部按钮**的样式。打开Hugo主题目录下的 static/asserts/_custom.scss，在其中加入样式代码。
 
   ```css
   .backtop {
@@ -21,11 +23,11 @@
   }
   ```
 
-- 打开Hugo主题目录下的 static/asserts/_custom.scss，在其中加入上面的代码
+- ### 导入按钮图标
 
-- 准备好按钮的图标，前往[Font Awesome](https://fontawesome.com/v5.15/icons)找到心仪的图标，下载其SVG文件，打开后全部复制
+  准备好按钮的图标，前往[Font Awesome](https://fontawesome.com/v5.15/icons)找到心仪的图标，下载其SVG文件，打开后全部复制
 
-- 在Hugo主题目录下layouts/partials新建back2top.html文件，将上一步拷贝的代码放入
+  在Hugo主题目录下layouts/partials新建back2top.html文件，将拷贝的代码放入
 
   ```html
   <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-circle-up" class="svg-inline--fa fa-chevron-circle-up fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -34,19 +36,21 @@
   </svg>
   ```
 
-- 在当前目录下找到header.html文件并打开，在任意行加入以下代码，称为**添加锚点**
+- ### **添加锚点**
+
+  在当前目录下找到header.html文件并打开，在任意行加入以下代码
 
   ```html
   <span id="top"></span>
   ```
 
-- 来到layouts/_default文件夹，打开single.html，添加以下代码(与content同级)
+  来到layouts/_default文件夹，打开single.html，添加以下代码(与content同级)
 
   ```html
   {{- define "main" -}}
   <a href="#top" class="backtop">{{ partial "back2top.html" . }}</a>
   ```
 
-- 大功告成！
+- ### 大功告成！
 
 
