@@ -966,9 +966,9 @@ var numRescueBoats = function(people, limit) {
 
 内存消耗：45.5MB，击败了36.32%的用户
 
-### 15. [三树之和](https://leetcode-cn.com/problems/3sum/)
+### 15. [三数之和](https://leetcode-cn.com/problems/3sum/)
 
-![image-20210907151859949](../../static/images/LeetCode/image-20210907151859949.png)
+![image-20210907152931008](/images/LeetCode/image-20210907152931008.png)
 
 #### 思路：
 
