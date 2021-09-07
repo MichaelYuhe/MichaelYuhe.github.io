@@ -966,6 +966,53 @@ var numRescueBoats = function(people, limit) {
 
 内存消耗：45.5MB，击败了36.32%的用户
 
+### 15. [三树之和](https://leetcode-cn.com/problems/3sum/)
+
+![image-20210907151859949](../../static/images/LeetCode/image-20210907151859949.png)
+
+#### 思路：
+
+- 此题的重点是，不能存在重复的三元组
+- 要找到和为0的三元组，自然地想到需要先进行排序。排序后找第一个元素，这个元素的特点是不能和前一个元素相等，这也就保证了每个三元组的最小值不会相等，初步保证不会重复
+- 接下去的操作类似于之前的两数之和题目，使用双指针来寻找，对于左指针指向的元素，拥有和对第一个元素一样的约束，这样也保证了第二个元素不会在第二个位置重复使用
+- 当前两个确定后，由于和是0是固定的，第三个只需要正常寻找就可以
+
+```js
+var threeSum = function(nums) {
+    let res = [];
+    nums.sort((a,b)=>(a-b)); // 排序数组
+    for(let i = 0; i < nums.length - 2; i++) { // 最后两个数不可能是三元组内第一个元素
+        if(i > 0 && nums[i-1] === nums[i]) continue; // 确保第一个位置不重复
+        let first = nums[i];
+        let left = i + 1, right = nums.length - 1;
+        while(left < right) {
+            let second = nums[left], third = nums[right];
+            if(first + second + third === 0) {
+               res.push([first, second, third]);
+               // 确保第二个位置不重复
+               while(1) {
+                   left++;
+                   if(nums[left] !== nums[left-1] || left >= right) {
+                       break;
+                   }
+               }
+            }
+            else if(first + second + third < 0) left++;
+            else right--;
+        }
+    }
+    return res;
+};
+```
+
+时间复杂度：O(n^2)
+
+空间复杂度：O(logn)
+
+执行用时：136ms，击败了83.01%的用户
+
+内存消耗：6MB，击败了34.90%的用户
+
 ## 基础线性表 || 矩阵 
 
 ### [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
