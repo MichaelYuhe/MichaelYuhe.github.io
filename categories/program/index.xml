@@ -4,7 +4,14 @@
         <link>https://MichaelYuhe.github.io/categories/program/</link>
         <description>program - 分类 - Yuhe&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 05 Sep 2021 20:39:52 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/categories/program/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 08 Sep 2021 11:21:17 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/categories/program/" rel="self" type="application/rss+xml" /><item>
+    <title>ES6Learning</title>
+    <link>https://MichaelYuhe.github.io/es6/</link>
+    <pubDate>Wed, 08 Sep 2021 11:21:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/es6/</guid>
+    <description><![CDATA[ECMA Script6 学习记录 继承 1.原型链继承 1 2 3 4 5 6 7 8 9 10 11 12 function Parent() { this.name = &#39;Michael&#39; } Parent.prototype.getName = function() { console.log(this.name) } function Child() { } Child.prototype = new Parent() var child1 = new Child() child1.getName() // &#39;Michael&#39; 缺陷： 引用类型的属性被所有实]]></description>
+</item><item>
     <title>一键回到顶部</title>
     <link>https://MichaelYuhe.github.io/back-to-top/</link>
     <pubDate>Sun, 05 Sep 2021 20:39:52 &#43;0800</pubDate>
