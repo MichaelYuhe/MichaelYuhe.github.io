@@ -14,6 +14,13 @@
     <guid>https://MichaelYuhe.github.io/es6/</guid>
     <description><![CDATA[ECMA Script6 学习记录 继承 1.原型链继承 1 2 3 4 5 6 7 8 9 10 11 12 function Parent() { this.name = &#39;Michael&#39; } Parent.prototype.getName = function() { console.log(this.name) } function Child() { } Child.prototype = new Parent() var child1 = new Child() child1.getName() // &#39;Michael&#39; 缺陷： 引用类型的属性被所有实]]></description>
 </item><item>
+    <title>Vue学习历程(一) Vue-todoist</title>
+    <link>https://MichaelYuhe.github.io/vue-todoist/</link>
+    <pubDate>Tue, 07 Sep 2021 08:33:40 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/vue-todoist/</guid>
+    <description><![CDATA[前言 学习完基础的三剑客后，决定开始学习框架。无非就两种选择，Vue或是React，了解了一番二者的区别，再看着文档写了两个教程demo，二者]]></description>
+</item><item>
     <title>一键回到顶部</title>
     <link>https://MichaelYuhe.github.io/back-to-top/</link>
     <pubDate>Sun, 05 Sep 2021 20:39:52 &#43;0800</pubDate>
