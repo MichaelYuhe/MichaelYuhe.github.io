@@ -54,6 +54,127 @@ class Solution:
         return maxprofit
 ```
 
+### [714. 买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
+
+![image-20210915104706423](../../static/images/LeetCode/image-20210915104706423.png)
+
+#### 思路：
+
+- 动态规划，每天有两种状态，一是今天交易结束后不持有股票，二是持有
+- sell表示不持有，buy表示持有
+- 不持有的情况：前一天就不持有，或者前一天买入今天卖出
+- 持有的情况：前一天就持有，前一天不持有但今天买入
+- 因此可以得到状态转移方程 sell = max(sell, buy + prices[i] - fee), buy = max(buy, sell - prices[i])
+
+```js
+var maxProfit = function(prices, fee) {
+    let sell = 0, buy = -prices[0]
+    for(let i = 1; i < prices.length; i++) {
+        sell = Math.max(sell, buy + prices[i] - fee)
+        buy = Math.max(sell - prices[i], buy)
+    }
+    return sell // 要想利润最大，结束后肯定不能持有股票
+};
+```
+
+### [1014.最佳观光组合](https://leetcode-cn.com/problems/best-sightseeing-pair/)
+
+![image-20210915223136730](../../static/images/LeetCode/image-20210915223136730.png)
+
+#### 思路：
+
+- maxScore由三个值组成：距离以及两个景点的好看程度
+- 很明显，两个景点都好看，又近的时候最完美
+- 因此可以先用一个值记录第一个好看的景点，当第二个离他越来越远，这个景点的好看程度也一直下降
+
+```js
+var maxScoreSightseeingPair = function(values) {
+    let maxScore = 0, firstSight = 0, secondSight = 1
+    for(let i = 0; i < values.length - 1; i++) {
+        // 如果第一个景点不够好看，无法支持这个距离，更新
+        if(values[firstSight] <= values[i]) {
+            // 更新第一个景点（第一个因为太远被抛弃了）
+            firstSight = i
+            secondSight = firstSight + 1
+        }
+        // 每次循环，第一个景点的吸引力就下降一点
+        values[firstSight]--
+        // maxScore维护最大值
+        maxScore = Math.max(maxScore, (values[firstSight] + values[secondSight]))
+        // 一直在往后找第二个景点
+        secondSight++
+    }
+    return maxScore
+```
+
+### [413.等差数列划分](https://leetcode-cn.com/problems/arithmetic-slices/)
+
+![image-20210917144621838](../../static/images/LeetCode/image-20210917144621838.png)
+
+#### 思路：
+
+- 每个等差数列内的子数列，都是等差数列
+- 不是别的等差数列的子数列的等差数列:joy:,之间不会有交集
+
+```js
+var numberOfArithmeticSlices = function(nums) {
+    if(nums.length < 3) return 0
+    let res = 0, len = 2
+    for(let i = 1; i < nums.length - 1; i++) {
+        if((nums[i] - nums[i-1]) === (nums[i+1] - nums[i])) {
+            len++
+        }
+        else {
+            if(len >= 3) {
+                res = res + (len-1) * (len-2) / 2
+            }
+            len = 2
+        }
+        if(i === nums.length - 2) {
+            if(len >= 3) {
+                res = res + (len-1) * (len-2) /2
+            }
+        }
+    }
+    return res
+}; 
+```
+
+时间复杂度：O(N)，遍历一次
+
+空间复杂度：O(1)，不需要额外空间
+
+执行用时：64ms，击败了88.75%的用户
+
+内存消耗：37.6MB，击败了58.73%的用户
+
+#### 官方题解
+
+```js
+var numberOfArithmeticSlices = function(nums) {
+    const n = nums.length;
+    if (n === 1) {
+        return 0;
+    }
+
+    let d = nums[0] - nums[1], t = 0;
+    let ans = 0;
+    // 因为等差数列的长度至少为 3，所以可以从 i=2 开始枚举
+    for (let i = 2; i < n; ++i) {
+        if (nums[i - 1] - nums[i] === d) {
+            ++t;
+        } else {
+            d = nums[i - 1] - nums[i];
+            t = 0;
+        }
+        ans += t;
+    }
+    return ans;
+};
+```
+
+
+
 ### [53.最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
 
 ![image-20210905170213381](/images/LeetCode/image-20210905170213381.png)
@@ -80,6 +201,41 @@ var maxSubArray = function(nums) {
 ```
 
 foreach：对数组的每个元素执行一次给定的函数。
+
+### [918. 环形子数组的最大和](https://leetcode-cn.com/problems/maximum-sum-circular-subarray/)
+
+![image-20210913101543776](../../static/images/LeetCode/image-20210913101543776.png)
+
+#### 思路：
+
+- 处理思想和最大子序和基本一致，唯一区别要考虑到环
+- 可以分为两种情况考虑，第一种是不需要越过边界，则和最大子序和一样
+- 第二种是越过了边界，这是只需要求出数组的总和，再减去**最小子序和**，就是越过环的结果
+- 最后在处理结果时还需要考虑全为负数的情况
+
+```js
+var maxSubarraySumCircular = function(nums) {
+    let max = nums[0], min = nums[0], preMax = nums[0], preMax = nums[0], sum = nums[0]
+    for(let i = 1; i < nums.length; i++) {
+        preMax = Math.max(nums[i], (preMax + nums[i]))
+        preMin = Math.min(nums[i], (preMin + nums[i]))
+        max = Math.max(preMax, max)
+        min = Math.min(preMin, min)
+        sum += nums[i]
+    }
+    return (max < 0) ? max : Math.max(max, sum - min)
+}
+```
+
+时间复杂度：O(N)，遍历一次
+
+空间复杂度：O(1)，不需要额外空间
+
+执行用时：84ms，击败了80.75%的用户
+
+内存消耗：43.6MB，击败了78.73%的用户
+
+#### 官方题解
 
 ### [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)
 
@@ -196,16 +352,6 @@ class Solution {
     }
 }
 ```
-
-### [213. 打家劫舍Ⅱ](https://leetcode-cn.com/problems/house-robber-ii/)
-
-![image-20210905170456256](/images/LeetCode/image-20210905170456256.png)
-
-#### 思路
-
-#### 官方题解
-
-
 
 ## 二分法
 
@@ -1435,4 +1581,5 @@ var twoSum = function(nums, target) {
 };
 ```
 
+``
 

@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/MichaelYuhe.github.io\/leetcode\/"
-        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "learning, leetcode","wordcount":  9103 ,
+        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "learning, leetcode","wordcount":  10214 ,
         "url": "https:\/\/MichaelYuhe.github.io\/leetcode\/","datePublished": "2021-09-05T16:34:10+08:00","dateModified": "2021-09-05T16:34:10+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/MichaelYuhe.github.io\/images\/avatar.png"},"author": {
@@ -52,7 +52,18 @@
         title="/images/logo.png" /></a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                     <i class="fas fa-adjust fa-fw"></i>
                 </a>
             </div>
@@ -75,7 +86,23 @@
                 <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
             </a></div>
     </div>
@@ -93,8 +120,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">持续更新的LeetCode笔记</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>夏宇航</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/program/"><i class="far fa-folder fa-fw"></i>program</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-05">2021-09-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 9103 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 19 分钟&nbsp;<span id="/leetcode/" class="leancloud_visitors" data-flag-title="持续更新的LeetCode笔记">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-05">2021-09-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 10214 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 21 分钟&nbsp;<span id="/leetcode/" class="leancloud_visitors" data-flag-title="持续更新的LeetCode笔记">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -112,28 +139,44 @@
             <li><a href="#官方题解">官方题解：</a></li>
           </ul>
         </li>
-        <li><a href="#53最大子序和httpsleetcode-cncomproblemsmaximum-subarray"><a href="https://leetcode-cn.com/problems/maximum-subarray/">53.最大子序和</a></a>
+        <li><a href="#714-买卖股票的最佳时机含手续费httpsleetcode-cncomproblemsbest-time-to-buy-and-sell-stock-with-transaction-fee"><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/">714. 买卖股票的最佳时机含手续费</a></a>
           <ul>
             <li><a href="#思路-1">思路：</a></li>
-            <li><a href="#官方题解-1">官方题解：</a></li>
+          </ul>
+        </li>
+        <li><a href="#1014最佳观光组合httpsleetcode-cncomproblemsbest-sightseeing-pair"><a href="https://leetcode-cn.com/problems/best-sightseeing-pair/">1014.最佳观光组合</a></a>
+          <ul>
+            <li><a href="#思路-2">思路：</a></li>
+          </ul>
+        </li>
+        <li><a href="#413等差数列划分httpsleetcode-cncomproblemsarithmetic-slices"><a href="https://leetcode-cn.com/problems/arithmetic-slices/">413.等差数列划分</a></a>
+          <ul>
+            <li><a href="#思路-3">思路：</a></li>
+            <li><a href="#官方题解-1">官方题解</a></li>
+          </ul>
+        </li>
+        <li><a href="#53最大子序和httpsleetcode-cncomproblemsmaximum-subarray"><a href="https://leetcode-cn.com/problems/maximum-subarray/">53.最大子序和</a></a>
+          <ul>
+            <li><a href="#思路-4">思路：</a></li>
+            <li><a href="#官方题解-2">官方题解：</a></li>
+          </ul>
+        </li>
+        <li><a href="#918-环形子数组的最大和httpsleetcode-cncomproblemsmaximum-sum-circular-subarray"><a href="https://leetcode-cn.com/problems/maximum-sum-circular-subarray/">918. 环形子数组的最大和</a></a>
+          <ul>
+            <li><a href="#思路-5">思路：</a></li>
+            <li><a href="#官方题解-3">官方题解</a></li>
           </ul>
         </li>
         <li><a href="#70-爬楼梯httpsleetcode-cncomproblemsclimbing-stairs"><a href="https://leetcode-cn.com/problems/climbing-stairs/">70. 爬楼梯</a></a>
           <ul>
-            <li><a href="#思路-2">思路：</a></li>
-            <li><a href="#官方题解-2">官方题解</a></li>
+            <li><a href="#思路-6">思路：</a></li>
+            <li><a href="#官方题解-4">官方题解</a></li>
           </ul>
         </li>
         <li><a href="#198-打家劫舍httpsleetcode-cncomproblemshouse-robber"><a href="https://leetcode-cn.com/problems/house-robber/">198. 打家劫舍</a></a>
           <ul>
-            <li><a href="#思路-3">思路：</a></li>
-            <li><a href="#官方题解-3">官方题解</a></li>
-          </ul>
-        </li>
-        <li><a href="#213-打家劫舍httpsleetcode-cncomproblemshouse-robber-ii"><a href="https://leetcode-cn.com/problems/house-robber-ii/">213. 打家劫舍Ⅱ</a></a>
-          <ul>
-            <li><a href="#思路-4">思路</a></li>
-            <li><a href="#官方题解-4">官方题解</a></li>
+            <li><a href="#思路-7">思路：</a></li>
+            <li><a href="#官方题解-5">官方题解</a></li>
           </ul>
         </li>
       </ul>
@@ -142,20 +185,20 @@
       <ul>
         <li><a href="#35搜索插入位置httpsleetcode-cncomproblemssearch-insert-position"><a href="https://leetcode-cn.com/problems/search-insert-position/">35.搜索插入位置</a></a>
           <ul>
-            <li><a href="#思路-5">思路：</a></li>
-            <li><a href="#官方题解-5">官方题解：</a></li>
+            <li><a href="#思路-8">思路：</a></li>
+            <li><a href="#官方题解-6">官方题解：</a></li>
           </ul>
         </li>
         <li><a href="#34-在排序数组中查找元素的第一个和最后一个位置"><a href="">34. 在排序数组中查找元素的第一个和最后一个位置</a></a>
           <ul>
-            <li><a href="#思路-6">思路：</a></li>
-            <li><a href="#官方题解-6">官方题解</a></li>
+            <li><a href="#思路-9">思路：</a></li>
+            <li><a href="#官方题解-7">官方题解</a></li>
           </ul>
         </li>
         <li><a href="#4-寻找两个正序数组的中位数httpsleetcode-cncomproblemsmedian-of-two-sorted-arrays"><a href="https://leetcode-cn.com/problems/median-of-two-sorted-arrays/">4. 寻找两个正序数组的中位数</a></a>
           <ul>
-            <li><a href="#思路-7">思路：</a></li>
-            <li><a href="#官方题解-7">官方题解：</a></li>
+            <li><a href="#思路-10">思路：</a></li>
+            <li><a href="#官方题解-8">官方题解：</a></li>
           </ul>
         </li>
       </ul>
@@ -164,8 +207,8 @@
       <ul>
         <li><a href="#剑指offer--06--从尾到头打印链表httpsleetcode-cncomproblemscong-wei-dao-tou-da-yin-lian-biao-lcof"><a href="https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/">剑指offer  06  从尾到头打印链表</a></a>
           <ul>
-            <li><a href="#思路-8">思路：</a></li>
-            <li><a href="#官方题解-8">官方题解</a></li>
+            <li><a href="#思路-11">思路：</a></li>
+            <li><a href="#官方题解-9">官方题解</a></li>
           </ul>
         </li>
       </ul>
@@ -174,8 +217,8 @@
       <ul>
         <li><a href="#671-二叉树中第二小的节点httpsleetcode-cncomproblemssecond-minimum-node-in-a-binary-tree"><a href="">671. 二叉树中第二小的节点</a>(<a href="https://leetcode-cn.com/problems/second-minimum-node-in-a-binary-tree/">https://leetcode-cn.com/problems/second-minimum-node-in-a-binary-tree/</a>)</a>
           <ul>
-            <li><a href="#思路-9">思路：</a></li>
-            <li><a href="#官方题解-9">官方题解</a></li>
+            <li><a href="#思路-12">思路：</a></li>
+            <li><a href="#官方题解-10">官方题解</a></li>
           </ul>
         </li>
       </ul>
@@ -184,8 +227,8 @@
       <ul>
         <li><a href="#面试题1710主要元素httpsleetcode-cncomproblemsfind-majority-element-lcci"><a href="https://leetcode-cn.com/problems/find-majority-element-lcci/">面试题17.10.主要元素</a></a>
           <ul>
-            <li><a href="#思路-10">思路：</a></li>
-            <li><a href="#官方题解-10">官方题解：</a></li>
+            <li><a href="#思路-13">思路：</a></li>
+            <li><a href="#官方题解-11">官方题解：</a></li>
           </ul>
         </li>
       </ul>
@@ -194,47 +237,47 @@
       <ul>
         <li><a href="#3-无重复字符的最长字串httpsleetcode-cncomproblemslongest-substring-without-repeating-characters"><a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/">3. 无重复字符的最长字串</a></a>
           <ul>
-            <li><a href="#思路-11">思路</a></li>
-            <li><a href="#官方题解-11">官方题解</a></li>
+            <li><a href="#思路-14">思路</a></li>
+            <li><a href="#官方题解-12">官方题解</a></li>
           </ul>
         </li>
         <li><a href="#26删除有序数组中的重复元素httpsleetcode-cncomproblemsremove-duplicates-from-sorted-array"><a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/">26.删除有序数组中的重复元素</a></a>
           <ul>
-            <li><a href="#思路-12">思路：</a></li>
-            <li><a href="#官方题解-12">官方题解：</a></li>
+            <li><a href="#思路-15">思路：</a></li>
+            <li><a href="#官方题解-13">官方题解：</a></li>
           </ul>
         </li>
         <li><a href="#27移除指定元素httpsleetcode-cncomproblemsremove-element"><a href="https://leetcode-cn.com/problems/remove-element/">27.移除指定元素</a></a>
           <ul>
-            <li><a href="#思路-13">思路：</a></li>
-            <li><a href="#官方题解-13">官方题解：</a></li>
+            <li><a href="#思路-16">思路：</a></li>
+            <li><a href="#官方题解-14">官方题解：</a></li>
           </ul>
         </li>
         <li><a href="#剑指offer52-两个链表的第一个公共节点httpsleetcode-cncomproblemsliang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof"><a href="https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/">剑指offer52 两个链表的第一个公共节点</a></a>
           <ul>
-            <li><a href="#官方题解-14">官方题解</a></li>
+            <li><a href="#官方题解-15">官方题解</a></li>
           </ul>
         </li>
         <li><a href="#141-环形链表">141. 环形链表</a>
           <ul>
-            <li><a href="#思路-14">思路</a></li>
-            <li><a href="#官方题解-15">官方题解</a></li>
+            <li><a href="#思路-17">思路</a></li>
+            <li><a href="#官方题解-16">官方题解</a></li>
           </ul>
         </li>
         <li><a href="#611-有效三角形的个数httpsleetcode-cncomproblemsvalid-triangle-number"><a href="https://leetcode-cn.com/problems/valid-triangle-number/">611. 有效三角形的个数</a></a>
           <ul>
-            <li><a href="#思路-15">思路</a></li>
-            <li><a href="#官方题解-16">官方题解</a></li>
+            <li><a href="#思路-18">思路</a></li>
+            <li><a href="#官方题解-17">官方题解</a></li>
           </ul>
         </li>
         <li><a href="#881-救生艇httpsleetcode-cncomproblemsboats-to-save-people"><a href="https://leetcode-cn.com/problems/boats-to-save-people/">881. 救生艇</a></a>
           <ul>
-            <li><a href="#思路-16">思路：</a></li>
+            <li><a href="#思路-19">思路：</a></li>
           </ul>
         </li>
         <li><a href="#15-三数之和httpsleetcode-cncomproblems3sum">15. <a href="https://leetcode-cn.com/problems/3sum/">三数之和</a></a>
           <ul>
-            <li><a href="#思路-17">思路：</a></li>
+            <li><a href="#思路-20">思路：</a></li>
           </ul>
         </li>
       </ul>
@@ -243,27 +286,27 @@
       <ul>
         <li><a href="#2-两数相加httpsleetcode-cncomproblemsadd-two-numbers"><a href="https://leetcode-cn.com/problems/add-two-numbers/">2. 两数相加</a></a>
           <ul>
-            <li><a href="#思路-18">思路</a></li>
-            <li><a href="#官方题解-17">官方题解</a></li>
+            <li><a href="#思路-21">思路</a></li>
+            <li><a href="#官方题解-18">官方题解</a></li>
           </ul>
         </li>
         <li><a href="#21合并两个有序链表httpsleetcode-cncomproblemsmerge-two-sorted-lists"><a href="https://leetcode-cn.com/problems/merge-two-sorted-lists/">21.合并两个有序链表</a></a>
           <ul>
-            <li><a href="#思路-19">思路：</a></li>
+            <li><a href="#思路-22">思路：</a></li>
             <li><a href="#官方递归解法">官方递归解法：</a></li>
             <li><a href="#递归">递归：</a></li>
           </ul>
         </li>
         <li><a href="#448找到消失的数字httpsleetcode-cncomproblemsfind-all-numbers-disappeared-in-an-array"><a href="https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/">448.找到消失的数字</a></a>
           <ul>
-            <li><a href="#思路-20">思路：</a></li>
+            <li><a href="#思路-23">思路：</a></li>
             <li><a href="#官方题解的做法">官方题解的做法：</a></li>
           </ul>
         </li>
         <li><a href="#54-螺旋矩阵httpsleetcode-cncomproblemsspiral-matrix"><a href="https://leetcode-cn.com/problems/spiral-matrix/">54. 螺旋矩阵</a></a>
           <ul>
-            <li><a href="#思路-21">思路：</a></li>
-            <li><a href="#官方题解-18">官方题解：</a></li>
+            <li><a href="#思路-24">思路：</a></li>
+            <li><a href="#官方题解-19">官方题解：</a></li>
           </ul>
         </li>
       </ul>
@@ -272,8 +315,8 @@
       <ul>
         <li><a href="#1736-替换隐藏数字得到的最晚时间httpsleetcode-cncomproblemslatest-time-by-replacing-hidden-digits"><a href="https://leetcode-cn.com/problems/latest-time-by-replacing-hidden-digits/">1736. 替换隐藏数字得到的最晚时间</a></a>
           <ul>
-            <li><a href="#思路-22">思路:</a></li>
-            <li><a href="#官方题解-19">官方题解</a></li>
+            <li><a href="#思路-25">思路:</a></li>
+            <li><a href="#官方题解-20">官方题解</a></li>
           </ul>
         </li>
       </ul>
@@ -284,7 +327,7 @@
         <li><a href="#706-设计哈希映射httpsleetcode-cncomproblemsdesign-hashmap"><a href="https://leetcode-cn.com/problems/design-hashmap/">706. 设计哈希映射</a></a></li>
         <li><a href="#1两数之和httpsleetcode-cncomproblemstwo-sum"><a href="https://leetcode-cn.com/problems/two-sum/">1.两数之和</a></a>
           <ul>
-            <li><a href="#思路-23">思路：</a></li>
+            <li><a href="#思路-26">思路：</a></li>
           </ul>
         </li>
       </ul>
@@ -368,6 +411,213 @@
         <span class="k">return</span> <span class="n">maxprofit</span>
 </code></pre></td></tr></table>
 </div>
+</div><h3 id="714-买卖股票的最佳时机含手续费httpsleetcode-cncomproblemsbest-time-to-buy-and-sell-stock-with-transaction-fee"><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/" target="_blank" rel="noopener noreffer">714. 买卖股票的最佳时机含手续费</a></h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="../../static/images/LeetCode/image-20210915104706423.png"
+        data-srcset="../../static/images/LeetCode/image-20210915104706423.png, ../../static/images/LeetCode/image-20210915104706423.png 1.5x, ../../static/images/LeetCode/image-20210915104706423.png 2x"
+        data-sizes="auto"
+        alt="../../static/images/LeetCode/image-20210915104706423.png"
+        title="image-20210915104706423" /></p>
+<h4 id="思路-1">思路：</h4>
+<ul>
+<li>动态规划，每天有两种状态，一是今天交易结束后不持有股票，二是持有</li>
+<li>sell表示不持有，buy表示持有</li>
+<li>不持有的情况：前一天就不持有，或者前一天买入今天卖出</li>
+<li>持有的情况：前一天就持有，前一天不持有但今天买入</li>
+<li>因此可以得到状态转移方程 sell = max(sell, buy + prices[i] - fee), buy = max(buy, sell - prices[i])</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">maxProfit</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">prices</span><span class="p">,</span> <span class="nx">fee</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">sell</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">buy</span> <span class="o">=</span> <span class="o">-</span><span class="nx">prices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">prices</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">sell</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">sell</span><span class="p">,</span> <span class="nx">buy</span> <span class="o">+</span> <span class="nx">prices</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">-</span> <span class="nx">fee</span><span class="p">)</span>
+        <span class="nx">buy</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">sell</span> <span class="o">-</span> <span class="nx">prices</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">buy</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">sell</span> <span class="c1">// 要想利润最大，结束后肯定不能持有股票
+</span><span class="c1"></span><span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="1014最佳观光组合httpsleetcode-cncomproblemsbest-sightseeing-pair"><a href="https://leetcode-cn.com/problems/best-sightseeing-pair/" target="_blank" rel="noopener noreffer">1014.最佳观光组合</a></h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="../../static/images/LeetCode/image-20210915223136730.png"
+        data-srcset="../../static/images/LeetCode/image-20210915223136730.png, ../../static/images/LeetCode/image-20210915223136730.png 1.5x, ../../static/images/LeetCode/image-20210915223136730.png 2x"
+        data-sizes="auto"
+        alt="../../static/images/LeetCode/image-20210915223136730.png"
+        title="image-20210915223136730" /></p>
+<h4 id="思路-2">思路：</h4>
+<ul>
+<li>maxScore由三个值组成：距离以及两个景点的好看程度</li>
+<li>很明显，两个景点都好看，又近的时候最完美</li>
+<li>因此可以先用一个值记录第一个好看的景点，当第二个离他越来越远，这个景点的好看程度也一直下降</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">maxScoreSightseeingPair</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">values</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">maxScore</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">firstSight</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">secondSight</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">values</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 如果第一个景点不够好看，无法支持这个距离，更新
+</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span><span class="nx">values</span><span class="p">[</span><span class="nx">firstSight</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="nx">values</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="p">{</span>
+            <span class="c1">// 更新第一个景点（第一个因为太远被抛弃了）
+</span><span class="c1"></span>            <span class="nx">firstSight</span> <span class="o">=</span> <span class="nx">i</span>
+            <span class="nx">secondSight</span> <span class="o">=</span> <span class="nx">firstSight</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="p">}</span>
+        <span class="c1">// 每次循环，第一个景点的吸引力就下降一点
+</span><span class="c1"></span>        <span class="nx">values</span><span class="p">[</span><span class="nx">firstSight</span><span class="p">]</span><span class="o">--</span>
+        <span class="c1">// maxScore维护最大值
+</span><span class="c1"></span>        <span class="nx">maxScore</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">maxScore</span><span class="p">,</span> <span class="p">(</span><span class="nx">values</span><span class="p">[</span><span class="nx">firstSight</span><span class="p">]</span> <span class="o">+</span> <span class="nx">values</span><span class="p">[</span><span class="nx">secondSight</span><span class="p">]))</span>
+        <span class="c1">// 一直在往后找第二个景点
+</span><span class="c1"></span>        <span class="nx">secondSight</span><span class="o">++</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">maxScore</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="413等差数列划分httpsleetcode-cncomproblemsarithmetic-slices"><a href="https://leetcode-cn.com/problems/arithmetic-slices/" target="_blank" rel="noopener noreffer">413.等差数列划分</a></h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="../../static/images/LeetCode/image-20210917144621838.png"
+        data-srcset="../../static/images/LeetCode/image-20210917144621838.png, ../../static/images/LeetCode/image-20210917144621838.png 1.5x, ../../static/images/LeetCode/image-20210917144621838.png 2x"
+        data-sizes="auto"
+        alt="../../static/images/LeetCode/image-20210917144621838.png"
+        title="image-20210917144621838" /></p>
+<h4 id="思路-3">思路：</h4>
+<ul>
+<li>每个等差数列内的子数列，都是等差数列</li>
+<li>不是别的等差数列的子数列的等差数列😂,之间不会有交集</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">numberOfArithmeticSlices</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">nums</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="k">return</span> <span class="mi">0</span>
+    <span class="kd">let</span> <span class="nx">res</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">len</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">nums</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">((</span><span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">-</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">===</span> <span class="p">(</span><span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]))</span> <span class="p">{</span>
+            <span class="nx">len</span><span class="o">++</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="nx">len</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">res</span> <span class="o">=</span> <span class="nx">res</span> <span class="o">+</span> <span class="p">(</span><span class="nx">len</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="nx">len</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+            <span class="p">}</span>
+            <span class="nx">len</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">i</span> <span class="o">===</span> <span class="nx">nums</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="nx">len</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">res</span> <span class="o">=</span> <span class="nx">res</span> <span class="o">+</span> <span class="p">(</span><span class="nx">len</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="nx">len</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span><span class="mi">2</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">res</span>
+<span class="p">};</span> 
+</code></pre></td></tr></table>
+</div>
+</div><p>时间复杂度：O(N)，遍历一次</p>
+<p>空间复杂度：O(1)，不需要额外空间</p>
+<p>执行用时：64ms，击败了88.75%的用户</p>
+<p>内存消耗：37.6MB，击败了58.73%的用户</p>
+<h4 id="官方题解-1">官方题解</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">numberOfArithmeticSlices</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">n</span> <span class="o">=</span> <span class="nx">nums</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">n</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">let</span> <span class="nx">d</span> <span class="o">=</span> <span class="nx">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="nx">nums</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nx">t</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="c1">// 因为等差数列的长度至少为 3，所以可以从 i=2 开始枚举
+</span><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">n</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">nums</span><span class="p">[</span><span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">===</span> <span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
+            <span class="o">++</span><span class="nx">t</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">d</span> <span class="o">=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+            <span class="nx">t</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nx">ans</span> <span class="o">+=</span> <span class="nx">t</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">ans</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
 </div><h3 id="53最大子序和httpsleetcode-cncomproblemsmaximum-subarray"><a href="https://leetcode-cn.com/problems/maximum-subarray/" target="_blank" rel="noopener noreffer">53.最大子序和</a></h3>
 <p><img
         class="lazyload"
@@ -377,13 +627,13 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905170213381.png"
         title="image-20210905170213381" /></p>
-<h4 id="思路-1">思路：</h4>
+<h4 id="思路-4">思路：</h4>
 <ul>
 <li>若只有一个元素，直接返回</li>
 <li>从前往后遍历并求和，若sum&lt;0，则sum归零（前面的元素都不要了）</li>
 <li>到后面遇到了负数，但是这个负数加进来也不足以使sum&lt;0，则从这个负数开始往后看，它和后面的元素依此相加，得到一个newSum，一大于0就把newSum加上。</li>
 </ul>
-<h4 id="官方题解-1">官方题解：</h4>
+<h4 id="官方题解-2">官方题解：</h4>
 <ol>
 <li>动态规划</li>
 </ol>
@@ -410,6 +660,55 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>foreach：对数组的每个元素执行一次给定的函数。</p>
+<h3 id="918-环形子数组的最大和httpsleetcode-cncomproblemsmaximum-sum-circular-subarray"><a href="https://leetcode-cn.com/problems/maximum-sum-circular-subarray/" target="_blank" rel="noopener noreffer">918. 环形子数组的最大和</a></h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="../../static/images/LeetCode/image-20210913101543776.png"
+        data-srcset="../../static/images/LeetCode/image-20210913101543776.png, ../../static/images/LeetCode/image-20210913101543776.png 1.5x, ../../static/images/LeetCode/image-20210913101543776.png 2x"
+        data-sizes="auto"
+        alt="../../static/images/LeetCode/image-20210913101543776.png"
+        title="image-20210913101543776" /></p>
+<h4 id="思路-5">思路：</h4>
+<ul>
+<li>处理思想和最大子序和基本一致，唯一区别要考虑到环</li>
+<li>可以分为两种情况考虑，第一种是不需要越过边界，则和最大子序和一样</li>
+<li>第二种是越过了边界，这是只需要求出数组的总和，再减去<strong>最小子序和</strong>，就是越过环的结果</li>
+<li>最后在处理结果时还需要考虑全为负数的情况</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">maxSubarraySumCircular</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">min</span> <span class="o">=</span> <span class="nx">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">preMax</span> <span class="o">=</span> <span class="nx">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">preMax</span> <span class="o">=</span> <span class="nx">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">sum</span> <span class="o">=</span> <span class="nx">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">nums</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">preMax</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="p">(</span><span class="nx">preMax</span> <span class="o">+</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]))</span>
+        <span class="nx">preMin</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="p">(</span><span class="nx">preMin</span> <span class="o">+</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]))</span>
+        <span class="nx">max</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">preMax</span><span class="p">,</span> <span class="nx">max</span><span class="p">)</span>
+        <span class="nx">min</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="nx">preMin</span><span class="p">,</span> <span class="nx">min</span><span class="p">)</span>
+        <span class="nx">sum</span> <span class="o">+=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nx">max</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="nx">max</span> <span class="o">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">max</span><span class="p">,</span> <span class="nx">sum</span> <span class="o">-</span> <span class="nx">min</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>时间复杂度：O(N)，遍历一次</p>
+<p>空间复杂度：O(1)，不需要额外空间</p>
+<p>执行用时：84ms，击败了80.75%的用户</p>
+<p>内存消耗：43.6MB，击败了78.73%的用户</p>
+<h4 id="官方题解-3">官方题解</h4>
 <h3 id="70-爬楼梯httpsleetcode-cncomproblemsclimbing-stairs"><a href="https://leetcode-cn.com/problems/climbing-stairs/" target="_blank" rel="noopener noreffer">70. 爬楼梯</a></h3>
 <p><img
         class="lazyload"
@@ -419,7 +718,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905170343945.png"
         title="image-20210905170343945" /></p>
-<h4 id="思路-2">思路：</h4>
+<h4 id="思路-6">思路：</h4>
 <ul>
 <li>爬到某一级台阶的前一步，必定落在上一级或者上上级。</li>
 <li>所以爬到某一台阶的方法数，等于爬到上一级和上上级的方法数之和。</li>
@@ -458,7 +757,7 @@
 <p>空间复杂度：O(1)，不需要额外空间</p>
 <p>执行用时：64ms，击败了94.33%的用户</p>
 <p>内存消耗：37.7MB，击败了30.68%的用户</p>
-<h4 id="官方题解-2">官方题解</h4>
+<h4 id="官方题解-4">官方题解</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -506,7 +805,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905170422059.png"
         title="image-20210905170422059" /></p>
-<h4 id="思路-3">思路：</h4>
+<h4 id="思路-7">思路：</h4>
 <ul>
 <li>小偷身处第 i 间房子时，知道自己在 “ 只偷到(k - 2)间时最多能偷到的钱 i1 ” 和 “ 只偷到(k - 1)间时最多能偷到的钱 i2 ”</li>
 <li>第 i 间房子的钱加上 i1 比 i2 大的话，就偷，然后到了下一间房子后，i1 变成了之前的 i2 ， i2 变成了现在的sum</li>
@@ -560,7 +859,7 @@
 <p>内存消耗：37.7MB，击败了44.61%的用户</p>
 <p>时间复杂度：O(n)</p>
 <p>空间复杂度：O(1)</p>
-<h4 id="官方题解-3">官方题解</h4>
+<h4 id="官方题解-5">官方题解</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -603,18 +902,7 @@
 <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="213-打家劫舍httpsleetcode-cncomproblemshouse-robber-ii"><a href="https://leetcode-cn.com/problems/house-robber-ii/" target="_blank" rel="noopener noreffer">213. 打家劫舍Ⅱ</a></h3>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/images/LeetCode/image-20210905170456256.png"
-        data-srcset="/images/LeetCode/image-20210905170456256.png, /images/LeetCode/image-20210905170456256.png 1.5x, /images/LeetCode/image-20210905170456256.png 2x"
-        data-sizes="auto"
-        alt="/images/LeetCode/image-20210905170456256.png"
-        title="image-20210905170456256" /></p>
-<h4 id="思路-4">思路</h4>
-<h4 id="官方题解-4">官方题解</h4>
-<h2 id="二分法">二分法</h2>
+</div><h2 id="二分法">二分法</h2>
 <h3 id="35搜索插入位置httpsleetcode-cncomproblemssearch-insert-position"><a href="https://leetcode-cn.com/problems/search-insert-position/" target="_blank" rel="noopener noreffer">35.搜索插入位置</a></h3>
 <p><img
         class="lazyload"
@@ -624,7 +912,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905170547626.png"
         title="image-20210905170547626" /></p>
-<h4 id="思路-5">思路：</h4>
+<h4 id="思路-8">思路：</h4>
 <p>二分查找法的基础变式</p>
 <ul>
 <li>如果查找到了，直接返回；</li>
@@ -674,7 +962,7 @@
 <p>内存消耗：39.1MB，击败了12.19%的用户</p>
 <p>时间复杂度：O(logn)</p>
 <p>空间复杂度：O(1)</p>
-<h4 id="官方题解-5">官方题解：</h4>
+<h4 id="官方题解-6">官方题解：</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -719,7 +1007,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905170712820.png"
         title="image-20210905170712820" /></p>
-<h4 id="思路-6">思路：</h4>
+<h4 id="思路-9">思路：</h4>
 <ul>
 <li>用二分法，找一个target</li>
 <li>如果没找到，则直接返回-1，-1</li>
@@ -861,7 +1149,7 @@
     <span class="p">}</span> 
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="官方题解-6">官方题解</h4>
+</div><h4 id="官方题解-7">官方题解</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -923,7 +1211,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905170806814.png"
         title="image-20210905170806814" /></p>
-<h4 id="思路-7">思路：</h4>
+<h4 id="思路-10">思路：</h4>
 <ul>
 <li>归并排序，根据长度返回中位数</li>
 </ul>
@@ -995,7 +1283,7 @@
 <p>空间复杂度：O(m+n)</p>
 <p>执行用时：124ms，击败了65.19%的用户</p>
 <p>内存消耗：43.2MB，击败了63.96%的用户</p>
-<h4 id="官方题解-7">官方题解：</h4>
+<h4 id="官方题解-8">官方题解：</h4>
 <p>题目要求：时间复杂度O(log(m+n))。</p>
 <p>该题可以转化为，求两个有序数组中第k小的数，其中k为(m+n)/2或者(m+n)/2+1</p>
 <p>要找到第k小的元素，我们可以比较nums1[k / 2 - 1]和nums2[k / 2 - 1]，所以对于nums1[k / 2 - 1]和nums2[k / 2 - 1]中的较小值，最多只会有(k-2)个元素比它小，那么它不可能是第k小的元素。</p>
@@ -1033,7 +1321,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905170903007.png"
         title="image-20210905170903007" /></p>
-<h4 id="思路-8">思路：</h4>
+<h4 id="思路-11">思路：</h4>
 <p>遍历链表，依此在头部添加val</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1061,7 +1349,7 @@
 <p>空间复杂度：O(n)</p>
 <p>执行用时：80ms，击败了94.21%的用户</p>
 <p>内存消耗：39.4MB，击败了94.03%的用户</p>
-<h4 id="官方题解-8">官方题解</h4>
+<h4 id="官方题解-9">官方题解</h4>
 <p><strong>栈</strong></p>
 <p>​		栈的特点是后进先出，即最后压入栈的元素最先弹出。考虑到栈的这一特点，使用栈将链表元素顺序倒置。从链表的头节点开始，依次将每个节点压入栈内，然后依次弹出栈内的元素并存储到数组中。</p>
 <h2 id="树">树</h2>
@@ -1074,7 +1362,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905171016582.png"
         title="image-20210905171016582" /></p>
-<h4 id="思路-9">思路：</h4>
+<h4 id="思路-12">思路：</h4>
 <ul>
 <li>在这个特殊的二叉树中，子节点的元素均大于等于父节点元素的值。</li>
 <li>所以只要自顶往下，在某一层遇到了比根节点大，且是这一层最小的，那就是所要的节点。</li>
@@ -1092,7 +1380,7 @@
 <p>空间复杂度：O(1)</p>
 <p>执行用时：76ms，击败了99.22%的用户</p>
 <p>内存消耗：40.2MB，击败了47.62%的用户</p>
-<h4 id="官方题解-9">官方题解</h4>
+<h4 id="官方题解-10">官方题解</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1153,7 +1441,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905171110786.png"
         title="image-20210905171110786" /></p>
-<h4 id="思路-10">思路：</h4>
+<h4 id="思路-13">思路：</h4>
 <ol>
 <li>若数组里只有一个数字，直接返回；</li>
 <li>对数组进行排序后，若两个相差一半长度的元素相等，则该元素就是主要元素；</li>
@@ -1195,7 +1483,7 @@
 <p>空间复杂度：O(1)，没有用到多余的空间</p>
 <p>执行用时：72ms，击败了94.35%的用户</p>
 <p>内存消耗：42.2MB，击败了10.63%的用户</p>
-<h4 id="官方题解-10">官方题解：</h4>
+<h4 id="官方题解-11">官方题解：</h4>
 <p>Boyer-Moore投票算法</p>
 <p>Boyer-Moore 投票算法的基本思想是：在每一轮投票过程中，从数组中删除两个不同的元素，直到投票过程无法继续，此时数组为空或者数组中剩下的元素都相等。</p>
 <p>该题中表现为：遍历到x时，若count为0，则先将x的值赋给candidate；接下去若遇到不相同的，count&ndash;，遇到相同的，count++，若count为0，重新赋值。因此遍历一遍过后，如果数组nums 中存在主要元素，则candidate 即为主要元素，否则candidate 可能为数组中的任意一个元素。</p>
@@ -1276,7 +1564,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905171211988.png"
         title="image-20210905171211988" /></p>
-<h4 id="思路-11">思路</h4>
+<h4 id="思路-14">思路</h4>
 <ul>
 <li>最初的思路是，用两重循环，以数组每个元素为起点都做一次最大长度，保留最大</li>
 <li>后面发现这样会超时(O(N^2))</li>
@@ -1318,7 +1606,7 @@
 <p>空间复杂度：<em>O</em>(∣Σ∣)，最坏情况全不重复，则最长是所有字符的合集128</p>
 <p>执行用时：76ms，击败了99.90%的用户</p>
 <p>内存消耗：41.4MB，击败了71.54%的用户</p>
-<h4 id="官方题解-11">官方题解</h4>
+<h4 id="官方题解-12">官方题解</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1381,7 +1669,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905171301864.png"
         title="image-20210905171301864" /></p>
-<h4 id="思路-12">思路：</h4>
+<h4 id="思路-15">思路：</h4>
 <p>因为数组是有序的，所以遍历数组，当某元素和前一个元素不等，则代表它没出现过，把他放到第n个位置，n为出现过的元素个数</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1415,7 +1703,7 @@
 <p>空间复杂度：O(1)</p>
 <p>执行用时：76ms，击败了99.22%的用户</p>
 <p>内存消耗：40.2MB，击败了47.62%的用户</p>
-<h4 id="官方题解-12">官方题解：</h4>
+<h4 id="官方题解-13">官方题解：</h4>
 <p>快慢指针，实际思想与自己无异</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1462,7 +1750,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905171351567.png"
         title="image-20210905171351567" /></p>
-<h4 id="思路-13">思路：</h4>
+<h4 id="思路-16">思路：</h4>
 <p>跟26题几乎一样，不一样的只是res的起点</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1494,7 +1782,7 @@
 <p>空间复杂度：O(1)</p>
 <p>执行用时：64ms，击败了99.51%的用户</p>
 <p>内存消耗：38MB，击败了32.95%的用户</p>
-<h4 id="官方题解-13">官方题解：</h4>
+<h4 id="官方题解-14">官方题解：</h4>
 <p>除了快慢指针，还可以使用左右指针，在val元素数量小时很有效，<strong>避免了需要保留的元素的重复赋值操作</strong>。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1535,7 +1823,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905171438009.png"
         title="image-20210905171438009" /></p>
-<h4 id="官方题解-14">官方题解</h4>
+<h4 id="官方题解-15">官方题解</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1579,7 +1867,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905171523851.png"
         title="image-20210905171523851" /></p>
-<h4 id="思路-14">思路</h4>
+<h4 id="思路-17">思路</h4>
 <ul>
 <li>val值有限定范围    	小聪明，但值得注意的是，面试时应先问清楚面试官题目细节，如果刻意透露了限定条件，则利用反而会加分</li>
 </ul>
@@ -1660,7 +1948,7 @@
 <p>空间复杂度：O(1)</p>
 <p>执行用时：76ms，击败了99.22%的用户</p>
 <p>内存消耗：40.2MB，击败了47.62%的用户</p>
-<h4 id="官方题解-15">官方题解</h4>
+<h4 id="官方题解-16">官方题解</h4>
 <ol>
 <li>哈希表，用集合存储访问过的节点</li>
 <li>快慢指针</li>
@@ -1674,7 +1962,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905171641662.png"
         title="image-20210905171641662" /></p>
-<h4 id="思路-15">思路</h4>
+<h4 id="思路-18">思路</h4>
 <ul>
 <li>暴力</li>
 </ul>
@@ -1729,7 +2017,7 @@
 </div><p>时间复杂度：O(N3)</p>
 <p>执行用时：852ms，击败了23.08%的用户</p>
 <p>内存消耗：39.4MB，击败了70.33%的用户</p>
-<h4 id="官方题解-16">官方题解</h4>
+<h4 id="官方题解-17">官方题解</h4>
 <h3 id="881-救生艇httpsleetcode-cncomproblemsboats-to-save-people"><a href="https://leetcode-cn.com/problems/boats-to-save-people/" target="_blank" rel="noopener noreffer">881. 救生艇</a></h3>
 <p><img
         class="lazyload"
@@ -1739,7 +2027,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905171743589.png"
         title="image-20210905171743589" /></p>
-<h4 id="思路-16">思路：</h4>
+<h4 id="思路-19">思路：</h4>
 <ul>
 <li>重点是每艘船只能载1或2人</li>
 <li>排序，最轻的和最重的加，若不大于limit，左边指针后移一位</li>
@@ -1790,7 +2078,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210907152931008.png"
         title="image-20210907152931008" /></p>
-<h4 id="思路-17">思路：</h4>
+<h4 id="思路-20">思路：</h4>
 <ul>
 <li>此题的重点是，不能存在重复的三元组</li>
 <li>要找到和为0的三元组，自然地想到需要先进行排序。排序后找第一个元素，这个元素的特点是不能和前一个元素相等，这也就保证了每个三元组的最小值不会相等，初步保证不会重复</li>
@@ -1867,7 +2155,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905171849815.png"
         title="image-20210905171849815" /></p>
-<h4 id="思路-18">思路</h4>
+<h4 id="思路-21">思路</h4>
 <ul>
 <li>用carry表示进位</li>
 <li>head代表头结点，尾结点往后走到l1、l2都为空</li>
@@ -1939,7 +2227,7 @@
 <p>空间复杂度：O(1)</p>
 <p>执行用时：96ms，击败了99.90%的用户</p>
 <p>内存消耗：43.2MB，击败了32.54%的用户</p>
-<h4 id="官方题解-17">官方题解</h4>
+<h4 id="官方题解-18">官方题解</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1957,7 +2245,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905171920563.png"
         title="image-20210905171920563" /></p>
-<h4 id="思路-19">思路：</h4>
+<h4 id="思路-22">思路：</h4>
 <ol>
 <li>创建结点head和tail</li>
 <li>先判断是否都不为空，若有一个为空则返回另一个，都为空则直接返回空结点</li>
@@ -2086,7 +2374,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905172035800.png"
         title="image-20210905172035800" /></p>
-<h4 id="思路-20">思路：</h4>
+<h4 id="思路-23">思路：</h4>
 <ol>
 <li>数字大小都在区间[1,n]内，项数范围是[0,n-1]</li>
 <li>则每个元素的绝对值减去1，就代表其中一个项的位置</li>
@@ -2180,7 +2468,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905172127345.png"
         title="image-20210905172127345" /></p>
-<h4 id="思路-21">思路：</h4>
+<h4 id="思路-24">思路：</h4>
 <p>一层层剥开矩阵，用矩阵的四个边界控制，每走一圈（每剥开一层），矩阵缩小一次</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2246,7 +2534,7 @@
 <p>空间复杂度：O(1)，除了返回的数组，没有用到多余空间</p>
 <p>执行用时：60ms，击败了99.00%的用户</p>
 <p>内存消耗：37.7MB，击败了48.38%的用户</p>
-<h4 id="官方题解-18">官方题解：</h4>
+<h4 id="官方题解-19">官方题解：</h4>
 <p>一样</p>
 <h2 id="贪心">贪心</h2>
 <h3 id="1736-替换隐藏数字得到的最晚时间httpsleetcode-cncomproblemslatest-time-by-replacing-hidden-digits"><a href="https://leetcode-cn.com/problems/latest-time-by-replacing-hidden-digits/" target="_blank" rel="noopener noreffer">1736. 替换隐藏数字得到的最晚时间</a></h3>
@@ -2258,7 +2546,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905172213963.png"
         title="image-20210905172213963" /></p>
-<h4 id="思路-22">思路:</h4>
+<h4 id="思路-25">思路:</h4>
 <p>从第一位开始判断：因为第一位最重要，直接if else枚举</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2322,7 +2610,7 @@
 <p>空间复杂度：O(1)</p>
 <p>执行用时：72ms，击败了90.00%的用户</p>
 <p>内存消耗：37.8MB，击败了84.00%的用户</p>
-<h4 id="官方题解-19">官方题解</h4>
+<h4 id="官方题解-20">官方题解</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2541,7 +2829,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905172415655.png"
         title="image-20210905172415655" /></p>
-<h4 id="思路-23">思路：</h4>
+<h4 id="思路-26">思路：</h4>
 <ul>
 <li>暴力，双重循环</li>
 <li>哈希表</li>
@@ -2572,7 +2860,8 @@
 <span class="p">};</span>
 </code></pre></td></tr></table>
 </div>
-</div></div><div class="post-footer" id="post-footer">
+</div><p>``</p>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -2585,7 +2874,7 @@
                             <a class="link-to-markdown" href="/leetcode/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://MichaelYuhe.github.io/leetcode/" data-title="持续更新的LeetCode笔记" data-hashtags="learning,leetcode"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://MichaelYuhe.github.io/leetcode/" data-title="持续更新的LeetCode笔记" data-ralateuid="u/7327190619"><i class="fab fa-weibo fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://MichaelYuhe.github.io/leetcode/" data-title="持续更新的LeetCode笔记" data-via="Coooolxyh" data-hashtags="learning,leetcode"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://MichaelYuhe.github.io/leetcode/" data-title="持续更新的LeetCode笔记" data-ralateuid="u/7327190619"><i class="fab fa-weibo fa-fw"></i></a></span>
             </div>
         </div>
     </div>
@@ -2614,5 +2903,5 @@
             </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
                 <i class="fas fa-comment fa-fw"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"VnoFwOAntIWwYmgCA3iQ2gzz-gzGzoHsz","appKey":"24ve8kV13pLoDH27z7txpwDu","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"说点什么吧","recordIP":true,"visitor":true}}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"VnoFwOAntIWwYmgCA3iQ2gzz-gzGzoHsz","appKey":"24ve8kV13pLoDH27z7txpwDu","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"说点什么吧","recordIP":false,"visitor":true}},"search":{"algoliaAppID":null,"algoliaIndex":null,"algoliaSearchKey":null,"highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>
