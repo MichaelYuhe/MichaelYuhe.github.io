@@ -28,23 +28,26 @@
 - 在src文件夹下新建目录**route**，在该文件夹里添加一个**index.js**文件
 
   ```js
-  // index.js
-  import { createRouter, createWebHistory } from "vue-router" // 引入
+  .// index.js
+  import { createRouter, createWebHistory } from "vue-router"
   const history = createWebHistory()
   const router = createRouter({
       history,
-      // 具体的路由项
       routes: [
           {
-              // 以新增的about视图为例
-              path: '/About',
-              name: 'About',
-              component: () => import('../views/About.vue') // 使用懒加载的方式
+              path: '/',
+              name: 'Home',
+              component: () => import('../views/Home.vue')
+          },
+          {
+              path: '/Login',
+              name: 'Login',
+              component: () => import('../views/Login.vue')
           }
       ]
   })
   
-  export default router // 将router导出
+  export default router
   ```
 
 - 修改**main.js**文件
@@ -62,12 +65,40 @@
 
 - 新建**views**文件夹，内部存放需要通过路由显示的视图
 
-- 
+  ![image-20210924200620604](/images/vue-router/image-20210924200620604.png)
+
+- 接下来就需要添加跳转路由的连接，和存放跳转到的视图的容器。更改App.vue文件结构，新增一个导航区存放链接，内容区存放视图，原有结构转移到Home.vue文件中
+
+  ```html
+  	<!-- 导航区 --> 
+  	<div class="nav">
+        <router-link to="/">Home</router-link>
+        <router-link to="/Login">Login</router-link>
+      </div>
+      <!-- 视图区 -->
+      <div class="main">
+        <router-view></router-view>
+      </div>
+  ```
+
+- 最终效果展示
+
+  当点击Login链接，以路由方式跳转到了Login界面
+
+  ![image-20210924201100380](/images/vue-router/image-20210924201100380.png)
+
+  点击Home或者tourist mode， 回到主页面
+
+  ![image-20210924201215210](/images/vue-router/image-20210924201215210.png)
 
 
 
-#### 
-
-
+```js
+// to do
+学习VueX
+区分登录用户和游客
+增加task的分类功能
+设置页面更换主题
+```
 
 
