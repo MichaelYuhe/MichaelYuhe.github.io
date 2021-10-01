@@ -5,30 +5,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Vue Router2 - Yuhe&#39;s Blog</title><meta name="Description" content="夏宇航的个人博客"><meta property="og:title" content="Vue Router2" />
-<meta property="og:description" content="Vue 3学习之路由的进阶 写在前面 之前学习使用了vue的路由，实现了简单的单页面内部pages跳转，继续跟随官方视频学习，进阶vue3中路由的使用" />
+        <title>Vuex使用小结 - Yuhe&#39;s Blog</title><meta name="Description" content="夏宇航的个人博客"><meta property="og:title" content="Vuex使用小结" />
+<meta property="og:description" content="Vuex使用小结 写在前面 虽如官方文档所说：“如果您不打算开发大型单页应用，使用 Vuex 可能是繁琐冗余的。确实是如此——如果您的应用够简单，您最好不" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://MichaelYuhe.github.io/vue-router2/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-09-27T09:33:14+08:00" />
-<meta property="article:modified_time" content="2021-09-27T09:33:14+08:00" />
+<meta property="og:url" content="https://MichaelYuhe.github.io/vuex/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-10-01T15:28:42+08:00" />
+<meta property="article:modified_time" content="2021-10-01T15:28:42+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Vue Router2"/>
-<meta name="twitter:description" content="Vue 3学习之路由的进阶 写在前面 之前学习使用了vue的路由，实现了简单的单页面内部pages跳转，继续跟随官方视频学习，进阶vue3中路由的使用"/>
+<meta name="twitter:title" content="Vuex使用小结"/>
+<meta name="twitter:description" content="Vuex使用小结 写在前面 虽如官方文档所说：“如果您不打算开发大型单页应用，使用 Vuex 可能是繁琐冗余的。确实是如此——如果您的应用够简单，您最好不"/>
 <meta name="application-name" content="Yuhe&#39;s Blog">
 <meta name="apple-mobile-web-app-title" content="Yuhe&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://MichaelYuhe.github.io/vue-router2/" /><link rel="prev" href="https://MichaelYuhe.github.io/vue-router/" /><link rel="next" href="https://MichaelYuhe.github.io/vuex/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://MichaelYuhe.github.io/vuex/" /><link rel="prev" href="https://MichaelYuhe.github.io/vue-router2/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Vue Router2",
+        "headline": "Vuex使用小结",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/MichaelYuhe.github.io\/vue-router2\/"
-        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Vue","wordcount":  878 ,
-        "url": "https:\/\/MichaelYuhe.github.io\/vue-router2\/","datePublished": "2021-09-27T09:33:14+08:00","dateModified": "2021-09-27T09:33:14+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/MichaelYuhe.github.io\/vuex\/"
+        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Vue","wordcount":  1003 ,
+        "url": "https:\/\/MichaelYuhe.github.io\/vuex\/","datePublished": "2021-10-01T15:28:42+08:00","dateModified": "2021-10-01T15:28:42+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/MichaelYuhe.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -118,10 +118,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Vue Router2</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Vuex使用小结</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>夏宇航</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/program/"><i class="far fa-folder fa-fw"></i>program</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-27">2021-09-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 878 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/vue-router2/" class="leancloud_visitors" data-flag-title="Vue Router2">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-01">2021-10-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1003 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/vuex/" class="leancloud_visitors" data-flag-title="Vuex使用小结">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -131,93 +131,77 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#vue-3学习之路由的进阶">Vue 3学习之路由的进阶</a>
+    <li><a href="#vuex使用小结">Vuex使用小结</a>
       <ul>
         <li><a href="#写在前面">写在前面</a></li>
-        <li><a href="#切换效果">切换效果</a></li>
-        <li><a href="#路由回溯与追踪">路由回溯与追踪</a></li>
-        <li><a href="#嵌套路由">嵌套路由</a></li>
-        <li><a href="#解耦路由组件传参">解耦：路由组件传参</a></li>
-        <li><a href="#导航守卫">导航守卫</a></li>
-        <li><a href="#heading"></a></li>
-        <li><a href="#heading-1"></a></li>
+        <li><a href="#vuex是什么">Vuex是什么</a></li>
+        <li><a href="#开始使用vuex">开始使用Vuex</a>
+          <ul>
+            <li><a href="#引入">引入</a></li>
+            <li><a href="#实例">实例</a></li>
+          </ul>
+        </li>
+        <li><a href="#解决页面刷新数据丢失问题">解决页面刷新数据丢失问题</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="vue-3学习之路由的进阶">Vue 3学习之路由的进阶</h2>
+            </div><div class="content" id="content"><h2 id="vuex使用小结">Vuex使用小结</h2>
 <h3 id="写在前面">写在前面</h3>
-<p>之前学习使用了vue的路由，实现了简单的单页面内部pages跳转，继续跟随官方视频学习，进阶vue3中路由的使用</p>
-<h3 id="切换效果">切换效果</h3>
-<p>vue-router提供了一套完备方便的，用于给各路由页面切换增加效果的方法。</p>
-<p>在vue2中，我们可以使用如下方法给页面切换添加slider效果</p>
+<p>虽如官方文档所说：“如果您不打算开发大型单页应用，使用 Vuex 可能是繁琐冗余的。确实是如此——如果您的应用够简单，您最好不要使用 Vuex”。没错，我的应用就是够简单的那个😂</p>
+<p>但随着深入学习，迟早也需要掌握Vuex的使用，何不现在就用上他呢？</p>
+<h3 id="vuex是什么">Vuex是什么</h3>
+<p>Vuex 是一个专为 Vue.js 应用程序开发的<strong>状态管理模式 + 库</strong>。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。（摘自Vue3官方文档）</p>
+<p>该状态自管理应用包含三部分</p>
+<ul>
+<li>state，状态，驱动应用的数据源</li>
+<li>view，视图，以声明方式将state映射到视图</li>
+<li>actions，操作，响应在视图上的用户输入导致的状态变化</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/vuex/image-20211001153324643.png"
+        data-srcset="/images/vuex/image-20211001153324643.png, /images/vuex/image-20211001153324643.png 1.5x, /images/vuex/image-20211001153324643.png 2x"
+        data-sizes="auto"
+        alt="/images/vuex/image-20211001153324643.png"
+        title="image-20211001153324643" /></p>
+<p>Vuex可以帮助我们更好地管理共享状态</p>
+<h3 id="开始使用vuex">开始使用Vuex</h3>
+<h4 id="引入">引入</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">npm i install vuex
+</code></pre></td></tr></table>
+</div>
+</div><p>在src文件夹下新建store目录，在其中新建index.js文件</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">transition</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;slide&#34;</span> <span class="na">mode</span><span class="o">=</span><span class="s">&#34;out-in&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">router-view</span> <span class="na">:key</span><span class="o">=</span><span class="s">&#34;$route.path&#34;</span><span class="p">/&gt;</span>
-<span class="p">&lt;/</span><span class="nt">transition</span><span class="p">&gt;</span>
-</code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">slide-enter-active</span><span class="o">,</span>
-<span class="p">.</span><span class="nc">slide-leave-active</span> <span class="p">{</span>
-  <span class="k">transition</span><span class="p">:</span> <span class="k">opacity</span> <span class="mf">.6</span><span class="kt">s</span><span class="p">,</span> <span class="k">transform</span> <span class="mf">.6</span><span class="kt">s</span><span class="p">;</span>
-<span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="p">{</span> <span class="nx">createStore</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;vuex&#34;</span>
 
-<span class="p">.</span><span class="nc">slide-enter</span><span class="o">,</span>
-<span class="p">.</span><span class="nc">slide-leave-to</span> <span class="p">{</span>
-  <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">transform</span><span class="p">:</span> <span class="nb">translateX</span><span class="p">(</span><span class="mi">-30</span><span class="kt">%</span><span class="p">);</span>
-<span class="p">}</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">createStore</span><span class="p">({</span>
+    <span class="nx">state</span><span class="o">:</span> <span class="p">{},</span>
+    <span class="nx">mutations</span><span class="o">:</span> <span class="p">{},</span>
+    <span class="nx">actions</span><span class="o">:</span> <span class="p">{},</span>
+    <span class="nx">modules</span><span class="o">:</span> <span class="p">{}</span>
+<span class="p">})</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>但在vue3中，继续这种写法能正常工作，但会有warning。</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/images/vue-router2/image-20210927191423295.png"
-        data-srcset="/images/vue-router2/image-20210927191423295.png, /images/vue-router2/image-20210927191423295.png 1.5x, /images/vue-router2/image-20210927191423295.png 2x"
-        data-sizes="auto"
-        alt="/images/vue-router2/image-20210927191423295.png"
-        title="image-20210927191423295" /></p>
-<p>根据warning提示对其进行修改即可</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"></code></pre></td></tr></table>
-</div>
-</div><h3 id="路由回溯与追踪">路由回溯与追踪</h3>
-<p>想要添加一个回到上一页的功能却苦于状态管理？Vue已经帮我们准备好了方法。很简单，仅需要一行代码。给一个按钮绑定goBack事件，点击触发，以下是goBack函数内的所有内容。this.$router.go()可以接受正数和负数作为参数，来进行路由间的跳转。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">$router</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> 
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="嵌套路由">嵌套路由</h3>
-<p>一些应用程序的 UI 由多层嵌套的组件组成。在这种情况下，URL 的片段通常对应于特定的嵌套组件结构。通过 Vue Router，就可以使用嵌套路由配置来表达这种关系。</p>
-<p>想要将组件渲染到嵌套的router-view当中，就需要在路由中配置chidren</p>
+</div><h4 id="实例">实例</h4>
+<p>往state中存入我们所需要共享的数据和操作</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -232,41 +216,51 @@
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="p">{</span>	<span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;/details/:slug&#34;</span><span class="p">,</span>
-    <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;DestinationDetails&#34;</span><span class="p">,</span>
-    <span class="nx">component</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="kr">import</span><span class="p">(</span><span class="cm">/* webpackChunkName: &#34;DestinationDetails&#34; */</span><span class="s2">&#34;../views/DestinationDetails.vue&#34;</span><span class="p">),</span>
-    <span class="nx">props</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nx">children</span><span class="o">:</span> <span class="p">[</span>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">state</span><span class="o">:</span> <span class="p">{</span>
+	<span class="nx">isLogin</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">configs</span><span class="o">:</span> <span class="p">[</span>
       <span class="p">{</span>
-        <span class="nx">path</span><span class="o">:</span> <span class="s2">&#34;:experienceSlug&#34;</span><span class="p">,</span>
-        <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;ExperienceDetails&#34;</span><span class="p">,</span>
-        <span class="nx">component</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="kr">import</span><span class="p">(</span><span class="cm">/* webpackChunkName: &#34;ExperienceDetails&#34; */</span><span class="s2">&#34;../views/ExperienceDetails.vue&#34;</span><span class="p">),</span>
-        <span class="nx">props</span><span class="o">:</span> <span class="kc">true</span>
+        <span class="nx">title</span><span class="o">:</span> <span class="s2">&#34;theme&#34;</span><span class="p">,</span>
+        <span class="nx">property</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nx">title</span><span class="o">:</span> <span class="s2">&#34;enableDelete&#34;</span><span class="p">,</span>
+        <span class="nx">property</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="mi">2</span>
       <span class="p">}</span>
-    <span class="p">]}</span>
+    <span class="p">]</span>
+<span class="p">},</span>
+<span class="nx">mutations</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">login</span><span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">state</span><span class="p">.</span><span class="nx">isLogin</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>如上所示，ExperienceDetails组件就将被渲染到嵌套在DestinationDetails组件的router-view中，而不会跳转到新的页面。</p>
-<p><code>children</code> 配置只是另一个路由数组，就像 <code>routes</code> 本身一样。因此，可以根据自己的需要，不断地嵌套视图。</p>
-<h3 id="解耦路由组件传参">解耦：路由组件传参</h3>
-<p>在组件中过多使用<code>$route</code>会使组件与路由紧密耦合，限制了其灵活性，因为这样只能用于特定的URL，我们可以通过配置props来解决这个问题。以官方文档为例，我们可以将下面的代码</p>
+</div><p>存放好了数据，该怎么查看、使用和更改这些数据呢？</p>
+<p>要调用这些数据，需要通过store.state来获取</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">User</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">template</span><span class="o">:</span> <span class="s1">&#39;&lt;div&gt;User {{ $route.params.id }}&lt;/div&gt;&#39;</span>
-<span class="p">}</span>
-<span class="kr">const</span> <span class="nx">routes</span> <span class="o">=</span> <span class="p">[{</span> <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/user/:id&#39;</span><span class="p">,</span> <span class="nx">component</span><span class="o">:</span> <span class="nx">User</span> <span class="p">}]</span>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 任意组件/视图下
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">isLogin</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>替换成</p>
+</div><p>我们不能直接更改数据，需要通过提交mutation的方式来改变。例如，当我们点击了登录按钮</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -274,34 +268,82 @@
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">User</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">props</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">],</span>
-  <span class="nx">template</span><span class="o">:</span> <span class="s1">&#39;&lt;div&gt;User {{ id }}&lt;/div&gt;&#39;</span>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+	<span class="nx">login</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">)</span>
+	<span class="p">}</span>
+    <span class="c1">// 当需要同时传递数据
+</span><span class="c1"></span>    <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;mutationName&#39;</span><span class="p">,</span> <span class="nx">data1</span><span class="p">,</span> <span class="nx">data2</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="kr">const</span> <span class="nx">routes</span> <span class="o">=</span> <span class="p">[{</span> <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/user/:id&#39;</span><span class="p">,</span> <span class="nx">component</span><span class="o">:</span> <span class="nx">User</span><span class="p">,</span> <span class="nx">props</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}]</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>这就允许我们在任何地方使用该组件，使其更易于复用与测试。</p>
-<h3 id="导航守卫">导航守卫</h3>
-<p><strong>正如其名，vue-router 提供的导航守卫主要用来通过跳转或取消的方式守卫导航</strong></p>
-<h3 id="heading"></h3>
-<h3 id="heading-1"></h3>
-</div><div class="post-footer" id="post-footer">
+</div><h3 id="解决页面刷新数据丢失问题">解决页面刷新数据丢失问题</h3>
+<p>store里的数据是保存在运行内存中的，每当页面刷新，就会重载Vue实例，store里的数据就会被重新赋值初始化。</p>
+<p>要解决这个问题，就需要想办法把数据存储在本地（localStorage, sessionStorage, cookie三者之一中）。<a href="/#" rel="">三者区别</a></p>
+<p>由于创建的是单页面应用，操作只是在一个页面跳转路由，因此选择sessionStorage.</p>
+<p>具体操作：</p>
+<ol>
+<li>在页面初始化和每次更新时，读取sessionStorage的数据存储到store中，使用Vuex的replaceState方法来替换store的根状态</li>
+<li>在beforeunload方法中，将store.state存储到sessionStorage.</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// App.vue
+</span><span class="c1"></span><span class="nx">created</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//在页面加载时读取sessionStorage里的状态信息
+</span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">&#34;store&#34;</span><span class="p">))</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">replaceState</span><span class="p">(</span>
+        <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span>
+          <span class="p">{},</span>
+          <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span><span class="p">,</span>
+          <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">&#34;store&#34;</span><span class="p">))</span>
+        <span class="p">)</span>
+      <span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">//在页面刷新时将vuex里的信息保存到sessionStorage里
+</span><span class="c1"></span>    <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;beforeunload&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s2">&#34;store&#34;</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span><span class="p">));</span>
+    <span class="p">});</span>
+  <span class="p">},</span>
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2021-09-27</span>
+                <span>更新于 2021-10-01</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/vue-router2/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/vuex/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://MichaelYuhe.github.io/vue-router2/" data-title="Vue Router2" data-via="Coooolxyh" data-hashtags="Vue"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://MichaelYuhe.github.io/vue-router2/" data-title="Vue Router2" data-ralateuid="u/7327190619"><i class="fab fa-weibo fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://MichaelYuhe.github.io/vuex/" data-title="Vuex使用小结" data-via="Coooolxyh" data-hashtags="Vue"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://MichaelYuhe.github.io/vuex/" data-title="Vuex使用小结" data-ralateuid="u/7327190619"><i class="fab fa-weibo fa-fw"></i></a></span>
             </div>
         </div>
     </div>
@@ -313,8 +355,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/vue-router/" class="prev" rel="prev" title="Vue Router"><i class="fas fa-angle-left fa-fw"></i>Vue Router</a>
-            <a href="/vuex/" class="next" rel="next" title="Vuex使用小结">Vuex使用小结<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/vue-router2/" class="prev" rel="prev" title="Vue Router2"><i class="fas fa-angle-left fa-fw"></i>Vue Router2</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
