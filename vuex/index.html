@@ -18,7 +18,7 @@
 <meta name="application-name" content="Yuhe&#39;s Blog">
 <meta name="apple-mobile-web-app-title" content="Yuhe&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://MichaelYuhe.github.io/vuex/" /><link rel="prev" href="https://MichaelYuhe.github.io/vue-router2/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://MichaelYuhe.github.io/vuex/" /><link rel="prev" href="https://MichaelYuhe.github.io/vue-router2/" /><link rel="next" href="https://MichaelYuhe.github.io/es6/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/MichaelYuhe.github.io\/vuex\/"
-        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Vue","wordcount":  1003 ,
+        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Vue","wordcount":  1445 ,
         "url": "https:\/\/MichaelYuhe.github.io\/vuex\/","datePublished": "2021-10-01T15:28:42+08:00","dateModified": "2021-10-01T15:28:42+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/MichaelYuhe.github.io\/images\/avatar.png"},"author": {
@@ -120,7 +120,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Vuex使用小结</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>夏宇航</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/program/"><i class="far fa-folder fa-fw"></i>program</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-01">2021-10-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1003 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-01">2021-10-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1445 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/vuex/" class="leancloud_visitors" data-flag-title="Vuex使用小结">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -142,6 +142,7 @@
           </ul>
         </li>
         <li><a href="#解决页面刷新数据丢失问题">解决页面刷新数据丢失问题</a></li>
+        <li><a href="#数据更新页面不更新的问题">数据更新页面不更新的问题</a></li>
       </ul>
     </li>
   </ul>
@@ -330,7 +331,121 @@
   <span class="p">},</span>
 </code></pre></td></tr></table>
 </div>
-</div></div><div class="post-footer" id="post-footer">
+</div><h3 id="数据更新页面不更新的问题">数据更新页面不更新的问题</h3>
+<p>解决完数据丢失的问题，又遇到了更新数据页面不随之更新的问题。从底层出发进行分析。</p>
+<p>原来的代码如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 组件中
+</span><span class="c1"></span><span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="p">{</span>
+		<span class="nx">currentCategory</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">currentCategory</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">changeCategory</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;changeCategory&#39;</span><span class="p">,</span> <span class="nx">name</span><span class="p">)</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">currentCategory</span><span class="p">)</span> <span class="c1">// 成功更新
+</span><span class="c1"></span>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">currentCategory</span><span class="p">)</span> <span class="c1">// 未更新
+</span><span class="c1"></span>    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// store.js
+</span><span class="c1"></span><span class="nx">mutations</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">changeCategory</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">state</span><span class="p">.</span><span class="nx">currentCategory</span> <span class="o">=</span> <span class="nx">name</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>在提交了更新以后，通过控制台查看输出，可以发现store.js里的变量已经成功更新，但组件内的data并没有再次获取更新后的值。这就牵扯到Vue的生命周期。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="nx">val</span><span class="o">:</span> <span class="s1">&#39;hello vue&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">beforeCreated</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">val</span><span class="p">)</span> <span class="c1">//undefined
+</span><span class="c1"></span><span class="p">}</span>
+<span class="nx">created</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">val</span><span class="p">)</span> <span class="c1">// hello vue
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>不难发现data的赋值，是在created()中进行的。</p>
+<p>而Vuex的state数据改变，并不会触发组件的刷新，组件也就无法获取到改变的值，直到手动进行刷新为止。该如何解决这个问题呢？</p>
+<ol>
+<li>
+<p>最简单的方法，是在组件中直接使用state中的数据，而不是用自建data作为中间变量。</p>
+</li>
+<li>
+<p>第二个方法，就是在提交数据的时候进行强制刷新操作，迫使组件重新获取store的值</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">changeCategory</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">commit</span><span class="p">(</span><span class="s1">&#39;changeCategory&#39;</span><span class="p">,</span> <span class="nx">name</span><span class="p">)</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">$store</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">currentCategory</span><span class="p">)</span> <span class="c1">// 成功更新
+</span><span class="c1"></span>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">currentCategory</span><span class="p">)</span> <span class="c1">// 未更新
+</span><span class="c1"></span>        <span class="k">this</span><span class="p">.</span><span class="nx">$forceUpdate</span><span class="p">()</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">currentCategory</span><span class="p">)</span> <span class="c1">// 成功更新
+</span><span class="c1"></span>    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -355,7 +470,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/vue-router2/" class="prev" rel="prev" title="Vue Router2"><i class="fas fa-angle-left fa-fw"></i>Vue Router2</a></div>
+    <div class="post-nav"><a href="/vue-router2/" class="prev" rel="prev" title="Vue Router2"><i class="fas fa-angle-left fa-fw"></i>Vue Router2</a>
+            <a href="/es6/" class="next" rel="next" title="知识点总结">知识点总结<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

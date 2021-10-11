@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/MichaelYuhe.github.io\/leetcode\/"
-        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "learning, leetcode","wordcount":  10214 ,
+        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "learning, leetcode","wordcount":  10423 ,
         "url": "https:\/\/MichaelYuhe.github.io\/leetcode\/","datePublished": "2021-09-05T16:34:10+08:00","dateModified": "2021-09-05T16:34:10+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/MichaelYuhe.github.io\/images\/avatar.png"},"author": {
@@ -120,7 +120,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">持续更新的LeetCode笔记</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>夏宇航</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/program/"><i class="far fa-folder fa-fw"></i>program</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-05">2021-09-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 10214 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-05">2021-09-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 10423 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 21 分钟&nbsp;<span id="/leetcode/" class="leancloud_visitors" data-flag-title="持续更新的LeetCode笔记">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -328,6 +328,11 @@
         <li><a href="#1两数之和httpsleetcode-cncomproblemstwo-sum"><a href="https://leetcode-cn.com/problems/two-sum/">1.两数之和</a></a>
           <ul>
             <li><a href="#思路-26">思路：</a></li>
+          </ul>
+        </li>
+        <li><a href="#128-最长连续子序列httpsleetcode-cncomproblemslongest-consecutive-sequence"><a href="https://leetcode-cn.com/problems/longest-consecutive-sequence/">128. 最长连续子序列</a></a>
+          <ul>
+            <li><a href="#思路-27">思路：</a></li>
           </ul>
         </li>
       </ul>
@@ -2860,8 +2865,59 @@
 <span class="p">};</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>``</p>
-</div><div class="post-footer" id="post-footer">
+</div><h3 id="128-最长连续子序列httpsleetcode-cncomproblemslongest-consecutive-sequence"><a href="https://leetcode-cn.com/problems/longest-consecutive-sequence/" target="_blank" rel="noopener noreffer">128. 最长连续子序列</a></h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="../../static/images/LeetCode/image-20211006145530245.png"
+        data-srcset="../../static/images/LeetCode/image-20211006145530245.png, ../../static/images/LeetCode/image-20211006145530245.png 1.5x, ../../static/images/LeetCode/image-20211006145530245.png 2x"
+        data-sizes="auto"
+        alt="../../static/images/LeetCode/image-20211006145530245.png"
+        title="image-20211006145530245" /></p>
+<h4 id="思路-27">思路：</h4>
+<p>因为时间复杂度要求为O(n)，所以不能使用排序算法。而很自然就想到应该使用哈希表来解决这个问题<code>let hashNums = new Set(nums)</code></p>
+<p>得到这样一个集合后，对于在数组内的元素，我们查找它的左邻居(比它小1的数字)是否在集合里，若在则长度加一，并保存长度然后从它的右邻居开始找，直到它的右邻居不在集合里</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">longestConsecutive</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">res</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="kd">let</span> <span class="nx">myHash</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Set</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">num</span> <span class="k">of</span> <span class="nx">myHash</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">myHash</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="p">{</span>
+            <span class="kd">let</span> <span class="nx">currentNum</span> <span class="o">=</span> <span class="nx">num</span>
+            <span class="kd">let</span> <span class="nx">currentLen</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">while</span><span class="p">(</span><span class="nx">myHash</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">currentNum</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="p">{</span>
+                <span class="nx">currentNum</span><span class="o">++</span>
+                <span class="nx">currentLen</span><span class="o">++</span>
+            <span class="p">}</span>
+            <span class="nx">res</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">res</span><span class="p">,</span> <span class="nx">currentLen</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">res</span>
+<span class="p">};</span>
+
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

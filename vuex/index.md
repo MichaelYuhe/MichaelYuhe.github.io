@@ -125,4 +125,70 @@ created() {
   },
 ```
 
+### 数据更新页面不更新的问题
+
+解决完数据丢失的问题，又遇到了更新数据页面不随之更新的问题。从底层出发进行分析。
+
+原来的代码如下
+
+```js
+// 组件中
+data() {
+	return {
+		currentCategory: this.$store.state.currentCategory
+	}
+}
+
+methods: {
+    changeCategory(name) {
+        this.$store.commit('changeCategory', name)
+        console.log(this.$store.state.currentCategory) // 成功更新
+        console.log(this.currentCategory) // 未更新
+    }
+}
+
+// store.js
+mutations: {
+    changeCategory(state, name) {
+        state.currentCategory = name
+    }
+}
+```
+
+在提交了更新以后，通过控制台查看输出，可以发现store.js里的变量已经成功更新，但组件内的data并没有再次获取更新后的值。这就牵扯到Vue的生命周期。
+
+```js
+data() {
+    return {
+        val: 'hello vue'
+    }
+}
+beforeCreated() {
+	console.log(this.val) //undefined
+}
+created() {
+	console.log(this.val) // hello vue
+}
+```
+
+不难发现data的赋值，是在created()中进行的。
+
+而Vuex的state数据改变，并不会触发组件的刷新，组件也就无法获取到改变的值，直到手动进行刷新为止。该如何解决这个问题呢？
+
+1. 最简单的方法，是在组件中直接使用state中的数据，而不是用自建data作为中间变量。
+
+2. 第二个方法，就是在提交数据的时候进行强制刷新操作，迫使组件重新获取store的值
+
+   ```js
+   methods: {
+       changeCategory(name) {
+           this.$store.commit('changeCategory', name)
+           console.log(this.$store.state.currentCategory) // 成功更新
+           console.log(this.currentCategory) // 未更新
+           this.$forceUpdate()
+           console.log(this.currentCategory) // 成功更新
+       }
+   }
+   ```
+
 

@@ -1581,5 +1581,38 @@ var twoSum = function(nums, target) {
 };
 ```
 
-``
+
+
+### [128. 最长连续子序列](https://leetcode-cn.com/problems/longest-consecutive-sequence/)
+
+![image-20211006145530245](../../static/images/LeetCode/image-20211006145530245.png)
+
+#### 思路：
+
+因为时间复杂度要求为O(n)，所以不能使用排序算法。而很自然就想到应该使用哈希表来解决这个问题`let hashNums = new Set(nums)`
+
+得到这样一个集合后，对于在数组内的元素，我们查找它的左邻居(比它小1的数字)是否在集合里，若在则长度加一，并保存长度然后从它的右邻居开始找，直到它的右邻居不在集合里
+
+```js
+var longestConsecutive = function(nums) {
+    res = 0
+    let myHash = new Set(nums)
+    for(let num of myHash) {
+        if(!myHash.has(num - 1)) {
+            let currentNum = num
+            let currentLen = 1
+            while(myHash.has(currentNum + 1)) {
+                currentNum++
+                currentLen++
+            }
+            res = Math.max(res, currentLen)
+        }
+    }
+    return res
+};
+
+```
+
+
+
 
