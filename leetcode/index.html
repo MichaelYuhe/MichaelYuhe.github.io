@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/MichaelYuhe.github.io\/leetcode\/"
-        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "learning, leetcode","wordcount":  10423 ,
+        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "learning, leetcode","wordcount":  10879 ,
         "url": "https:\/\/MichaelYuhe.github.io\/leetcode\/","datePublished": "2021-09-05T16:34:10+08:00","dateModified": "2021-09-05T16:34:10+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/MichaelYuhe.github.io\/images\/avatar.png"},"author": {
@@ -120,8 +120,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">持续更新的LeetCode笔记</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>夏宇航</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/program/"><i class="far fa-folder fa-fw"></i>program</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-05">2021-09-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 10423 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 21 分钟&nbsp;<span id="/leetcode/" class="leancloud_visitors" data-flag-title="持续更新的LeetCode笔记">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-05">2021-09-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 10879 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 22 分钟&nbsp;<span id="/leetcode/" class="leancloud_visitors" data-flag-title="持续更新的LeetCode笔记">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -223,12 +223,22 @@
         </li>
       </ul>
     </li>
+    <li><a href="#bfs和dfs">BFS和DFS</a>
+      <ul>
+        <li><a href="#200-岛屿数量httpsleetcode-cncomproblemsnumber-of-islands"><a href="https://leetcode-cn.com/problems/number-of-islands/">200. 岛屿数量</a></a>
+          <ul>
+            <li><a href="#思路-13">思路</a></li>
+            <li><a href="#官方题解-11">官方题解</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
     <li><a href="#摩尔投票法">摩尔投票法</a>
       <ul>
         <li><a href="#面试题1710主要元素httpsleetcode-cncomproblemsfind-majority-element-lcci"><a href="https://leetcode-cn.com/problems/find-majority-element-lcci/">面试题17.10.主要元素</a></a>
           <ul>
-            <li><a href="#思路-13">思路：</a></li>
-            <li><a href="#官方题解-11">官方题解：</a></li>
+            <li><a href="#思路-14">思路：</a></li>
+            <li><a href="#官方题解-12">官方题解：</a></li>
           </ul>
         </li>
       </ul>
@@ -237,47 +247,47 @@
       <ul>
         <li><a href="#3-无重复字符的最长字串httpsleetcode-cncomproblemslongest-substring-without-repeating-characters"><a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/">3. 无重复字符的最长字串</a></a>
           <ul>
-            <li><a href="#思路-14">思路</a></li>
-            <li><a href="#官方题解-12">官方题解</a></li>
+            <li><a href="#思路-15">思路</a></li>
+            <li><a href="#官方题解-13">官方题解</a></li>
           </ul>
         </li>
         <li><a href="#26删除有序数组中的重复元素httpsleetcode-cncomproblemsremove-duplicates-from-sorted-array"><a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/">26.删除有序数组中的重复元素</a></a>
-          <ul>
-            <li><a href="#思路-15">思路：</a></li>
-            <li><a href="#官方题解-13">官方题解：</a></li>
-          </ul>
-        </li>
-        <li><a href="#27移除指定元素httpsleetcode-cncomproblemsremove-element"><a href="https://leetcode-cn.com/problems/remove-element/">27.移除指定元素</a></a>
           <ul>
             <li><a href="#思路-16">思路：</a></li>
             <li><a href="#官方题解-14">官方题解：</a></li>
           </ul>
         </li>
-        <li><a href="#剑指offer52-两个链表的第一个公共节点httpsleetcode-cncomproblemsliang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof"><a href="https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/">剑指offer52 两个链表的第一个公共节点</a></a>
+        <li><a href="#27移除指定元素httpsleetcode-cncomproblemsremove-element"><a href="https://leetcode-cn.com/problems/remove-element/">27.移除指定元素</a></a>
           <ul>
-            <li><a href="#官方题解-15">官方题解</a></li>
+            <li><a href="#思路-17">思路：</a></li>
+            <li><a href="#官方题解-15">官方题解：</a></li>
           </ul>
         </li>
-        <li><a href="#141-环形链表">141. 环形链表</a>
+        <li><a href="#剑指offer52-两个链表的第一个公共节点httpsleetcode-cncomproblemsliang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof"><a href="https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/">剑指offer52 两个链表的第一个公共节点</a></a>
           <ul>
-            <li><a href="#思路-17">思路</a></li>
             <li><a href="#官方题解-16">官方题解</a></li>
           </ul>
         </li>
-        <li><a href="#611-有效三角形的个数httpsleetcode-cncomproblemsvalid-triangle-number"><a href="https://leetcode-cn.com/problems/valid-triangle-number/">611. 有效三角形的个数</a></a>
+        <li><a href="#141-环形链表">141. 环形链表</a>
           <ul>
             <li><a href="#思路-18">思路</a></li>
             <li><a href="#官方题解-17">官方题解</a></li>
           </ul>
         </li>
+        <li><a href="#611-有效三角形的个数httpsleetcode-cncomproblemsvalid-triangle-number"><a href="https://leetcode-cn.com/problems/valid-triangle-number/">611. 有效三角形的个数</a></a>
+          <ul>
+            <li><a href="#思路-19">思路</a></li>
+            <li><a href="#官方题解-18">官方题解</a></li>
+          </ul>
+        </li>
         <li><a href="#881-救生艇httpsleetcode-cncomproblemsboats-to-save-people"><a href="https://leetcode-cn.com/problems/boats-to-save-people/">881. 救生艇</a></a>
           <ul>
-            <li><a href="#思路-19">思路：</a></li>
+            <li><a href="#思路-20">思路：</a></li>
           </ul>
         </li>
         <li><a href="#15-三数之和httpsleetcode-cncomproblems3sum">15. <a href="https://leetcode-cn.com/problems/3sum/">三数之和</a></a>
           <ul>
-            <li><a href="#思路-20">思路：</a></li>
+            <li><a href="#思路-21">思路：</a></li>
           </ul>
         </li>
       </ul>
@@ -286,27 +296,27 @@
       <ul>
         <li><a href="#2-两数相加httpsleetcode-cncomproblemsadd-two-numbers"><a href="https://leetcode-cn.com/problems/add-two-numbers/">2. 两数相加</a></a>
           <ul>
-            <li><a href="#思路-21">思路</a></li>
-            <li><a href="#官方题解-18">官方题解</a></li>
+            <li><a href="#思路-22">思路</a></li>
+            <li><a href="#官方题解-19">官方题解</a></li>
           </ul>
         </li>
         <li><a href="#21合并两个有序链表httpsleetcode-cncomproblemsmerge-two-sorted-lists"><a href="https://leetcode-cn.com/problems/merge-two-sorted-lists/">21.合并两个有序链表</a></a>
           <ul>
-            <li><a href="#思路-22">思路：</a></li>
+            <li><a href="#思路-23">思路：</a></li>
             <li><a href="#官方递归解法">官方递归解法：</a></li>
             <li><a href="#递归">递归：</a></li>
           </ul>
         </li>
         <li><a href="#448找到消失的数字httpsleetcode-cncomproblemsfind-all-numbers-disappeared-in-an-array"><a href="https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/">448.找到消失的数字</a></a>
           <ul>
-            <li><a href="#思路-23">思路：</a></li>
+            <li><a href="#思路-24">思路：</a></li>
             <li><a href="#官方题解的做法">官方题解的做法：</a></li>
           </ul>
         </li>
         <li><a href="#54-螺旋矩阵httpsleetcode-cncomproblemsspiral-matrix"><a href="https://leetcode-cn.com/problems/spiral-matrix/">54. 螺旋矩阵</a></a>
           <ul>
-            <li><a href="#思路-24">思路：</a></li>
-            <li><a href="#官方题解-19">官方题解：</a></li>
+            <li><a href="#思路-25">思路：</a></li>
+            <li><a href="#官方题解-20">官方题解：</a></li>
           </ul>
         </li>
       </ul>
@@ -315,8 +325,8 @@
       <ul>
         <li><a href="#1736-替换隐藏数字得到的最晚时间httpsleetcode-cncomproblemslatest-time-by-replacing-hidden-digits"><a href="https://leetcode-cn.com/problems/latest-time-by-replacing-hidden-digits/">1736. 替换隐藏数字得到的最晚时间</a></a>
           <ul>
-            <li><a href="#思路-25">思路:</a></li>
-            <li><a href="#官方题解-20">官方题解</a></li>
+            <li><a href="#思路-26">思路:</a></li>
+            <li><a href="#官方题解-21">官方题解</a></li>
           </ul>
         </li>
       </ul>
@@ -327,12 +337,12 @@
         <li><a href="#706-设计哈希映射httpsleetcode-cncomproblemsdesign-hashmap"><a href="https://leetcode-cn.com/problems/design-hashmap/">706. 设计哈希映射</a></a></li>
         <li><a href="#1两数之和httpsleetcode-cncomproblemstwo-sum"><a href="https://leetcode-cn.com/problems/two-sum/">1.两数之和</a></a>
           <ul>
-            <li><a href="#思路-26">思路：</a></li>
+            <li><a href="#思路-27">思路：</a></li>
           </ul>
         </li>
         <li><a href="#128-最长连续子序列httpsleetcode-cncomproblemslongest-consecutive-sequence"><a href="https://leetcode-cn.com/problems/longest-consecutive-sequence/">128. 最长连续子序列</a></a>
           <ul>
-            <li><a href="#思路-27">思路：</a></li>
+            <li><a href="#思路-28">思路：</a></li>
           </ul>
         </li>
       </ul>
@@ -1436,7 +1446,152 @@
 </div>
 </div><p>**const dfs = (node) =&gt; {} **</p>
 <p><strong>=&gt;  :  箭头函数，相当于匿名函数，且简化了函数定义</strong></p>
-<h2 id="摩尔投票法">摩尔投票法</h2>
+<h2 id="bfs和dfs">BFS和DFS</h2>
+<h3 id="200-岛屿数量httpsleetcode-cncomproblemsnumber-of-islands"><a href="https://leetcode-cn.com/problems/number-of-islands/" target="_blank" rel="noopener noreffer">200. 岛屿数量</a></h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="../../static/images/LeetCode/image-20211012132241776.png"
+        data-srcset="../../static/images/LeetCode/image-20211012132241776.png, ../../static/images/LeetCode/image-20211012132241776.png 1.5x, ../../static/images/LeetCode/image-20211012132241776.png 2x"
+        data-sizes="auto"
+        alt="../../static/images/LeetCode/image-20211012132241776.png"
+        title="image-20211012132241776" /></p>
+<h4 id="思路-13">思路</h4>
+<p>遍历grid，当遇到1，将其置0，将其上下左右的1置0，将其上下左右的1的上下左右的1置零……</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">numIslands</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grid</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">res</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="kr">const</span> <span class="nx">bfs</span> <span class="o">=</span> <span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">i</span> <span class="o">&gt;=</span> <span class="nx">grid</span><span class="p">.</span><span class="nx">length</span> <span class="o">||</span> <span class="nx">j</span> <span class="o">&gt;=</span> <span class="nx">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">length</span> <span class="o">||</span> <span class="nx">grid</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span>
+        <span class="p">}</span>
+        <span class="nx">grid</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
+        <span class="nx">bfs</span><span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">j</span><span class="p">)</span>
+        <span class="nx">bfs</span><span class="p">(</span><span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">j</span><span class="p">)</span>
+        <span class="nx">bfs</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="nx">bfs</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">grid</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="nx">grid</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;1&#39;</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">res</span><span class="o">++</span>
+                <span class="nx">bfs</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">res</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>时间复杂度：O(n)</p>
+<p>空间复杂度：O(1)</p>
+<p>执行用时：84ms，击败了52.76%的用户</p>
+<p>内存消耗：40.4MB，击败了49.33%的用户</p>
+<h4 id="官方题解-11">官方题解</h4>
+<p>1.广度优先搜索BFS</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">numIslands</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">grid</span><span class="p">:</span> <span class="p">[[</span><span class="nb">str</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">def</span> <span class="nf">bfs</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+            <span class="n">queue</span> <span class="o">=</span> <span class="p">[[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]]</span>
+            <span class="k">while</span> <span class="n">queue</span><span class="p">:</span>
+                <span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+                <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">grid</span><span class="p">)</span> <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">and</span> <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
+                    <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
+                    <span class="n">queue</span> <span class="o">+=</span> <span class="p">[[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">],</span> <span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">],</span> <span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]]</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">grid</span><span class="p">)):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
+                <span class="k">if</span> <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;0&#39;</span><span class="p">:</span> <span class="k">continue</span>
+                <span class="n">bfs</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+                <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">count</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>2.深度优先搜索DFS</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">numIslands</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">grid</span><span class="p">:</span> <span class="p">[[</span><span class="nb">str</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">grid</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">or</span> <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;0&#39;</span><span class="p">:</span> <span class="k">return</span>
+            <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
+            <span class="n">dfs</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+            <span class="n">dfs</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">dfs</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+            <span class="n">dfs</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">grid</span><span class="p">)):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
+                <span class="k">if</span> <span class="n">grid</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
+                    <span class="n">dfs</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+                    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">count</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="摩尔投票法">摩尔投票法</h2>
 <h3 id="面试题1710主要元素httpsleetcode-cncomproblemsfind-majority-element-lcci"><a href="https://leetcode-cn.com/problems/find-majority-element-lcci/" target="_blank" rel="noopener noreffer">面试题17.10.主要元素</a></h3>
 <p><img
         class="lazyload"
@@ -1446,7 +1601,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905171110786.png"
         title="image-20210905171110786" /></p>
-<h4 id="思路-13">思路：</h4>
+<h4 id="思路-14">思路：</h4>
 <ol>
 <li>若数组里只有一个数字，直接返回；</li>
 <li>对数组进行排序后，若两个相差一半长度的元素相等，则该元素就是主要元素；</li>
@@ -1488,7 +1643,7 @@
 <p>空间复杂度：O(1)，没有用到多余的空间</p>
 <p>执行用时：72ms，击败了94.35%的用户</p>
 <p>内存消耗：42.2MB，击败了10.63%的用户</p>
-<h4 id="官方题解-11">官方题解：</h4>
+<h4 id="官方题解-12">官方题解：</h4>
 <p>Boyer-Moore投票算法</p>
 <p>Boyer-Moore 投票算法的基本思想是：在每一轮投票过程中，从数组中删除两个不同的元素，直到投票过程无法继续，此时数组为空或者数组中剩下的元素都相等。</p>
 <p>该题中表现为：遍历到x时，若count为0，则先将x的值赋给candidate；接下去若遇到不相同的，count&ndash;，遇到相同的，count++，若count为0，重新赋值。因此遍历一遍过后，如果数组nums 中存在主要元素，则candidate 即为主要元素，否则candidate 可能为数组中的任意一个元素。</p>
@@ -1569,7 +1724,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905171211988.png"
         title="image-20210905171211988" /></p>
-<h4 id="思路-14">思路</h4>
+<h4 id="思路-15">思路</h4>
 <ul>
 <li>最初的思路是，用两重循环，以数组每个元素为起点都做一次最大长度，保留最大</li>
 <li>后面发现这样会超时(O(N^2))</li>
@@ -1611,7 +1766,7 @@
 <p>空间复杂度：<em>O</em>(∣Σ∣)，最坏情况全不重复，则最长是所有字符的合集128</p>
 <p>执行用时：76ms，击败了99.90%的用户</p>
 <p>内存消耗：41.4MB，击败了71.54%的用户</p>
-<h4 id="官方题解-12">官方题解</h4>
+<h4 id="官方题解-13">官方题解</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1674,7 +1829,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905171301864.png"
         title="image-20210905171301864" /></p>
-<h4 id="思路-15">思路：</h4>
+<h4 id="思路-16">思路：</h4>
 <p>因为数组是有序的，所以遍历数组，当某元素和前一个元素不等，则代表它没出现过，把他放到第n个位置，n为出现过的元素个数</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1708,7 +1863,7 @@
 <p>空间复杂度：O(1)</p>
 <p>执行用时：76ms，击败了99.22%的用户</p>
 <p>内存消耗：40.2MB，击败了47.62%的用户</p>
-<h4 id="官方题解-13">官方题解：</h4>
+<h4 id="官方题解-14">官方题解：</h4>
 <p>快慢指针，实际思想与自己无异</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1755,7 +1910,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905171351567.png"
         title="image-20210905171351567" /></p>
-<h4 id="思路-16">思路：</h4>
+<h4 id="思路-17">思路：</h4>
 <p>跟26题几乎一样，不一样的只是res的起点</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1787,7 +1942,7 @@
 <p>空间复杂度：O(1)</p>
 <p>执行用时：64ms，击败了99.51%的用户</p>
 <p>内存消耗：38MB，击败了32.95%的用户</p>
-<h4 id="官方题解-14">官方题解：</h4>
+<h4 id="官方题解-15">官方题解：</h4>
 <p>除了快慢指针，还可以使用左右指针，在val元素数量小时很有效，<strong>避免了需要保留的元素的重复赋值操作</strong>。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1828,7 +1983,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905171438009.png"
         title="image-20210905171438009" /></p>
-<h4 id="官方题解-15">官方题解</h4>
+<h4 id="官方题解-16">官方题解</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1872,7 +2027,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905171523851.png"
         title="image-20210905171523851" /></p>
-<h4 id="思路-17">思路</h4>
+<h4 id="思路-18">思路</h4>
 <ul>
 <li>val值有限定范围    	小聪明，但值得注意的是，面试时应先问清楚面试官题目细节，如果刻意透露了限定条件，则利用反而会加分</li>
 </ul>
@@ -1953,7 +2108,7 @@
 <p>空间复杂度：O(1)</p>
 <p>执行用时：76ms，击败了99.22%的用户</p>
 <p>内存消耗：40.2MB，击败了47.62%的用户</p>
-<h4 id="官方题解-16">官方题解</h4>
+<h4 id="官方题解-17">官方题解</h4>
 <ol>
 <li>哈希表，用集合存储访问过的节点</li>
 <li>快慢指针</li>
@@ -1967,7 +2122,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905171641662.png"
         title="image-20210905171641662" /></p>
-<h4 id="思路-18">思路</h4>
+<h4 id="思路-19">思路</h4>
 <ul>
 <li>暴力</li>
 </ul>
@@ -2022,7 +2177,7 @@
 </div><p>时间复杂度：O(N3)</p>
 <p>执行用时：852ms，击败了23.08%的用户</p>
 <p>内存消耗：39.4MB，击败了70.33%的用户</p>
-<h4 id="官方题解-17">官方题解</h4>
+<h4 id="官方题解-18">官方题解</h4>
 <h3 id="881-救生艇httpsleetcode-cncomproblemsboats-to-save-people"><a href="https://leetcode-cn.com/problems/boats-to-save-people/" target="_blank" rel="noopener noreffer">881. 救生艇</a></h3>
 <p><img
         class="lazyload"
@@ -2032,7 +2187,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905171743589.png"
         title="image-20210905171743589" /></p>
-<h4 id="思路-19">思路：</h4>
+<h4 id="思路-20">思路：</h4>
 <ul>
 <li>重点是每艘船只能载1或2人</li>
 <li>排序，最轻的和最重的加，若不大于limit，左边指针后移一位</li>
@@ -2083,7 +2238,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210907152931008.png"
         title="image-20210907152931008" /></p>
-<h4 id="思路-20">思路：</h4>
+<h4 id="思路-21">思路：</h4>
 <ul>
 <li>此题的重点是，不能存在重复的三元组</li>
 <li>要找到和为0的三元组，自然地想到需要先进行排序。排序后找第一个元素，这个元素的特点是不能和前一个元素相等，这也就保证了每个三元组的最小值不会相等，初步保证不会重复</li>
@@ -2160,7 +2315,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905171849815.png"
         title="image-20210905171849815" /></p>
-<h4 id="思路-21">思路</h4>
+<h4 id="思路-22">思路</h4>
 <ul>
 <li>用carry表示进位</li>
 <li>head代表头结点，尾结点往后走到l1、l2都为空</li>
@@ -2232,7 +2387,7 @@
 <p>空间复杂度：O(1)</p>
 <p>执行用时：96ms，击败了99.90%的用户</p>
 <p>内存消耗：43.2MB，击败了32.54%的用户</p>
-<h4 id="官方题解-18">官方题解</h4>
+<h4 id="官方题解-19">官方题解</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -2250,7 +2405,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905171920563.png"
         title="image-20210905171920563" /></p>
-<h4 id="思路-22">思路：</h4>
+<h4 id="思路-23">思路：</h4>
 <ol>
 <li>创建结点head和tail</li>
 <li>先判断是否都不为空，若有一个为空则返回另一个，都为空则直接返回空结点</li>
@@ -2379,7 +2534,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905172035800.png"
         title="image-20210905172035800" /></p>
-<h4 id="思路-23">思路：</h4>
+<h4 id="思路-24">思路：</h4>
 <ol>
 <li>数字大小都在区间[1,n]内，项数范围是[0,n-1]</li>
 <li>则每个元素的绝对值减去1，就代表其中一个项的位置</li>
@@ -2473,7 +2628,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905172127345.png"
         title="image-20210905172127345" /></p>
-<h4 id="思路-24">思路：</h4>
+<h4 id="思路-25">思路：</h4>
 <p>一层层剥开矩阵，用矩阵的四个边界控制，每走一圈（每剥开一层），矩阵缩小一次</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2539,7 +2694,7 @@
 <p>空间复杂度：O(1)，除了返回的数组，没有用到多余空间</p>
 <p>执行用时：60ms，击败了99.00%的用户</p>
 <p>内存消耗：37.7MB，击败了48.38%的用户</p>
-<h4 id="官方题解-19">官方题解：</h4>
+<h4 id="官方题解-20">官方题解：</h4>
 <p>一样</p>
 <h2 id="贪心">贪心</h2>
 <h3 id="1736-替换隐藏数字得到的最晚时间httpsleetcode-cncomproblemslatest-time-by-replacing-hidden-digits"><a href="https://leetcode-cn.com/problems/latest-time-by-replacing-hidden-digits/" target="_blank" rel="noopener noreffer">1736. 替换隐藏数字得到的最晚时间</a></h3>
@@ -2551,7 +2706,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905172213963.png"
         title="image-20210905172213963" /></p>
-<h4 id="思路-25">思路:</h4>
+<h4 id="思路-26">思路:</h4>
 <p>从第一位开始判断：因为第一位最重要，直接if else枚举</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2615,7 +2770,7 @@
 <p>空间复杂度：O(1)</p>
 <p>执行用时：72ms，击败了90.00%的用户</p>
 <p>内存消耗：37.8MB，击败了84.00%的用户</p>
-<h4 id="官方题解-20">官方题解</h4>
+<h4 id="官方题解-21">官方题解</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2834,7 +2989,7 @@
         data-sizes="auto"
         alt="/images/LeetCode/image-20210905172415655.png"
         title="image-20210905172415655" /></p>
-<h4 id="思路-26">思路：</h4>
+<h4 id="思路-27">思路：</h4>
 <ul>
 <li>暴力，双重循环</li>
 <li>哈希表</li>
@@ -2874,7 +3029,7 @@
         data-sizes="auto"
         alt="../../static/images/LeetCode/image-20211006145530245.png"
         title="image-20211006145530245" /></p>
-<h4 id="思路-27">思路：</h4>
+<h4 id="思路-28">思路：</h4>
 <p>因为时间复杂度要求为O(n)，所以不能使用排序算法。而很自然就想到应该使用哈希表来解决这个问题<code>let hashNums = new Set(nums)</code></p>
 <p>得到这样一个集合后，对于在数组内的元素，我们查找它的左邻居(比它小1的数字)是否在集合里，若在则长度加一，并保存长度然后从它的右邻居开始找，直到它的右邻居不在集合里</p>
 <div class="highlight"><div class="chroma">

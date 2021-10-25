@@ -4,7 +4,14 @@
         <link>https://MichaelYuhe.github.io/tags/vue/</link>
         <description>Vue - 标签 - Yuhe&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 01 Oct 2021 15:28:42 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/tags/vue/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 20 Oct 2021 23:13:12 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/tags/vue/" rel="self" type="application/rss+xml" /><item>
+    <title>Vusic</title>
+    <link>https://MichaelYuhe.github.io/vusic/</link>
+    <pubDate>Wed, 20 Oct 2021 23:13:12 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/vusic/</guid>
+    <description><![CDATA[年轻人的第一个项目 Vusic 项目简介 Vusic是一个使用Vue3作为框架的在线音乐播放器，目前仅适配了移动端，桌面版的适配工作正在进行中。后端采用Q]]></description>
+</item><item>
     <title>Vuex使用小结</title>
     <link>https://MichaelYuhe.github.io/vuex/</link>
     <pubDate>Fri, 01 Oct 2021 15:28:42 &#43;0800</pubDate>

@@ -701,6 +701,95 @@ var findSecondMinimumValue = function(root){
 
 **=>  :  箭头函数，相当于匿名函数，且简化了函数定义**
 
+## BFS和DFS
+
+### [200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)
+
+![image-20211012132241776](../../static/images/LeetCode/image-20211012132241776.png)
+
+#### 思路
+
+遍历grid，当遇到1，将其置0，将其上下左右的1置0，将其上下左右的1的上下左右的1置零……
+
+```js
+var numIslands = function(grid) {
+    let res = 0
+    const bfs = (i, j) => {
+        if(i < 0 || j < 0 || i >= grid.length || j >= grid[0].length || grid[i][j] === '0') {
+            return
+        }
+        grid[i][j] = '0'
+        bfs(i + 1, j)
+        bfs(i - 1, j)
+        bfs(i, j + 1)
+        bfs(i, j - 1)
+    }
+    for(let i = 0; i < grid.length; i++) {
+        for(let j = 0; j < grid[0].length; j++) {
+            if(grid[i][j] === '1') {
+                res++
+                bfs(i, j)
+            }
+        }
+    }
+    return res
+};
+```
+
+时间复杂度：O(n)
+
+空间复杂度：O(1)
+
+执行用时：84ms，击败了52.76%的用户
+
+内存消耗：40.4MB，击败了49.33%的用户
+
+#### 官方题解
+
+1.广度优先搜索BFS
+
+```python
+class Solution:
+    def numIslands(self, grid: [[str]]) -> int:
+        def bfs(grid, i, j):
+            queue = [[i, j]]
+            while queue:
+                [i, j] = queue.pop(0)
+                if 0 <= i < len(grid) and 0 <= j < len(grid[0]) and grid[i][j] == '1':
+                    grid[i][j] = '0'
+                    queue += [[i + 1, j], [i - 1, j], [i, j - 1], [i, j + 1]]
+        count = 0
+        for i in range(len(grid)):
+            for j in range(len(grid[0])):
+                if grid[i][j] == '0': continue
+                bfs(grid, i, j)
+                count += 1
+        return count
+```
+
+2.深度优先搜索DFS
+
+```python
+class Solution:
+    def numIslands(self, grid: [[str]]) -> int:
+        def dfs(grid, i, j):
+            if not 0 <= i < len(grid) or not 0 <= j < len(grid[0]) or grid[i][j] == '0': return
+            grid[i][j] = '0'
+            dfs(grid, i + 1, j)
+            dfs(grid, i, j + 1)
+            dfs(grid, i - 1, j)
+            dfs(grid, i, j - 1)
+        count = 0
+        for i in range(len(grid)):
+            for j in range(len(grid[0])):
+                if grid[i][j] == '1':
+                    dfs(grid, i, j)
+                    count += 1
+        return count
+```
+
+
+
 ## 摩尔投票法
 
 ### [面试题17.10.主要元素](https://leetcode-cn.com/problems/find-majority-element-lcci/)

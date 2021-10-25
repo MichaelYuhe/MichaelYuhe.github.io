@@ -4,14 +4,21 @@
         <link>https://MichaelYuhe.github.io/</link>
         <description>夏宇航的个人博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 08 Oct 2021 11:21:17 &#43;0800</lastBuildDate>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 20 Oct 2021 23:13:12 &#43;0800</lastBuildDate>
             <atom:link href="https://MichaelYuhe.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Vusic</title>
+    <link>https://MichaelYuhe.github.io/vusic/</link>
+    <pubDate>Wed, 20 Oct 2021 23:13:12 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/vusic/</guid>
+    <description><![CDATA[年轻人的第一个项目 Vusic 项目简介 Vusic是一个使用Vue3作为框架的在线音乐播放器，目前仅适配了移动端，桌面版的适配工作正在进行中。后端采用Q]]></description>
+</item><item>
     <title>知识点总结</title>
-    <link>https://MichaelYuhe.github.io/es6/</link>
+    <link>https://MichaelYuhe.github.io/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</link>
     <pubDate>Fri, 08 Oct 2021 11:21:17 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/es6/</guid>
+    <guid>https://MichaelYuhe.github.io/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[知识点总结 Javascript 讲一下闭包 闭包的定义 闭包是指那些能够访问自由变量的函数。那么什么是自由变量？自由变量是指在函数中使用的，但既不是函数参数也不是函]]></description>
 </item><item>
     <title>Vuex使用小结</title>
