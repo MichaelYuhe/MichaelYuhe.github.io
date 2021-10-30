@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Email - Yuhe&#39;s Blog</title><meta name="Description" content="夏宇航的个人博客"><meta property="og:title" content="Email" />
+        <title>Node.js初体验 - Yuhe&#39;s Blog</title><meta name="Description" content="夏宇航的个人博客"><meta property="og:title" content="Node.js初体验" />
 <meta property="og:description" content="Node.js初体验 &mdash; nodemailer的使用 写在前面 需求：给自己的todo应用添加一个邮件提醒的功能，当创建了任务则会发送邮件至指定邮箱" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://MichaelYuhe.github.io/email/" /><meta property="article:section" content="posts" />
@@ -13,7 +13,7 @@
 <meta property="article:modified_time" content="2021-10-27T10:52:09+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Email"/>
+<meta name="twitter:title" content="Node.js初体验"/>
 <meta name="twitter:description" content="Node.js初体验 &mdash; nodemailer的使用 写在前面 需求：给自己的todo应用添加一个邮件提醒的功能，当创建了任务则会发送邮件至指定邮箱"/>
 <meta name="application-name" content="Yuhe&#39;s Blog">
 <meta name="apple-mobile-web-app-title" content="Yuhe&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -22,12 +22,12 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Email",
+        "headline": "Node.js初体验",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/MichaelYuhe.github.io\/email\/"
-        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Node.js","wordcount":  1295 ,
+        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Node.js","wordcount":  1453 ,
         "url": "https:\/\/MichaelYuhe.github.io\/email\/","datePublished": "2021-10-27T10:52:09+08:00","dateModified": "2021-10-27T10:52:09+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/MichaelYuhe.github.io\/images\/avatar.png"},"author": {
@@ -118,10 +118,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Email</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Node.js初体验</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>夏宇航</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/program/"><i class="far fa-folder fa-fw"></i>program</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-27">2021-10-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1295 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/email/" class="leancloud_visitors" data-flag-title="Email">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-27">2021-10-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1453 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/email/" class="leancloud_visitors" data-flag-title="Node.js初体验">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -135,6 +135,7 @@
       <ul>
         <li><a href="#写在前面">写在前面</a></li>
         <li><a href="#历程">历程</a></li>
+        <li><a href="#结语">结语</a></li>
       </ul>
     </li>
   </ul>
@@ -317,6 +318,9 @@
         title="image-20211027145751166" /></p>
 <p>查看我们的邮箱，也可以看到该新到达的热乎的邮件。</p>
 <p>下一步，就是在服务器端复现这个功能，省去每次都需要自己在本地启动服务的步骤。</p>
+<h3 id="结语">结语</h3>
+<p>这是第一次真正意义上的接触Node.js，前前后后摸索了一天半，也学习到了很多知识：<strong>跨域、Linux基本操作、服务器部署、axios</strong>等。最后也成功实现了发送邮件的功能，虽然不太实用，后期需要想办法修改为定时发送的服务，到了设定时间前一天再发送邮件提醒。</p>
+<p>不得不感慨真的是学无止境呀。还有许多东西需要自己去慢慢学习。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -330,7 +334,7 @@
                             <a class="link-to-markdown" href="/email/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://MichaelYuhe.github.io/email/" data-title="Email" data-via="Coooolxyh" data-hashtags="Node.js"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://MichaelYuhe.github.io/email/" data-title="Email" data-ralateuid="u/7327190619"><i class="fab fa-weibo fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://MichaelYuhe.github.io/email/" data-title="Node.js初体验" data-via="Coooolxyh" data-hashtags="Node.js"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://MichaelYuhe.github.io/email/" data-title="Node.js初体验" data-ralateuid="u/7327190619"><i class="fab fa-weibo fa-fw"></i></a></span>
             </div>
         </div>
     </div>

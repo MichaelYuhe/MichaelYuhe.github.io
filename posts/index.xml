@@ -5,7 +5,7 @@
         <description>所有文章 | Yuhe&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
             <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 27 Oct 2021 10:52:09 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>Email</title>
+    <title>Node.js初体验</title>
     <link>https://MichaelYuhe.github.io/email/</link>
     <pubDate>Wed, 27 Oct 2021 10:52:09 &#43;0800</pubDate>
     <author>作者</author>
@@ -24,7 +24,7 @@
     <pubDate>Fri, 08 Oct 2021 11:21:17 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://MichaelYuhe.github.io/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</guid>
-    <description><![CDATA[知识点总结 Javascript 讲一下闭包 闭包的定义 闭包是指那些能够访问自由变量的函数。那么什么是自由变量？自由变量是指在函数中使用的，但既不是函数参数也不是函]]></description>
+    <description><![CDATA[知识点总结 Javascript 执行上下文 当JavaScript执行一段可执行代码时，会创建相应的执行上下文 对于每个执行上下文，都有三个重要的属性 变量对象 作用域]]></description>
 </item><item>
     <title>Vuex使用小结</title>
     <link>https://MichaelYuhe.github.io/vuex/</link>
