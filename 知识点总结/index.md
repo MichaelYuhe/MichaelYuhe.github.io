@@ -3,8 +3,6 @@
 
 # 知识点总结
 
-
-
 ## Javascript
 
 ### 执行上下文
@@ -261,9 +259,9 @@ prototype(Child, Parent);
 3、 location.hash + iframe
 4、 window.name + iframe跨域
 5、 postMessage跨域
-6、 跨域资源共享（CORS）
+6、 **跨域资源共享（CORS）**
 7、 nginx代理跨域
-8、 nodejs中间件代理跨域
+8、 **nodejs中间件代理跨域**
 9、 WebSocket协议跨域
 
 ### JS是单线程还是多线程的？
@@ -312,8 +310,6 @@ function objectFactory() {
 为什么可以先调用再声明？这是因为JavaScript的工作方式是执行上下文，在执行任何代码段之前，将函数声明放入内存。
 
 JavaScript只会提升声明，而不会提升其初始化。
-
-
 
 ### 立即执行函数
 
@@ -588,11 +584,7 @@ localStorage可以用来夸页面传递参数，代替了cookie保存用户购�
 - 首部20字节
 - 只能点对点全双工通信
 
-
-
 ### https和http的区别
-
-
 
 ### 七层网络模型
 
@@ -637,10 +629,6 @@ localStorage可以用来夸页面传递参数，代替了cookie保存用户购�
 **Vue设置proxy代理**
 
 ## webpack
-
-
-
-
 
 ## 性能
 
@@ -706,8 +694,6 @@ localStorage可以用来夸页面传递参数，代替了cookie保存用户购�
 ### 通信方式
 
 ### 生命周期
-
-
 
 ### 理解双向数据绑定
 
