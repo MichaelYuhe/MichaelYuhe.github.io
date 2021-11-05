@@ -33,6 +33,13 @@
     <guid>https://MichaelYuhe.github.io/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</guid>
     <description><![CDATA[Web前端安全之XSS和CSRF 写在前面 昨晚（2021 / 11 / 2），面试有赞实习，面试官提问了XSS和CSRF，从没了解过的我只能尴尬地回答：]]></description>
 </item><item>
+    <title>那些好用的前端学习网站/文档/博客</title>
+    <link>https://MichaelYuhe.github.io/resources/</link>
+    <pubDate>Fri, 29 Oct 2021 15:00:29 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/resources/</guid>
+    <description><![CDATA[面试专用 Web前端面试——面试官系列 简介 为语音打卡社群(JS每日一题)维护的前端面试题库，包含不限于Vue面试题，React面试题，JS面试]]></description>
+</item><item>
     <title>Node.js初体验</title>
     <link>https://MichaelYuhe.github.io/email/</link>
     <pubDate>Wed, 27 Oct 2021 10:52:09 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://MichaelYuhe.github.io/vue-router2/</guid>
     <description><![CDATA[Vue 3学习之路由的进阶 写在前面 之前学习使用了vue的路由，实现了简单的单页面内部pages跳转，继续跟随官方视频学习，进阶vue3中路由的使用]]></description>
-</item><item>
-    <title>Vue Router</title>
-    <link>https://MichaelYuhe.github.io/vue-router/</link>
-    <pubDate>Thu, 23 Sep 2021 21:08:15 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/vue-router/</guid>
-    <description><![CDATA[Vue学习历程（二） 路由的使用 写在前面 在着手进行一个大项目之前，想先优化、完善之前的todolist项目。例如：增加登录、注册功能；数据储存]]></description>
 </item></channel>
 </rss>
