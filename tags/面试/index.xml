@@ -1,0 +1,36 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>面试 - 标签 - Yuhe&#39;s Blog</title>
+        <link>https://MichaelYuhe.github.io/tags/%E9%9D%A2%E8%AF%95/</link>
+        <description>面试 - 标签 - Yuhe&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 05 Nov 2021 08:03:08 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/tags/%E9%9D%A2%E8%AF%95/" rel="self" type="application/rss+xml" /><item>
+    <title>滴滴日常实习_一面</title>
+    <link>https://MichaelYuhe.github.io/%E6%BB%B4%E6%BB%B4%E6%97%A5%E5%B8%B8%E5%AE%9E%E4%B9%A0_%E4%B8%80%E9%9D%A2/</link>
+    <pubDate>Fri, 05 Nov 2021 08:03:08 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E6%BB%B4%E6%BB%B4%E6%97%A5%E5%B8%B8%E5%AE%9E%E4%B9%A0_%E4%B8%80%E9%9D%A2/</guid>
+    <description><![CDATA[滴滴日常实习一面 10月30日 自我介绍 项目 小游戏的难点，做了些什么，登陆相关 CSS 盒模型 怎么居中，尽可能多方法 flex布局讲一下 Javascript reduce用过]]></description>
+</item><item>
+    <title>有赞前端实习_二面</title>
+    <link>https://MichaelYuhe.github.io/%E6%9C%89%E8%B5%9E%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0_%E4%BA%8C%E9%9D%A2/</link>
+    <pubDate>Fri, 05 Nov 2021 08:00:13 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E6%9C%89%E8%B5%9E%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0_%E4%BA%8C%E9%9D%A2/</guid>
+    <description><![CDATA[有赞日常实习二面 11月4号 自我介绍 然后问了专业相关，聊到下学期才上计网，于是“那我计网只问你一些基础的吧” 计算机网络 讲一下HTTP，讲一下和]]></description>
+</item><item>
+    <title>有赞前端实习_一面</title>
+    <link>https://MichaelYuhe.github.io/%E6%9C%89%E8%B5%9E%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0_%E4%B8%80%E9%9D%A2/</link>
+    <pubDate>Fri, 05 Nov 2021 08:00:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E6%9C%89%E8%B5%9E%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0_%E4%B8%80%E9%9D%A2/</guid>
+    <description><![CDATA[有赞日常实习一面 11月2日 线上笔试 直播写代码 网站：showMeTheCode，有赞自己的平台 1、字符串相加 忘记处理最后一步的进位 1 2 3 4 5 6]]></description>
+</item><item>
+    <title>知识点总结</title>
+    <link>https://MichaelYuhe.github.io/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</link>
+    <pubDate>Fri, 08 Oct 2021 11:21:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</guid>
+    <description><![CDATA[知识点总结 Javascript 讲一下闭包 闭包的定义 闭包是指那些能够访问自由变量的函数。 那么什么是自由变量？自由变量是指在函数中使用的，但既不是函数参数也不是函]]></description>
+</item></channel>
+</rss>

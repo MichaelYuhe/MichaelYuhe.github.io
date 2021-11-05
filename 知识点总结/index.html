@@ -6,7 +6,7 @@
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>知识点总结 - Yuhe&#39;s Blog</title><meta name="Description" content="夏宇航的个人博客"><meta property="og:title" content="知识点总结" />
-<meta property="og:description" content="知识点总结 Javascript 执行上下文 当JavaScript执行一段可执行代码时，会创建相应的执行上下文 对于每个执行上下文，都有三个重要的属性 变量对象 作用域" />
+<meta property="og:description" content="知识点总结 Javascript 讲一下闭包 闭包的定义 闭包是指那些能够访问自由变量的函数。 那么什么是自由变量？自由变量是指在函数中使用的，但既不是函数参数也不是函" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://MichaelYuhe.github.io/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-10-08T11:21:17+08:00" />
@@ -14,7 +14,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="知识点总结"/>
-<meta name="twitter:description" content="知识点总结 Javascript 执行上下文 当JavaScript执行一段可执行代码时，会创建相应的执行上下文 对于每个执行上下文，都有三个重要的属性 变量对象 作用域"/>
+<meta name="twitter:description" content="知识点总结 Javascript 讲一下闭包 闭包的定义 闭包是指那些能够访问自由变量的函数。 那么什么是自由变量？自由变量是指在函数中使用的，但既不是函数参数也不是函"/>
 <meta name="application-name" content="Yuhe&#39;s Blog">
 <meta name="apple-mobile-web-app-title" content="Yuhe&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/MichaelYuhe.github.io\/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93\/"
-        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","wordcount":  9010 ,
+        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "面试","wordcount":  11338 ,
         "url": "https:\/\/MichaelYuhe.github.io\/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93\/","datePublished": "2021-10-08T11:21:17+08:00","dateModified": "2021-10-08T11:21:17+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/MichaelYuhe.github.io\/images\/avatar.png"},"author": {
@@ -119,9 +119,9 @@
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">知识点总结</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>夏宇航</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/program/"><i class="far fa-folder fa-fw"></i>program</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-08">2021-10-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 9010 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 18 分钟&nbsp;<span id="/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" class="leancloud_visitors" data-flag-title="知识点总结">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>夏宇航</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/"><i class="far fa-folder fa-fw"></i>知识点</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-08">2021-10-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 11338 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 23 分钟&nbsp;<span id="/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" class="leancloud_visitors" data-flag-title="知识点总结">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -133,7 +133,6 @@
   <ul>
     <li><a href="#javascript">Javascript</a>
       <ul>
-        <li><a href="#执行上下文">执行上下文</a></li>
         <li><a href="#讲一下闭包">讲一下闭包</a>
           <ul>
             <li><a href="#闭包的定义">闭包的定义</a></li>
@@ -163,9 +162,9 @@
             <li><a href="#既然javascript是单线程的那么它怎么执行异步的代码">既然JavaScript是单线程的，那么它怎么执行异步的代码？</a></li>
           </ul>
         </li>
+        <li><a href="#事件循环">事件循环</a></li>
         <li><a href="#js中new具体做了些什么">JS中new具体做了些什么？</a></li>
         <li><a href="#手写new">手写new</a></li>
-        <li><a href="#变量提升">变量提升</a></li>
         <li><a href="#立即执行函数">立即执行函数</a></li>
         <li><a href="#浮点数精度">浮点数精度</a>
           <ul>
@@ -175,10 +174,28 @@
             <li><a href="#浮点数的运算">浮点数的运算</a></li>
           </ul>
         </li>
+        <li><a href="#深拷贝和浅拷贝">深拷贝和浅拷贝</a>
+          <ul>
+            <li><a href="#浅拷贝">浅拷贝</a></li>
+            <li><a href="#深拷贝">深拷贝</a></li>
+          </ul>
+        </li>
+        <li><a href="#讲一下promise">讲一下Promise</a>
+          <ul>
+            <li><a href="#promise是什么">Promise是什么</a></li>
+            <li><a href="#promise的状态">Promise的状态</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li><a href="#css">CSS</a>
       <ul>
+        <li><a href="#双栏布局和三栏布局">双栏布局和三栏布局</a>
+          <ul>
+            <li><a href="#双栏布局">双栏布局</a></li>
+            <li><a href="#三栏布局">三栏布局</a></li>
+          </ul>
+        </li>
         <li><a href="#bfc">BFC</a></li>
         <li><a href="#水平居中">水平居中</a></li>
         <li><a href="#垂直居中">垂直居中</a></li>
@@ -219,6 +236,7 @@
     </li>
     <li><a href="#计算机网络">计算机网络</a>
       <ul>
+        <li><a href="#http常见状态码">HTTP常见状态码</a></li>
         <li><a href="#tcp三次握手和四次挥手">TCP三次握手和四次挥手</a></li>
         <li><a href="#tcp和udp的区别">TCP和UDP的区别</a>
           <ul>
@@ -228,10 +246,8 @@
         </li>
         <li><a href="#https和http的区别">https和http的区别</a></li>
         <li><a href="#七层网络模型">七层网络模型</a></li>
-        <li><a href="#跨域">跨域</a></li>
       </ul>
     </li>
-    <li><a href="#webpack">webpack</a></li>
     <li><a href="#性能">性能</a>
       <ul>
         <li><a href="#重排和重绘">重排和重绘</a>
@@ -251,9 +267,21 @@
     </li>
     <li><a href="#vue">Vue</a>
       <ul>
+        <li><a href="#对keep-alive的理解">对keep-alive的理解</a>
+          <ul>
+            <li><a href="#keep-alive是什么">keep-alive是什么</a></li>
+            <li><a href="#keep-alive基本用法">keep-alive基本用法</a></li>
+            <li><a href="#使用场景">使用场景</a></li>
+            <li><a href="#原理分析">原理分析</a></li>
+          </ul>
+        </li>
         <li><a href="#通信方式">通信方式</a></li>
-        <li><a href="#生命周期">生命周期</a></li>
-        <li><a href="#理解双向数据绑定">理解双向数据绑定</a></li>
+        <li><a href="#理解双向数据绑定">理解双向数据绑定</a>
+          <ul>
+            <li><a href="#proxy相比objectdefineproperty的优势">Proxy相比Object.defineProperty()的优势</a></li>
+            <li><a href="#vue里的双向绑定流程"><strong>Vue里的双向绑定流程</strong></a></li>
+          </ul>
+        </li>
         <li><a href="#computed和watch">computed和watch</a>
           <ul>
             <li><a href="#computed">computed</a></li>
@@ -265,10 +293,9 @@
         <li><a href="#diff算法">diff算法</a>
           <ul>
             <li><a href="#是什么">是什么</a></li>
-            <li><a href="#原理分析">原理分析</a></li>
+            <li><a href="#原理分析-1">原理分析</a></li>
           </ul>
         </li>
-        <li><a href="#composition-api">Composition API</a></li>
       </ul>
     </li>
     <li><a href="#操作系统">操作系统</a>
@@ -280,18 +307,13 @@
 </nav></div>
             </div><div class="content" id="content"><h1 id="知识点总结">知识点总结</h1>
 <h2 id="javascript">Javascript</h2>
-<h3 id="执行上下文">执行上下文</h3>
-<p>当JavaScript执行一段可执行代码时，会创建相应的执行上下文</p>
-<p>对于每个执行上下文，都有三个重要的属性</p>
-<ul>
-<li>变量对象</li>
-<li>作用域链</li>
-<li>this</li>
-</ul>
 <h3 id="讲一下闭包">讲一下闭包</h3>
 <h4 id="闭包的定义">闭包的定义</h4>
-<p><strong>闭包是指那些能够访问自由变量的函数</strong>。那么什么是自由变量？<strong>自由变量是指在函数中使用的，但既不是函数参数也不是函数的局部变量的变量</strong>。那么可以看出，<strong>闭包 = 函数 + 函数能够访问的自由变量</strong></p>
+<p><strong>闭包是指那些能够访问自由变量的函数</strong>。</p>
+<p>那么什么是自由变量？<strong>自由变量是指在函数中使用的，但既不是函数参数也不是函数的局部变量的变量</strong>。</p>
+<p>可以看出，<strong>闭包 = 函数 + 函数能够访问的自由变量</strong></p>
 <p>所以，<strong>从技术的角度讲，所有的JavaScript函数都是闭包</strong>。</p>
+<p>从实际出发：</p>
 <p><strong>即使创建它的执行上下文已经被销毁了，但它还是存在； 在其中引用了自由变量</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -646,7 +668,7 @@
     <span class="nx">prototype</span><span class="p">.</span><span class="nx">constructor</span> <span class="o">=</span> <span class="nx">child</span><span class="p">;</span>
     <span class="nx">child</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nx">prototype</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="c1">// 当我们使用的时候：
+<span class="c1">// 使用的时候：
 </span><span class="c1"></span><span class="nx">prototype</span><span class="p">(</span><span class="nx">Child</span><span class="p">,</span> <span class="nx">Parent</span><span class="p">);</span>
 </code></pre></td></tr></table>
 </div>
@@ -655,7 +677,7 @@
 <p>跨域是指<strong>一个域下的文档或脚本试图去请求另一个域下的资源</strong>，这里跨域是广义的。</p>
 <p>而我们常说的跨域是狭义上的，是由浏览器同源策略限制的一类请求场景。浏览器的<strong>同源策略</strong>会导致跨域。</p>
 <h4 id="同源策略">同源策略</h4>
-<p>同源：协议、域名和端口都相同。</p>
+<p>同源：<strong>协议、域名和端口</strong>都相同。</p>
 <p>同源策略限制以下行为</p>
 <ul>
 <li>无法读取cookie，localStorage和indexDB</li>
@@ -679,6 +701,11 @@
 <p>单线程就意味着，所有任务需要排队，前一个任务结束，才会执行后一个任务。但JS引擎执行异步代码并不需要等待，是因为有<strong>消息队列和事件循环</strong>。</p>
 <p><strong>消息队列</strong>：消息队列是一个先进先出的队列，它里面存放着各种消息。
 <strong>事件循环</strong>：事件循环是指主线程重复从消息队列中取消息、执行的过程。</p>
+<h3 id="事件循环">事件循环</h3>
+<p>JavaScript是一门单线程的语言，但不意味着单线程就会阻塞，<strong>实现单线程不阻塞的方法就是事件循环</strong>。</p>
+<p>所有的任务都会分为<strong>同步和异步</strong>，同步直接放到主线程执行，异步任务进入任务队列，主线程的任务执行完了，就来消息队列取一个任务推到主线程执行。然后异步任务还可以细分成<strong>宏任务和微任务</strong>。每次执行一个宏任务，然后如果遇到微任务就把它放到微任务的任务队列。这个宏任务执行完了以后，就去看微任务队列，把里面所有微任务执行完。</p>
+<p>常见宏任务：setTimeout,setInterval,setImmediate;</p>
+<p>常见微任务：Promise.then()</p>
 <h3 id="js中new具体做了些什么">JS中new具体做了些什么？</h3>
 <p><strong>new运算符创建一个用户定义的对象类型的实例或具有构造函数的内置对象的实例</strong></p>
 <p>new会进行哪些操作？</p>
@@ -715,10 +742,7 @@
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="变量提升">变量提升</h3>
-<p>为什么可以先调用再声明？这是因为JavaScript的工作方式是执行上下文，在执行任何代码段之前，将函数声明放入内存。</p>
-<p>JavaScript只会提升声明，而不会提升其初始化。</p>
-<h3 id="立即执行函数">立即执行函数</h3>
+</div><h3 id="立即执行函数">立即执行函数</h3>
 <p><strong>IIFE(Immediately Invoked Function Expression)</strong>,在定义后立即执行的JavaScript函数</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -759,7 +783,134 @@
 <h4 id="浮点数的运算">浮点数的运算</h4>
 <p>五个步骤：对阶、尾数运算、规格化、舍入处理、溢出判断</p>
 <p>两次存储时的精度丢失加上一次运算时的精度丢失，导致$0.1 + 0.2 !== 0.3$</p>
+<h3 id="深拷贝和浅拷贝">深拷贝和浅拷贝</h3>
+<h4 id="浅拷贝">浅拷贝</h4>
+<p>浅拷贝，指的是创建新的数据，这个数据有着原始数据属性值的一份精确拷贝</p>
+<p>如果属性是基本类型，拷贝的就是基本类型的值。如果属性是引用类型，拷贝的就是内存地址，即<strong>浅拷贝是拷贝一层，深层次的引用类型则共享内存地址</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 浅拷贝的实现
+</span><span class="c1">// 1. 遍历复制
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">shallowClone</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kd">let</span> <span class="nx">newObj</span> <span class="o">=</span> <span class="p">{}</span>
+	<span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">prop</span> <span class="k">in</span> <span class="nx">obj</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">if</span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">prop</span><span class="p">))</span> <span class="p">{</span>
+			<span class="nx">newObj</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nx">newObj</span>
+<span class="p">}</span>
+<span class="c1">// 2. Object.assign()
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="深拷贝">深拷贝</h4>
+<p>深拷贝<strong>开辟一个新的栈，两个对象属完成相同，但是对应两个不同的地址，修改一个对象的属性，不会改变另一个对象的属性</strong></p>
+<p>常见的深拷贝方式有：</p>
+<ul>
+<li>_.cloneDeep()</li>
+<li>jQuery.extend()</li>
+<li>JSON.stringify()</li>
+<li>手写循环递归</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 手写循环递归
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">deepClone</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">hash</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WeakMap</span><span class="p">())</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">obj</span><span class="p">)</span> 
+      <span class="k">return</span> <span class="nx">obj</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">obj</span> <span class="k">instanceof</span> <span class="nb">Date</span><span class="p">)</span> 
+      <span class="k">return</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">obj</span> <span class="k">instanceof</span> <span class="nb">RegExp</span><span class="p">)</span> 
+      <span class="k">return</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">obj</span> <span class="o">!==</span> <span class="s2">&#34;object&#34;</span><span class="p">)</span> 
+      <span class="k">return</span> <span class="nx">obj</span><span class="p">;</span>
+  <span class="c1">// 是对象的话就要进行深拷贝
+</span><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="nx">hash</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">obj</span><span class="p">))</span> 
+      <span class="k">return</span> <span class="nx">hash</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">cloneObj</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">constructor</span><span class="p">();</span>
+  <span class="c1">// 找到的是所属类原型上的constructor,而原型上的 constructor指向的是当前类本身
+</span><span class="c1"></span>  <span class="nx">hash</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">cloneObj</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">obj</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">key</span><span class="p">))</span> <span class="p">{</span>
+      <span class="c1">// 实现一个递归拷贝
+</span><span class="c1"></span>      <span class="nx">cloneObj</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">deepClone</span><span class="p">(</span><span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">],</span> <span class="nx">hash</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">cloneObj</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="讲一下promise">讲一下Promise</h3>
+<h4 id="promise是什么">Promise是什么</h4>
+<p><code>Promise</code>是异步编程的一种解决方案，比传统的解决方案（回调函数）更加合理和更加强大。他解决异步操作的优点：</p>
+<ul>
+<li>链式操作减低了编码难度</li>
+<li>代码可读性明显增强</li>
+</ul>
+<h4 id="promise的状态">Promise的状态</h4>
+<ul>
+<li><code>pending</code>（进行中）</li>
+<li><code>fulfilled</code>（已成功）</li>
+<li><code>rejected</code>（已失败）</li>
+<li>Promise的状态不受外界的影响，只有异步操作的结果可以决定状态</li>
+<li>状态改变是不可逆的</li>
+</ul>
 <h2 id="css">CSS</h2>
+<h3 id="双栏布局和三栏布局">双栏布局和三栏布局</h3>
+<h4 id="双栏布局">双栏布局</h4>
+<p>双栏布局非常常见，往往是以<strong>一个定宽栏和一个自适应的栏</strong>并排展示存在</p>
+<p>实现思路</p>
+<ol>
+<li>使用<code>float</code>左浮左边栏；右边的自适应栏用<code>margin-left</code>撑开内容块；为父级添加<code>BFC</code>（如<code>overflow: hidden</code>），防止下方元素飞到上方内容。</li>
+<li>使用<code>flex</code>弹性布局。父元素添加<code>display: flex</code>左边设置定宽，右边设置<code>flex: 1</code>或者<code>width: 100%</code></li>
+</ol>
+<h4 id="三栏布局">三栏布局</h4>
+<ul>
+<li>两边使用<code>float</code>，中间使用<code>margin</code></li>
+<li>两边使用<code>absolute</code>，中间使用<code>margin</code></li>
+<li>两边使用<code>float</code>，并设置负的<code>margin</code></li>
+<li><code>display: table | flex | grid</code></li>
+</ul>
 <h3 id="bfc">BFC</h3>
 <p>Block Formatting Contexts (块级格式化上下文)。具有 BFC 特性的元素可以看作是<strong>隔离了的独立容器</strong>，容器里面的元素不会在布局上影响到外面的元素，并且 BFC 具有普通容器所没有的一些特性。</p>
 <h3 id="水平居中">水平居中</h3>
@@ -916,17 +1067,17 @@
 <p>可以通过<strong>预解析</strong>操作：当渲染引擎收到字节流之后，会开启一个预解析线程，用来分析 HTML 文件中包含的 JavaScript、CSS 等相关文件，解析到相关文件之后，预解析线程会提前下载这些文件  来优化</p>
 <h3 id="路由">路由</h3>
 <h4 id="为什么要使用路由">为什么要使用路由</h4>
-<p>单页面应用利用了JavaScript动态变换网页内容，避免了页面重载；路由则提供了浏览器地址变化，网页内容也跟随变化，两者结合起来则为我们提供了体验良好的单页面web应用。</p>
+<p>单页面应用利用了JavaScript动态变换网页内容，<strong>避免了页面重载</strong>；<strong>路由则提供了浏览器地址变化，网页内容也跟随变化</strong>，两者结合起来则为我们提供了体验良好的单页面web应用。</p>
 <h4 id="hash模式">hash模式</h4>
 <p>使用<code>window.location.hash</code>属性以及窗口的<code>onhashchange</code>事件，实现监听浏览器地址hash值变换，执行相应的js来切换网页</p>
 <ol>
 <li>hash指的是地址中#号以及后面的字符，也称<strong>散列值</strong>。</li>
-<li>散列值并不随请求发送到服务器端，所以改变hash不会重载页面</li>
+<li><strong>散列值并不随请求发送到服务器端</strong>，所以改变hash不会重载页面</li>
 <li>当散列值改变，通过<code>window.location.hash</code>属性获取和设置hash值</li>
 <li><code>window.location.hash</code>的变化会直接反映到浏览器地址栏</li>
 </ol>
 <h4 id="history模式">history模式</h4>
-<p><code>window.history</code>属性指向History对象，代表当前窗口的浏览历史。History对象保存了当前窗口访问过的所有页面网址，通过<code>history.length</code>可以知道当前窗口访问过几个网址。</p>
+<p><code>window.history</code>属性指向History对象，代表当前窗口的浏览历史。<strong>History对象保存了当前窗口访问过的所有页面网址</strong>，通过<code>history.length</code>可以知道当前窗口访问过几个网址。</p>
 <p>方法：<code>history.back(); history.forward(); history.go(); history.pushState(); history.replaceState()</code></p>
 <h3 id="跨页面通信">跨页面通信</h3>
 <h4 id="同源页面">同源页面</h4>
@@ -993,12 +1144,31 @@
 <h4 id="安全性">安全性</h4>
 <p>并非所有数据都适合保存在上述三者中。只要打开控制台，就可以随意修改他们的值。所以重要的数据需要保存在服务器端而非客户端。</p>
 <h2 id="计算机网络">计算机网络</h2>
+<h3 id="http常见状态码">HTTP常见状态码</h3>
+<p><code>1xx</code>代表信息相应；<code>2xx</code>代表成功相应；<code>3xx</code>代表重定向；<code>4xx</code>代表客户端响应；<code>5xx</code>代表服务端响应。</p>
+<ul>
+<li><code>100	Continue</code> ：表明到目前为止所有内容都是可行的，客户端可以继续请求</li>
+<li><code>101    Switching Protocol</code>：指示服务器正在切换协议</li>
+<li><code>200    OK</code>：请求成功，具体含义取决于请求的方法</li>
+<li><code>204    Not Content</code>：服务器成功处理了请求，但不需要返回任何实体内容，并且希望返回更新了的元信息。响应可能通过实体头部的形式，返回新的或更新后的元信息。</li>
+<li><code>205    Reset Content</code>：服务器成功处理了请求，且没有返回任何内容。但是与204响应不同，返回此状态码的响应要求请求者重置文档视图。如用户输入表单，提交后清空表单。</li>
+<li><code>206    Partial Content</code>：服务器已经成功处理了部分 GET 请求。迅雷这类的 HTTP 下载工具都是使用此类响应实现断点续传或者将一个大文档分解为多个下载段同时下载。该请求必须包含 Range 头信息来指示客户端希望得到的内容范围，并且可能包含 If-Range 来作为请求条件。</li>
+<li><code>301    Move Permanently</code>：被请求的资源已经永久移到了新位置。拥有编辑功能的客户端会自动把请求的地址修改为服务器返回的地址。</li>
+<li><code>302    Found</code>：临时重定向，以后应该继续按原地址发送请求。</li>
+<li><code>304    Not Modified</code>：客户端发送了一个带条件的 GET 请求且该请求已被允许，而文档的内容（自上次访问以来或者根据请求的条件）并没有改变，则服务器返回这个状态码。禁止包含消息体，因此始终以消息头后的第一个空行结尾。</li>
+<li><code>400    Bad Request</code>：语义有误，服务器无法理解；请求参数有误。</li>
+<li><code>401    Unauthorized</code>：当前请求需要用户验证。</li>
+<li><code>403    Forbidden</code>：服务器已经理解请求，但是拒绝执行。</li>
+<li><code>404    Not Found</code>：请求失败，请求需要的资源在服务器上未被发现。</li>
+<li><code>500    Interval Server Error</code>：服务器遇到不知道该如何处理的情况。</li>
+<li><code>503    Service Unavailable</code>：服务器没有准备好处理请求，常见原因是服务器因维护或重载而停机。</li>
+</ul>
 <h3 id="tcp三次握手和四次挥手">TCP三次握手和四次挥手</h3>
 <h3 id="tcp和udp的区别">TCP和UDP的区别</h3>
 <h4 id="udp">UDP</h4>
-<p>用户数据包协议，一个简单的面向数据的通信协议，对于应用层传递下来的报文，它只会简单地加上首部，就交给网络层，不会做合并或者拆分的工作。特点如下</p>
+<p>用户数据包协议，一个简单的<strong>面向数据的通信协议</strong>，对于应用层传递下来的报文，它只会简单地加上首部，就交给网络层，不会做合并或者拆分的工作。特点如下</p>
 <ul>
-<li>不提供复杂的控制机制，利用IP提供面向无连接的通信服务</li>
+<li>不提供复杂的控制机制，<strong>利用IP提供面向无连接的通信服务</strong></li>
 <li>传输过程中若出现了丢包，UDP也不会重发</li>
 <li>包的到达顺序错乱了的话，UDP也无法纠正</li>
 <li>无法进行流量控制等避免网络堵塞的行为</li>
@@ -1019,7 +1189,7 @@
 <h3 id="https和http的区别">https和http的区别</h3>
 <h3 id="七层网络模型">七层网络模型</h3>
 <p><strong>应用层</strong></p>
-<p>该层协议定义了应用进程之间的交互规则，通过不同的应用层协议为不同的网络应用提供服务；在应用层交互的数据单元称为报文。应用层协议：<code>HTTPS</code>、<code>DNS</code>等</p>
+<p>该层协议定义了应用进程之间的交互规则，通过不同的应用层协议为不同的网络应用提供服务；在应用层交互的数据单元称为报文。应用层协议：<code>HTTPS</code>、<code>DNS</code>、<code>SMTP</code>等</p>
 <p><strong>表示层</strong></p>
 <p>表示层的作用是使通信的应用程序能够解释交换数据的含义。该层提供的服务主要包括数据压缩，数据加密以及数据描述，使应用程序不必担心在各台计算机中表示和存储的内部格式差异</p>
 <p><strong>会话层</strong></p>
@@ -1032,13 +1202,6 @@
 <p>在物理层和网络层之间。两台主机之间的数据传输，总是在一段一段的链路上传送的，这就需要使用专门的链路层协议。将网络层交下来的 <code>IP</code>数据报组装成帧，在两个相邻节点间的链路上传送帧</p>
 <p><strong>物理层</strong></p>
 <p>和软件关系不大，确定与传输媒体的接口的一些特性（机械特性、电气特性、功能特性，过程特性）</p>
-<h3 id="跨域">跨域</h3>
-<p>自己实际中遇到跨域的解决方案：</p>
-<p><strong>跨域资源共享CORS</strong></p>
-<p>它允许浏览器向跨源服务器，发出<a href="https://www.ruanyifeng.com/blog/2012/09/xmlhttprequest_level_2.html" target="_blank" rel="noopener noreffer"><code>XMLHttpRequest</code></a>请求，从而克服了AJAX只能<a href="https://www.ruanyifeng.com/blog/2016/04/same-origin-policy.html" target="_blank" rel="noopener noreffer">同源</a>使用的限制。</p>
-<p>整个CORS过程，都是由浏览器自动完成，浏览器一旦发现AJAX请求跨源，就会自动添加一些附加的头信息，有时还会有一次附加的预检请求（对于非简单请求）所以我们只需要关注服务端如何实现</p>
-<p><strong>Vue设置proxy代理</strong></p>
-<h2 id="webpack">webpack</h2>
 <h2 id="性能">性能</h2>
 <h3 id="重排和重绘">重排和重绘</h3>
 <h4 id="重排重绘是什么">重排重绘是什么？</h4>
@@ -1049,7 +1212,7 @@
 <li>元素尺寸改变——边距、填充、边框、宽度和高度</li>
 <li>内容变化，比如用户在input框中输入文字</li>
 <li>浏览器窗口尺寸改变——resize事件发生时</li>
-<li>计算 <code>offsetWidth</code> 和 <code>offsetHeight</code> 属性</li>
+<li><strong>计算 <code>offsetWidth</code> 和 <code>offsetHeight</code> 属性</strong></li>
 <li>设置 style 属性的值</li>
 </ul>
 <p>重绘：当一个元素的<strong>外观发生改变</strong>，但<strong>没有改变布局</strong>,重新把元素外观绘制出来的过程，叫做重绘。</p>
@@ -1057,11 +1220,11 @@
 <h3 id="优化方法">优化方法</h3>
 <ul>
 <li>尽可能减少重排的次数和范围：重排的性能花销跟渲染树有多少节点需要重新构建有关系，我们应尽量以局部布局的方式组织HTML</li>
-<li>分离读写操作，防止多次拿值触发渲染</li>
-<li>样式集中改变</li>
+<li><strong>分离读写操作</strong>，防止多次拿值触发渲染</li>
+<li><strong>样式集中改变</strong></li>
 <li>缓存布局信息</li>
 <li>离线改变DOM</li>
-<li>position多用absolute和fixed，这样不用考虑他对其他元素的影响</li>
+<li>position可以多用absolute和fixed，这样不用考虑他对其他元素的影响</li>
 </ul>
 <h3 id="白屏">白屏</h3>
 <h4 id="概念">概念</h4>
@@ -1092,11 +1255,57 @@
 <li>尽可能精简HTML、CSS代码和结构。合理放置JS代码</li>
 </ol>
 <h2 id="vue">Vue</h2>
+<h3 id="对keep-alive的理解">对keep-alive的理解</h3>
+<h4 id="keep-alive是什么">keep-alive是什么</h4>
+<p><code>keep-alive</code>是<code>vue</code>中的<strong>内置组件</strong>，能在组件切换过程中将状态保留在内存中，防止重复渲染<code>DOM</code>，包裹动态组件时，会<strong>缓存不活动的组件实例</strong>，而不是销毁它们。它可以设置一些属性</p>
+<ul>
+<li><code>include</code> 字符串或者正则表达式，只有名称匹配的组件才会被缓存</li>
+<li><code>exclude</code> 和上面的相反，名称匹配的不被缓存</li>
+<li><code>max</code> 最多可以缓存多少组件</li>
+</ul>
+<h4 id="keep-alive基本用法">keep-alive基本用法</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="p">&lt;</span><span class="nt">keep-alive</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">component</span> <span class="nt">:is</span><span class="s">=&#34;view&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">component</span><span class="p">&gt;</span>
+<span class="o">&lt;</span><span class="err">/keep-alive&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>设置了<code>keep-alive</code>缓存的组件，会多出两个生命周期钩子（<code>activated</code>与<code>deactivated</code>）</p>
+<h4 id="使用场景">使用场景</h4>
+<p>当我们在某些场景下不想让页面重新加载时我们可以使用<code>keepalive</code></p>
+<p>例如，当我们从首页切换到歌手页，再切换到收藏页面，再返回歌手页，我们不想每次切换页面都发送一次请求，就使用keep-alive将其缓存。</p>
+<h4 id="原理分析">原理分析</h4>
+<p>源码位置：<code>src/core/components/keep-alive.js</code></p>
 <h3 id="通信方式">通信方式</h3>
-<h3 id="生命周期">生命周期</h3>
+<ol>
+<li>通过 props 传递</li>
+<li>通过 $emit 触发自定义事件</li>
+<li>使用 ref</li>
+<li>EventBus</li>
+<li>$parent 或 root</li>
+<li>attrs 与 listeners</li>
+<li>Provide 与 Inject</li>
+<li>Vuex</li>
+</ol>
 <h3 id="理解双向数据绑定">理解双向数据绑定</h3>
-<p>双向绑定由三个部分组成：数据层（Model）、视图层（View）、业务逻辑层（ViewModel）。其中最重要的是那个<strong>ViewModel</strong>，主要职责是<strong>数据变化后更新视图，视图变化后更新数据</strong>。包含两部分，监听器和解析器。监听器用来监听所有数据的属性，解析器对每个元素节点的指令进行扫描和解析，根据指令模板替换数据,以及绑定相应的更新函数</p>
-<p><strong>Vue里的双向绑定流程</strong></p>
+<p>双向绑定由三个部分组成：数据层（Model）、视图层（View）、业务逻辑层（ViewModel）。其中最重要的是那个<strong>ViewModel</strong>，主要职责是<strong>数据变化后更新视图，视图变化后更新数据</strong>。包含两部分，监听器和解析器。监听器用来监听所有数据的属性，解析器对每个元素节点的指令进行扫描和解析，根据指令模板替换数据,以及绑定相应的更新函数。</p>
+<p>简单来说，利用<strong>Object.defineProperty()</strong>，结合订阅-发布模式，对数据属性的getter和setter进行劫持。Vue3中抛弃了defineProperty()，改为Proxy</p>
+<h4 id="proxy相比objectdefineproperty的优势">Proxy相比Object.defineProperty()的优势</h4>
+<p><code>Object.defineProperty()</code>虽然可以做到监听对象属性，但是存在着一些缺点。</p>
+<ul>
+<li><strong>检测不到对象属性的添加和删除</strong></li>
+<li><strong>数组API无法监听到</strong>，所以在Vue2中对数组API进行了重写</li>
+<li>需要对每个属性进行遍历监听，如果是嵌套对象，需要<strong>深层监听，造成性能问题</strong></li>
+</ul>
+<p>而<code>Proxy</code>直接可以<strong>劫持整个对象，并返回一个新对象</strong>，我们只需要操作新对象就可以达到响应式目的。</p>
+<p><code>Proxy</code>的缺点：兼容性差，不兼容IE，而<code>Object.defineProperty()</code>可以兼容到IE9</p>
+<h4 id="vue里的双向绑定流程"><strong>Vue里的双向绑定流程</strong></h4>
 <ul>
 <li>初始化，对data执行相应化处理，该过程发生在监听器</li>
 <li>同时编译模板，找到里面动态绑定的数据，然后获取、初始化视图层，发生在解析器里</li>
@@ -1119,7 +1328,7 @@
 <li>omputed中的成员可以只定义一个函数作为只读属性, 也可以定义成 get / set变成可读写属性, 但是methods中的成员没有这样的。</li>
 </ol>
 <h4 id="watch">watch</h4>
-<p>watch是一个对data数据的监听回调, 当依赖的数据变化时, 会执行回调。在回调中，会传入newVal和oldVal两个参数。
+<p>watch是一个<strong>对data数据的监听回调, 当依赖的数据变化时, 会执行回调</strong>。在回调中，会传入newVal和oldVal两个参数。
 Vue实例会在实例化时调用$watch()，遍历watch对象的每一个属性。</p>
 <p>应用场景：</p>
 <p>当在data中的某个数据发生变化时, 我们需要做一些操作, 或者当需要在数据变化时执行异步或开销较大的操作时. 我们就可以使用watch来进行<strong>监听</strong></p>
@@ -1129,13 +1338,13 @@ Vue实例会在实例化时调用$watch()，遍历watch对象的每一个属性�
 <h3 id="vue3新特性">Vue3新特性</h3>
 <h3 id="diff算法">diff算法</h3>
 <h4 id="是什么">是什么</h4>
-<p><code>diff</code> 算法是一种通过同层的树节点进行比较的高效算法，在 <code>vue</code> 中，作用于虚拟 <code>dom</code> 渲染成真实 <code>dom</code> 的新旧 <code>VNode</code> 节点比较。</p>
+<p><code>diff</code> 算法是一种通过<strong>同层的树节点</strong>进行比较的高效算法，在 <code>vue</code> 中，作用于虚拟 <code>dom</code> 渲染成真实 <code>dom</code> 的新旧 <code>VNode</code> 节点比较。</p>
 <p>它有两个特点</p>
 <ul>
 <li>比较只会在相同层级进行，不会跨级比较</li>
 <li>在具体某一层的diff比较中，循环从两边向中间比较</li>
 </ul>
-<h4 id="原理分析">原理分析</h4>
+<h4 id="原理分析-1">原理分析</h4>
 <p>数据发生改变，<code>set</code>方法会调用<code>Dep.notify</code>通知所有订阅者<code>Watcher</code>，订阅者就会调用<code>patch</code>给真实的<code>DOM</code>打补丁，更新相应的视图</p>
 <p>先看<code>patch</code>。接收四个参数，第一个是旧节点<code>oldVnode</code>，第二个是新节点<code>vnode</code>。</p>
 <ul>
@@ -1143,7 +1352,6 @@ Vue实例会在实例化时调用$watch()，遍历watch对象的每一个属性�
 <li>没有旧节点，直接生成新的就可以了，<code>createElm</code></li>
 <li>通过<code>sameNode</code>判断两个节点一不一样，一样的话直接<code>patchVnode</code>，不一样的话创建新节点，删除旧节点</li>
 </ul>
-<h3 id="composition-api">Composition API</h3>
 <h2 id="操作系统">操作系统</h2>
 <h3 id="进程和线程的区别"><strong>进程和线程的区别：</strong></h3>
 <p><strong>进程</strong>，是程序的依次执行过程，是程序在执行过程中分配和管理资源的基本单位，每个进程都有自己的地址空间，至少有五种状态：初始态，执行态，等待状态，就绪状态，终止状态。</p>
@@ -1167,13 +1375,13 @@ Vue实例会在实例化时调用$watch()，遍历watch对象的每一个属性�
                             <a class="link-to-markdown" href="/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://MichaelYuhe.github.io/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" data-title="知识点总结" data-via="Coooolxyh"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://MichaelYuhe.github.io/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" data-title="知识点总结" data-ralateuid="u/7327190619"><i class="fab fa-weibo fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://MichaelYuhe.github.io/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" data-title="知识点总结" data-via="Coooolxyh" data-hashtags="面试"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://MichaelYuhe.github.io/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" data-title="知识点总结" data-ralateuid="u/7327190619"><i class="fab fa-weibo fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E9%9D%A2%E8%AF%95/">面试</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>

@@ -4,9 +4,37 @@
         <link>https://MichaelYuhe.github.io/</link>
         <description>夏宇航的个人博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 27 Oct 2021 10:52:09 &#43;0800</lastBuildDate>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 05 Nov 2021 08:03:08 &#43;0800</lastBuildDate>
             <atom:link href="https://MichaelYuhe.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>滴滴日常实习_一面</title>
+    <link>https://MichaelYuhe.github.io/%E6%BB%B4%E6%BB%B4%E6%97%A5%E5%B8%B8%E5%AE%9E%E4%B9%A0_%E4%B8%80%E9%9D%A2/</link>
+    <pubDate>Fri, 05 Nov 2021 08:03:08 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E6%BB%B4%E6%BB%B4%E6%97%A5%E5%B8%B8%E5%AE%9E%E4%B9%A0_%E4%B8%80%E9%9D%A2/</guid>
+    <description><![CDATA[滴滴日常实习一面 10月30日 自我介绍 项目 小游戏的难点，做了些什么，登陆相关 CSS 盒模型 怎么居中，尽可能多方法 flex布局讲一下 Javascript reduce用过]]></description>
+</item><item>
+    <title>有赞前端实习_二面</title>
+    <link>https://MichaelYuhe.github.io/%E6%9C%89%E8%B5%9E%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0_%E4%BA%8C%E9%9D%A2/</link>
+    <pubDate>Fri, 05 Nov 2021 08:00:13 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E6%9C%89%E8%B5%9E%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0_%E4%BA%8C%E9%9D%A2/</guid>
+    <description><![CDATA[有赞日常实习二面 11月4号 自我介绍 然后问了专业相关，聊到下学期才上计网，于是“那我计网只问你一些基础的吧” 计算机网络 讲一下HTTP，讲一下和]]></description>
+</item><item>
+    <title>有赞前端实习_一面</title>
+    <link>https://MichaelYuhe.github.io/%E6%9C%89%E8%B5%9E%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0_%E4%B8%80%E9%9D%A2/</link>
+    <pubDate>Fri, 05 Nov 2021 08:00:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E6%9C%89%E8%B5%9E%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0_%E4%B8%80%E9%9D%A2/</guid>
+    <description><![CDATA[有赞日常实习一面 11月2日 线上笔试 直播写代码 网站：showMeTheCode，有赞自己的平台 1、字符串相加 忘记处理最后一步的进位 1 2 3 4 5 6]]></description>
+</item><item>
+    <title>Web前端安全之XSS和CSRF</title>
+    <link>https://MichaelYuhe.github.io/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</link>
+    <pubDate>Wed, 03 Nov 2021 11:03:28 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</guid>
+    <description><![CDATA[Web前端安全之XSS和CSRF 写在前面 昨晚（2021 / 11 / 2），面试有赞实习，面试官提问了XSS和CSRF，从没了解过的我只能尴尬地回答：]]></description>
+</item><item>
     <title>Node.js初体验</title>
     <link>https://MichaelYuhe.github.io/email/</link>
     <pubDate>Wed, 27 Oct 2021 10:52:09 &#43;0800</pubDate>
@@ -26,7 +54,7 @@
     <pubDate>Fri, 08 Oct 2021 11:21:17 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://MichaelYuhe.github.io/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</guid>
-    <description><![CDATA[知识点总结 Javascript 执行上下文 当JavaScript执行一段可执行代码时，会创建相应的执行上下文 对于每个执行上下文，都有三个重要的属性 变量对象 作用域]]></description>
+    <description><![CDATA[知识点总结 Javascript 讲一下闭包 闭包的定义 闭包是指那些能够访问自由变量的函数。 那么什么是自由变量？自由变量是指在函数中使用的，但既不是函数参数也不是函]]></description>
 </item><item>
     <title>Vuex使用小结</title>
     <link>https://MichaelYuhe.github.io/vuex/</link>
@@ -48,26 +76,5 @@
     <author>作者</author>
     <guid>https://MichaelYuhe.github.io/vue-router/</guid>
     <description><![CDATA[Vue学习历程（二） 路由的使用 写在前面 在着手进行一个大项目之前，想先优化、完善之前的todolist项目。例如：增加登录、注册功能；数据储存]]></description>
-</item><item>
-    <title>Vue学习历程(一) Vue-todoist</title>
-    <link>https://MichaelYuhe.github.io/vue-todoist/</link>
-    <pubDate>Tue, 07 Sep 2021 08:33:40 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/vue-todoist/</guid>
-    <description><![CDATA[前言 学习完基础的三剑客后，决定开始学习框架。无非就两种选择，Vue或是React，了解了一番二者的区别，再看着文档写了两个教程demo，二者]]></description>
-</item><item>
-    <title>一键回到顶部</title>
-    <link>https://MichaelYuhe.github.io/back-to-top/</link>
-    <pubDate>Sun, 05 Sep 2021 20:39:52 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/back-to-top/</guid>
-    <description><![CDATA[如何给自己的博客添加一键回到顶部的功能？ 今天用Hugo搭好了博客，美化、自定义什么的先放在一边，单纯用框架改改参数什么的，总感觉技术含量不高]]></description>
-</item><item>
-    <title>持续更新的LeetCode笔记</title>
-    <link>https://MichaelYuhe.github.io/leetcode/</link>
-    <pubDate>Sun, 05 Sep 2021 16:34:10 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/leetcode/</guid>
-    <description><![CDATA[LeetCode刷题记录 动态规划 121.买卖股票的最佳时机 思路： 动态规划题 minPrice保存前i天的最低价格，用第i天的现价去减这个最小值]]></description>
 </item></channel>
 </rss>

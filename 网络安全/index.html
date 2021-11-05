@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Web前端安全之XSS和CSRF - Yuhe&#39;s Blog</title><meta name="Description" content="夏宇航的个人博客"><meta property="og:title" content="Web前端安全之XSS和CSRF" />
+<meta property="og:description" content="Web前端安全之XSS和CSRF 写在前面 昨晚（2021 / 11 / 2），面试有赞实习，面试官提问了XSS和CSRF，从没了解过的我只能尴尬地回答：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://MichaelYuhe.github.io/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-11-03T11:03:28+08:00" />
+<meta property="article:modified_time" content="2021-11-03T11:03:28+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Web前端安全之XSS和CSRF"/>
+<meta name="twitter:description" content="Web前端安全之XSS和CSRF 写在前面 昨晚（2021 / 11 / 2），面试有赞实习，面试官提问了XSS和CSRF，从没了解过的我只能尴尬地回答："/>
+<meta name="application-name" content="Yuhe&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Yuhe&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://MichaelYuhe.github.io/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" /><link rel="prev" href="https://MichaelYuhe.github.io/email/" /><link rel="next" href="https://MichaelYuhe.github.io/%E6%9C%89%E8%B5%9E%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0_%E4%B8%80%E9%9D%A2/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Web前端安全之XSS和CSRF",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/MichaelYuhe.github.io\/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8\/"
+        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "网络安全","wordcount":  3036 ,
+        "url": "https:\/\/MichaelYuhe.github.io\/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8\/","datePublished": "2021-11-03T11:03:28+08:00","dateModified": "2021-11-03T11:03:28+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "https:\/\/MichaelYuhe.github.io\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "夏宇航"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <span id="top"></span>
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Yuhe&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/logo.png"
+        data-srcset="/images/logo.png, /images/logo.png 1.5x, /images/logo.png 2x"
+        data-sizes="auto"
+        alt="/images/logo.png"
+        title="/images/logo.png" /></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Yuhe&#39;s Blog"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/logo.png"
+        data-srcset="/images/logo.png, /images/logo.png 1.5x, /images/logo.png 2x"
+        data-sizes="auto"
+        alt="/images/logo.png"
+        title="/images/logo.png" /></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Web前端安全之XSS和CSRF</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>夏宇航</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><i class="far fa-folder fa-fw"></i>计算机网络</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-11-03">2021-11-03</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3036 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 7 分钟&nbsp;<span id="/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" class="leancloud_visitors" data-flag-title="Web前端安全之XSS和CSRF">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#web前端安全之xss和csrf">Web前端安全之XSS和CSRF</a>
+      <ul>
+        <li><a href="#写在前面">写在前面</a></li>
+        <li><a href="#xss">XSS</a>
+          <ul>
+            <li><a href="#xss是什么">XSS是什么</a></li>
+            <li><a href="#xss攻击的类型">XSS攻击的类型</a>
+              <ul>
+                <li><a href="#存储型">存储型</a></li>
+                <li><a href="#反射型">反射型</a></li>
+                <li><a href="#dom型">DOM型</a></li>
+              </ul>
+            </li>
+            <li><a href="#如何防范xss">如何防范XSS</a>
+              <ul>
+                <li><a href="#输入过滤">输入过滤</a></li>
+                <li><a href="#预防存储型和反射型">预防存储型和反射型</a>
+                  <ul>
+                    <li><a href="#纯前端渲染">纯前端渲染</a></li>
+                    <li><a href="#html转义">HTML转义</a></li>
+                  </ul>
+                </li>
+                <li><a href="#预防dom型">预防DOM型</a></li>
+                <li><a href="#其他通用措施">其他通用措施</a></li>
+              </ul>
+            </li>
+            <li><a href="#如何检测xss">如何检测XSS</a></li>
+            <li><a href="#总结">总结</a></li>
+          </ul>
+        </li>
+        <li><a href="#csrf">CSRF</a>
+          <ul>
+            <li><a href="#什么是csrf">什么是CSRF</a></li>
+            <li><a href="#csef攻击的类型">CSEF攻击的类型</a>
+              <ul>
+                <li><a href="#get类型">GET类型</a></li>
+                <li><a href="#post类型">POST类型</a></li>
+                <li><a href="#链接类型">链接类型</a></li>
+              </ul>
+            </li>
+            <li><a href="#如何防范csrf">如何防范CSRF</a></li>
+            <li><a href="#总结-1">总结</a></li>
+          </ul>
+        </li>
+        <li><a href="#附录">附录</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="web前端安全之xss和csrf">Web前端安全之XSS和CSRF</h2>
+<h3 id="写在前面">写在前面</h3>
+<p>昨晚（2021 / 11 / 2），面试有赞实习，面试官提问了XSS和CSRF，从没了解过的我只能尴尬地回答：“不好意思，我没有了解过相关的知识”。那么什么是XSS和CSRF，今天就必须给他搞懂了！</p>
+<h3 id="xss">XSS</h3>
+<h4 id="xss是什么">XSS是什么</h4>
+<p><strong>跨站脚本攻击（Cross-site scripting，XSS）<strong>是一种安全漏洞，攻击者可以利用这种漏洞在网站上</strong>注入恶意的客户端代码</strong>。当被攻击者登陆网站时就会自动运行这些恶意代码，从而，攻击者可以突破网站的访问权限，冒充受害者。XSS 在 2017 年被认为 <a href="https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A7-Cross-Site_Scripting_%28XSS%29" target="_blank" rel="noopener noreffer">7 种最常见的 Web 应用程序漏洞之一</a>。这种攻击的主要目的是窃取其他用户的身份数据——cookie、会话令牌和其他信息。在大多数情况下，这种攻击是用来窃取其他人的 cookie。 大多数情况下，这种攻击是通过 Javascript 和 HTML 完成的。</p>
+<p><strong>XSS 的本质</strong>是：恶意代码未经过滤，与网站正常的代码混在一起；浏览器无法分辨哪些脚本是可信的，导致恶意脚本被执行。</p>
+<h4 id="xss攻击的类型">XSS攻击的类型</h4>
+<h5 id="存储型">存储型</h5>
+<ol>
+<li>攻击者将恶意代码<strong>提交到目标网站的数据库</strong>中。</li>
+<li>用户打开目标网站时，网站服务端将恶意代码从数据库取出，<strong>拼接在 HTML 中返回给浏览器</strong>。</li>
+<li>用户浏览器接收到响应后解析执行，混在其中的<strong>恶意代码也被执行</strong>。</li>
+<li>恶意代码窃取用户数据并发送到攻击者的网站，或者冒充用户的行为，调用目标网站接口执行攻击者指定的操作。</li>
+</ol>
+<p>这种攻击常见于<strong>带有用户保存数据的网站功能</strong>，如论坛发帖、商品评论、用户私信等。</p>
+<h5 id="反射型">反射型</h5>
+<ol>
+<li>攻击者构造出<strong>特殊的 URL，其中包含恶意代码</strong>。</li>
+<li>用户打开带有恶意代码的 URL 时，<strong>网站服务端将恶意代码从 URL 中取出，拼接在 HTML 中返回给浏览器</strong>。</li>
+<li>用户浏览器接收到响应后解析执行，混在其中的<strong>恶意代码也被执行</strong>。</li>
+<li>恶意代码窃取用户数据并发送到攻击者的网站，或者冒充用户的行为，调用目标网站接口执行攻击者指定的操作。</li>
+</ol>
+<p>反射型 XSS 跟存储型 XSS 的区别是：<strong>存储型 XSS 的恶意代码存在数据库里，反射型 XSS 的恶意代码存在 URL</strong> 里。</p>
+<p>反射型 XSS 漏洞常见于<strong>通过 URL 传递参数的功能</strong>，如网站搜索、跳转等。</p>
+<p>由于需要用户主动打开恶意的 URL 才能生效，攻击者往往会结合多种手段<strong>诱导用户点击</strong>。</p>
+<p>POST 的内容也可以触发反射型 XSS，只不过其触发条件比较苛刻（需要构造表单提交页面，并引导用户点击），所以非常少见。</p>
+<h5 id="dom型">DOM型</h5>
+<ol>
+<li>攻击者构造出<strong>特殊的 URL，其中包含恶意代码</strong>。</li>
+<li>用户打开带有恶意代码的 URL。</li>
+<li>用户浏览器接收到响应后解析执行，<strong>前端 JavaScript 取出 URL 中的恶意代码并执行</strong>。</li>
+<li>恶意代码窃取用户数据并发送到攻击者的网站，或者冒充用户的行为，调用目标网站接口执行攻击者指定的操作。</li>
+</ol>
+<p>DOM 型 XSS 跟前两种 XSS 的区别：DOM 型 XSS 攻击中，<strong>取出和执行恶意代码由浏览器端完成</strong>，属于前端 JavaScript <strong>自身的安全漏洞</strong>，而其他两种 XSS 都属于服务端的安全漏洞。</p>
+<h4 id="如何防范xss">如何防范XSS</h4>
+<p>现在，我们已经了解了XSS攻击的两大要素</p>
+<ul>
+<li>攻击者提交恶意代码</li>
+<li>浏览器执行恶意代码</li>
+</ul>
+<p>我们就可以针对这两大要素进行防护</p>
+<h5 id="输入过滤">输入过滤</h5>
+<p>输入侧过滤能够在某些情况下解决特定的 XSS 问题，但会引入很大的不确定性和乱码问题。但对于明确的输入类型，例如数字、URL、电话号码、邮件地址等等内容，进行输入过滤还是必要的。</p>
+<h5 id="预防存储型和反射型">预防存储型和反射型</h5>
+<p>存储型和反射型 XSS 都是在服务端取出恶意代码后，插入到响应 HTML 里的，攻击者刻意编写的“数据”被内嵌到“代码”中，被浏览器所执行。对此有两种解决方案</p>
+<h6 id="纯前端渲染">纯前端渲染</h6>
+<ol>
+<li>浏览器先加载一个静态 HTML，此 HTML 中不包含任何跟业务相关的数据。</li>
+<li>然后浏览器执行 HTML 中的 JavaScript。</li>
+<li>JavaScript 通过 Ajax 加载业务数据，调用 DOM API 更新到页面上。</li>
+</ol>
+<h6 id="html转义">HTML转义</h6>
+<p>使用转义库，在不同的上下文里应用不同的转义规则。</p>
+<h5 id="预防dom型">预防DOM型</h5>
+<p>DOM 型 XSS 攻击，实际上就是网站前端 JavaScript 代码本身不够严谨，把不可信的数据当作代码执行了。</p>
+<p>在使用 <code>.innerHTML</code>、<code>.outerHTML</code>、<code>document.write()</code> 时要特别小心，不要把不可信的数据作为 HTML 插到页面上，而应尽量使用 <code>.textContent</code>、<code>.setAttribute()</code> 等。</p>
+<p>DOM 中的内联事件监听器，如 <code>location</code>、<code>onclick</code>、<code>onerror</code>、<code>onload</code>、<code>onmouseover</code> 等，<code>&lt;a&gt;</code> 标签的 <code>href</code> 属性，JavaScript 的 <code>eval()</code>、<code>setTimeout()</code>、<code>setInterval()</code> 等，都能把字符串作为代码运行。如果不可信的数据拼接到字符串中传递给这些 API，很容易产生安全隐患，一定要避免在字符串中拼接不可靠数据</p>
+<h5 id="其他通用措施">其他通用措施</h5>
+<ul>
+<li>Content Security Policy</li>
+<li>输入内容长度控制</li>
+<li>禁止JavaScript读取cookie</li>
+<li>验证码，防止脚本模拟用户</li>
+</ul>
+<h4 id="如何检测xss">如何检测XSS</h4>
+<ol>
+<li>使用通用 XSS 攻击字符串手动检测 XSS 漏洞。</li>
+<li>使用扫描工具自动检测 XSS 漏洞。</li>
+</ol>
+<h4 id="总结">总结</h4>
+<p>很难通过技术手段完全避免XSS攻击，但要遵守以下原则来避免漏洞的产生</p>
+<ul>
+<li>
+<p><strong>利用模板引擎</strong> 开启模板引擎自带的 HTML 转义功能。例如： 在 ejs 中，尽量使用 <code>&lt;%= data %&gt;</code> 而不是 <code>&lt;%- data %&gt;</code>； 在 doT.js 中，尽量使用 <code>{{! data }</code> 而不是 <code>{{= data }</code>； 在 FreeMarker 中，确保引擎版本高于 2.3.24，并且选择正确的 <code>freemarker.core.OutputFormat</code>。</p>
+</li>
+<li>
+<p><strong>避免内联事件</strong> 尽量不要使用 <code>onLoad=&quot;onload('{{data}}')&quot;</code>、<code>onClick=&quot;go('{{action}}')&quot;</code> 这种拼接内联事件的写法。在 JavaScript 中通过 <code>.addEventlistener()</code> 事件绑定会更安全。</p>
+</li>
+<li>
+<p><strong>避免拼接 HTML</strong> 前端采用拼接 HTML 的方法比较危险，如果框架允许，使用 <code>createElement</code>、<code>setAttribute</code> 之类的方法实现。或者采用比较成熟的渲染框架，如 Vue/React 等。</p>
+</li>
+<li>
+<p><strong>时刻保持警惕</strong> 在插入位置为 DOM 属性、链接等位置时，要打起精神，严加防范。</p>
+</li>
+<li>
+<p><strong>增加攻击难度，降低攻击后果</strong> 通过 CSP、输入长度配置、接口安全措施等方法，增加攻击的难度，降低攻击的后果。</p>
+</li>
+<li>
+<p><strong>主动检测和发现</strong> 可使用 XSS 攻击字符串和自动扫描工具寻找潜在的 XSS 漏洞。</p>
+</li>
+</ul>
+<h3 id="csrf">CSRF</h3>
+<h4 id="什么是csrf">什么是CSRF</h4>
+<p><strong>CSRF（Cross-site request forgery）跨站请求伪造</strong>：攻击者诱导受害者进入第三方网站，在第三方网站中，向被攻击网站发送跨站请求。利用受害者在被攻击网站已经获取的注册凭证，绕过后台的用户验证，达到冒充用户对被攻击的网站执行某项操作的目的。</p>
+<ul>
+<li>攻击一般发起在<strong>第三方网站</strong>，而不是被攻击的网站。被攻击的网站无法防止攻击发生。</li>
+<li>攻击利用受害者在被攻击网站的登录凭证，<strong>冒充受害者提交操作</strong>；而不是直接窃取数据。</li>
+<li>整个过程攻击者<strong>并不能获取到受害者的登录凭证，仅仅是“冒用”</strong>。</li>
+<li>跨站请求可以用各种方式：图片URL、超链接、CORS、Form提交等等。部分请求方式可以直接嵌入在第三方论坛、文章中，难以进行追踪。</li>
+</ul>
+<p><strong>CSRF通常是跨域的</strong>，因为外域通常更容易被攻击者掌控。但是如果本域下有容易被利用的功能，比如可以发图和链接的论坛和评论区，攻击可以直接在本域下进行，而且这种攻击更加危险。</p>
+<h4 id="csef攻击的类型">CSEF攻击的类型</h4>
+<h5 id="get类型">GET类型</h5>
+<h5 id="post类型">POST类型</h5>
+<h5 id="链接类型">链接类型</h5>
+<h4 id="如何防范csrf">如何防范CSRF</h4>
+<p>CSRF通常从第三方网站发起，被攻击的网站无法防止攻击发生，只能通过增强自己网站针对CSRF的防护能力来提升安全性。</p>
+<p>我们已经了解到：</p>
+<ul>
+<li>CSRF（通常）发生在第三方域名。</li>
+<li>CSRF攻击者不能获取到Cookie等信息，只是使用。</li>
+</ul>
+<p>我们可以针对这两点来制定防护策略：</p>
+<ul>
+<li><strong>阻止不明外域的访问</strong>
+<ul>
+<li>同源检测</li>
+<li>Samesite Cookie</li>
+</ul>
+</li>
+<li><strong>提交时要求附加本域才能获取的信息</strong>
+<ul>
+<li>CSRF Token</li>
+<li>双重Cookie验证</li>
+</ul>
+</li>
+</ul>
+<h4 id="总结-1">总结</h4>
+<ul>
+<li>CSRF自动防御策略：同源检测（Origin 和 Referer 验证）。</li>
+<li>CSRF主动防御措施：Token验证 或者 双重Cookie验证 以及配合Samesite Cookie。</li>
+<li>保证页面的幂等性，后端接口不要在GET页面中做用户操作。</li>
+</ul>
+<h3 id="附录">附录</h3>
+<p><a href="https://xss-game.appspot.com" target="_blank" rel="noopener noreffer">一个有趣的练习XSS攻击的网站</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-11-03</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://MichaelYuhe.github.io/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" data-title="Web前端安全之XSS和CSRF" data-via="Coooolxyh" data-hashtags="网络安全"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://MichaelYuhe.github.io/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" data-title="Web前端安全之XSS和CSRF" data-ralateuid="u/7327190619"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/email/" class="prev" rel="prev" title="Node.js初体验"><i class="fas fa-angle-left fa-fw"></i>Node.js初体验</a>
+            <a href="/%E6%9C%89%E8%B5%9E%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0_%E4%B8%80%E9%9D%A2/" class="next" rel="next" title="有赞前端实习_一面">有赞前端实习_一面<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+        
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"VnoFwOAntIWwYmgCA3iQ2gzz-gzGzoHsz","appKey":"24ve8kV13pLoDH27z7txpwDu","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"说点什么吧","recordIP":false,"visitor":true}},"search":{"algoliaAppID":null,"algoliaIndex":null,"algoliaSearchKey":null,"highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
