@@ -4,9 +4,16 @@
         <link>https://MichaelYuhe.github.io/</link>
         <description>夏宇航的个人博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 05 Nov 2021 08:03:08 &#43;0800</lastBuildDate>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 09 Dec 2021 23:38:52 &#43;0800</lastBuildDate>
             <atom:link href="https://MichaelYuhe.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>实习一月总结</title>
+    <link>https://MichaelYuhe.github.io/%E5%AE%9E%E4%B9%A0%E4%B8%80%E6%9C%88%E6%80%BB%E7%BB%93/</link>
+    <pubDate>Thu, 09 Dec 2021 23:38:52 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E5%AE%9E%E4%B9%A0%E4%B8%80%E6%9C%88%E6%80%BB%E7%BB%93/</guid>
+    <description><![CDATA[实习一月小结 写在前面 抱着试试看＋练习面试的想法，冲刺了几天面经，参与了几家公司的面试。只能说基础太不扎实了，许多js的基本问题都不能回答出来]]></description>
+</item><item>
     <title>滴滴日常实习_一面</title>
     <link>https://MichaelYuhe.github.io/%E6%BB%B4%E6%BB%B4%E6%97%A5%E5%B8%B8%E5%AE%9E%E4%B9%A0_%E4%B8%80%E9%9D%A2/</link>
     <pubDate>Fri, 05 Nov 2021 08:03:08 &#43;0800</pubDate>
@@ -69,12 +76,5 @@
     <author>作者</author>
     <guid>https://MichaelYuhe.github.io/vuex/</guid>
     <description><![CDATA[Vuex使用小结 写在前面 虽如官方文档所说：“如果您不打算开发大型单页应用，使用 Vuex 可能是繁琐冗余的。确实是如此——如果您的应用够简单，您最好不]]></description>
-</item><item>
-    <title>Vue Router2</title>
-    <link>https://MichaelYuhe.github.io/vue-router2/</link>
-    <pubDate>Mon, 27 Sep 2021 09:33:14 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/vue-router2/</guid>
-    <description><![CDATA[Vue 3学习之路由的进阶 写在前面 之前学习使用了vue的路由，实现了简单的单页面内部pages跳转，继续跟随官方视频学习，进阶vue3中路由的使用]]></description>
 </item></channel>
 </rss>
