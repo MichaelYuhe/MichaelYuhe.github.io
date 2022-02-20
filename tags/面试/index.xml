@@ -4,7 +4,14 @@
         <link>https://MichaelYuhe.github.io/tags/%E9%9D%A2%E8%AF%95/</link>
         <description>面试 - 标签 - Yuhe&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 05 Nov 2021 08:03:08 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/tags/%E9%9D%A2%E8%AF%95/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 14 Feb 2022 08:00:10 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/tags/%E9%9D%A2%E8%AF%95/" rel="self" type="application/rss+xml" /><item>
+    <title>阿里云OPENAPI前端实习_一面</title>
+    <link>https://MichaelYuhe.github.io/%E9%98%BF%E9%87%8C%E4%BA%91openapi%E4%B8%80%E9%9D%A2/</link>
+    <pubDate>Mon, 14 Feb 2022 08:00:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E9%98%BF%E9%87%8C%E4%BA%91openapi%E4%B8%80%E9%9D%A2/</guid>
+    <description><![CDATA[阿里云OpenAPI一面 绩点，排名，相关课程 面试官：你们绩点也太高了，这才百分三十几吗 自我介绍，要求介绍自己的优势 说自己学习能力强，上手快 简]]></description>
+</item><item>
     <title>滴滴日常实习_一面</title>
     <link>https://MichaelYuhe.github.io/%E6%BB%B4%E6%BB%B4%E6%97%A5%E5%B8%B8%E5%AE%9E%E4%B9%A0_%E4%B8%80%E9%9D%A2/</link>
     <pubDate>Fri, 05 Nov 2021 08:03:08 &#43;0800</pubDate>
@@ -39,5 +46,12 @@
     <author>作者</author>
     <guid>https://MichaelYuhe.github.io/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[知识点总结 Javascript 讲一下闭包 闭包的定义 闭包是指那些能够访问自由变量的函数。 那么什么是自由变量？自由变量是指在函数中使用的，但既不是函数参数也不是函]]></description>
+</item><item>
+    <title>网易雷火前端实习_一面</title>
+    <link>https://MichaelYuhe.github.io/%E7%BD%91%E6%98%93%E9%9B%B7%E7%81%AB%E4%B8%80%E9%9D%A2/</link>
+    <pubDate>Sun, 14 Feb 2021 08:00:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E7%BD%91%E6%98%93%E9%9B%B7%E7%81%AB%E4%B8%80%E9%9D%A2/</guid>
+    <description><![CDATA[网易雷火一面 自我介绍 移动端自适应 小游戏性能优化 分包加载预加载 模型怎么优化 cocos内部怎么自适应，原理 webpack CSS动画 垂直居中，水平居中 this]]></description>
 </item></channel>
 </rss>
