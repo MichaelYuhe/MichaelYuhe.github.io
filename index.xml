@@ -4,9 +4,16 @@
         <link>https://MichaelYuhe.github.io/</link>
         <description>夏宇航的个人博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 21 Feb 2022 23:13:12 &#43;0800</lastBuildDate>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 23 Feb 2022 08:00:10 &#43;0800</lastBuildDate>
             <atom:link href="https://MichaelYuhe.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>阿里云OPENAPI前端实习_二面</title>
+    <link>https://MichaelYuhe.github.io/%E9%98%BF%E9%87%8C%E4%BA%91%E4%BA%8C%E9%9D%A2/</link>
+    <pubDate>Wed, 23 Feb 2022 08:00:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E9%98%BF%E9%87%8C%E4%BA%91%E4%BA%8C%E9%9D%A2/</guid>
+    <description><![CDATA[阿里云二面 没想过有一天自己看过的书的作者来面试自己&hellip; 待我入个正支持一下😂 没有技术，纯聊天 学习路线 HTML和CSS的重点是什么？]]></description>
+</item><item>
     <title>备战暑期实习</title>
     <link>https://MichaelYuhe.github.io/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/</link>
     <pubDate>Mon, 21 Feb 2022 23:13:12 &#43;0800</pubDate>
@@ -69,12 +76,5 @@
     <author>作者</author>
     <guid>https://MichaelYuhe.github.io/%E6%9C%89%E8%B5%9E%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0_%E4%B8%80%E9%9D%A2/</guid>
     <description><![CDATA[有赞日常实习一面 11月2日 线上笔试 直播写代码 网站：showMeTheCode，有赞自己的平台 1、字符串相加 忘记处理最后一步的进位 1 2 3 4 5 6]]></description>
-</item><item>
-    <title>Web前端安全之XSS和CSRF</title>
-    <link>https://MichaelYuhe.github.io/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</link>
-    <pubDate>Wed, 03 Nov 2021 11:03:28 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</guid>
-    <description><![CDATA[Web前端安全之XSS和CSRF 写在前面 昨晚（2021 / 11 / 2），面试有赞实习，面试官提问了XSS和CSRF，从没了解过的我只能尴尬地回答：]]></description>
 </item></channel>
 </rss>

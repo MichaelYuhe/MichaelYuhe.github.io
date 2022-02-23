@@ -2253,6 +2253,27 @@ io.disconnect()
 
 
 
+## 其他
+
+### 前端新技术的了解
+
+- Web3.0
+- WebGL
+- Serverless
+- Three.js
+- 微前端
+- Typescript
+- NodeJS
+- 移动端
+- Flutter
+- 元宇宙
+
+### 最近在研究的东西
+
+- 想学Flutter
+- 区块链相关
+- 聊天室
+
 ## 自我介绍
 
 面试官好，我是夏宇航，福建泉州人，来自浙江大学信息与电子工程学院，现在在读大三。
