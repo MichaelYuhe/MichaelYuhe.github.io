@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/MichaelYuhe.github.io\/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0\/"
-        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "知识点","wordcount":  23306 ,
+        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "知识点","wordcount":  26090 ,
         "url": "https:\/\/MichaelYuhe.github.io\/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0\/","datePublished": "2022-02-21T23:13:12+08:00","dateModified": "2022-02-21T23:13:12+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/MichaelYuhe.github.io\/images\/avatar.png"},"author": {
@@ -120,8 +120,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">备战暑期实习</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>夏宇航</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E9%9D%A2%E8%AF%95/"><i class="far fa-folder fa-fw"></i>面试</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-21">2022-02-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 23306 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 47 分钟&nbsp;<span id="/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/" class="leancloud_visitors" data-flag-title="备战暑期实习">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-21">2022-02-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 26090 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 53 分钟&nbsp;<span id="/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/" class="leancloud_visitors" data-flag-title="备战暑期实习">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -152,6 +152,15 @@
             <li><a href="#http">HTTP</a></li>
             <li><a href="#https">HTTPS</a></li>
             <li><a href="#区别">区别</a></li>
+            <li><a href="#ssl加密">SSL加密</a></li>
+          </ul>
+        </li>
+        <li><a href="#http版本">HTTP版本</a>
+          <ul>
+            <li><a href="#http10">HTTP1.0</a></li>
+            <li><a href="#http11">HTTP1.1</a></li>
+            <li><a href="#http20">HTTP2.0</a></li>
+            <li><a href="#总结">总结</a></li>
           </ul>
         </li>
         <li><a href="#url">URL</a>
@@ -165,6 +174,7 @@
           <ul>
             <li><a href="#是什么">是什么</a></li>
             <li><a href="#查询过程">查询过程</a></li>
+            <li><a href="#协议">协议</a></li>
           </ul>
         </li>
         <li><a href="#cdn">CDN</a></li>
@@ -207,7 +217,16 @@
             <li><a href="#垂直居中">垂直居中</a></li>
           </ul>
         </li>
-        <li><a href="#flex布局">flex布局</a></li>
+        <li><a href="#flex布局">flex布局</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#属性">属性</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#css画三角形">CSS画三角形</a></li>
         <li><a href="#性能优化">性能优化</a></li>
         <li><a href="#回流重绘">回流、重绘</a>
           <ul>
@@ -302,6 +321,7 @@
             <li><a href="#new都做了些什么">new都做了些什么？</a></li>
           </ul>
         </li>
+        <li><a href="#settimeout实现setinterval"><code>setTimeout</code>实现<code>setInterval</code></a></li>
         <li><a href="#bindcall和apply">bind，call和apply</a>
           <ul>
             <li><a href="#call">call</a></li>
@@ -348,6 +368,11 @@
         <li><a href="#数据类型">数据类型</a>
           <ul>
             <li><a href="#基本类型">基本类型</a></li>
+            <li><a href="#symbol">Symbol</a>
+              <ul>
+                <li><a href="#作用">作用</a></li>
+              </ul>
+            </li>
             <li><a href="#引用类型">引用类型</a></li>
             <li><a href="#判断数据类型的方法">判断数据类型的方法</a>
               <ul>
@@ -412,10 +437,29 @@
             <li><a href="#解决方案-1">解决方案</a></li>
           </ul>
         </li>
+        <li><a href="#this指向">this指向</a>
+          <ul>
+            <li><a href="#绑定规则">绑定规则</a>
+              <ul>
+                <li><a href="#默认绑定">默认绑定</a></li>
+                <li><a href="#隐式绑定">隐式绑定</a></li>
+                <li><a href="#new绑定">new绑定</a></li>
+                <li><a href="#显示修改">显示修改</a></li>
+              </ul>
+            </li>
+            <li><a href="#箭头函数">箭头函数</a></li>
+          </ul>
+        </li>
         <li><a href="#es6">ES6</a>
           <ul>
             <li><a href="#varlet和const">var，let和const</a></li>
+            <li><a href="#set和map">Set和Map</a>
+              <ul>
+                <li><a href="#set">Set</a></li>
+              </ul>
+            </li>
             <li><a href="#forin-和-forof-的区别">for&hellip;in 和 for&hellip;of 的区别</a></li>
+            <li><a href="#箭头函数-1">箭头函数</a></li>
             <li><a href="#proxy">Proxy</a>
               <ul>
                 <li><a href="#用法">用法：</a></li>
@@ -435,10 +479,29 @@
     <li><a href="#react">React</a></li>
     <li><a href="#vue">Vue</a>
       <ul>
+        <li><a href="#vue3和vue2的区别">Vue3和Vue2的区别</a>
+          <ul>
+            <li><a href="#proxy替代defineproperty"><code>Proxy</code>替代<code>defineProperty</code></a>
+              <ul>
+                <li><a href="#objectdefineproperty"><code>Object.defineProperty()</code></a></li>
+                <li><a href="#proxy-1"><code>Proxy</code></a></li>
+              </ul>
+            </li>
+            <li><a href="#composition-api替代options-api"><code>Composition API</code>替代<code>Options API</code></a>
+              <ul>
+                <li><a href="#options-api"><code>Options API</code></a></li>
+                <li><a href="#composition-api"><code>Composition API</code></a></li>
+                <li><a href="#优势">优势</a></li>
+              </ul>
+            </li>
+            <li><a href="#性能提升">性能提升</a></li>
+            <li><a href="#treeshaking">Treeshaking</a></li>
+          </ul>
+        </li>
         <li><a href="#双向数据绑定">双向数据绑定</a>
           <ul>
-            <li><a href="#objectdefineproperty"><code>Object.defineProperty</code></a></li>
-            <li><a href="#proxy-1">Proxy</a></li>
+            <li><a href="#objectdefineproperty-1"><code>Object.defineProperty</code></a></li>
+            <li><a href="#proxy-2">Proxy</a></li>
           </ul>
         </li>
         <li><a href="#mvvm">MVVM</a>
@@ -459,8 +522,17 @@
         </li>
         <li><a href="#computed和watch">computed和watch</a>
           <ul>
-            <li><a href="#computed">computed</a></li>
-            <li><a href="#watch">watch</a></li>
+            <li><a href="#computed">computed</a>
+              <ul>
+                <li><a href="#应用场景-2">应用场景</a></li>
+                <li><a href="#和methods的区别">和methods的区别</a></li>
+              </ul>
+            </li>
+            <li><a href="#watch">watch</a>
+              <ul>
+                <li><a href="#使用场景">使用场景</a></li>
+              </ul>
+            </li>
             <li><a href="#二者异同">二者异同</a></li>
           </ul>
         </li>
@@ -471,7 +543,7 @@
             <li><a href="#组件不会被卸载">组件不会被卸载</a></li>
           </ul>
         </li>
-        <li><a href="#vue3和vue2的区别">Vue3和Vue2的区别</a></li>
+        <li><a href="#vue3和vue2的区别-1">Vue3和Vue2的区别</a></li>
         <li><a href="#生命周期">生命周期</a>
           <ul>
             <li><a href="#生命周期顺序">生命周期顺序</a></li>
@@ -484,14 +556,32 @@
           <ul>
             <li><a href="#vue-router中的懒加载">vue-router中的懒加载</a></li>
             <li><a href="#route和router的区别"><code>$route</code>和<code>$router</code>的区别</a></li>
+            <li><a href="#history模式-1">history模式</a>
+              <ul>
+                <li><a href="#特点">特点</a></li>
+                <li><a href="#原理">原理</a></li>
+              </ul>
+            </li>
+            <li><a href="#hash模式-1">hash模式</a>
+              <ul>
+                <li><a href="#特点-1">特点</a></li>
+                <li><a href="#原理-1">原理</a></li>
+              </ul>
+            </li>
+            <li><a href="#replace和push的区别">replace和push的区别</a>
+              <ul>
+                <li><a href="#thisrouterpush"><code>this.$router.push()</code></a></li>
+                <li><a href="#thisrouterreplace"><code>this.$router.replace()</code></a></li>
+              </ul>
+            </li>
           </ul>
         </li>
-        <li><a href="#vuex">Vuex</a>
+        <li><a href="#vuex"><code>Vuex</code></a>
           <ul>
             <li><a href="#是什么-2">是什么</a></li>
             <li><a href="#action和mutation的区别">action和mutation的区别</a></li>
-            <li><a href="#vuex和localstorage的区别">Vuex和localStorage的区别</a></li>
-            <li><a href="#vuex和一个单纯的全局对象相比有什么优点">Vuex和一个单纯的全局对象相比有什么优点</a></li>
+            <li><a href="#vuex和localstorage的区别"><code>Vuex</code>和<code>localStorage</code>的区别</a></li>
+            <li><a href="#vuex和一个单纯的全局对象相比有什么优点"><code>Vuex</code>和一个单纯的全局对象相比有什么优点</a></li>
           </ul>
         </li>
       </ul>
@@ -739,8 +829,8 @@
 <ul>
 <li>支持客户/服务器模式</li>
 <li>简单快速：客户只需向服务器传送请求方法和请求路径</li>
-<li>灵活：允许传送任何类型的数据，数据类型由Content-Type标注</li>
-<li>无连接：每次连接只处理一个请求（后面出现了keep-alive解决该问题）</li>
+<li>灵活：允许传送任何类型的数据，数据类型由<code>Content-Type</code>标注</li>
+<li>无连接：每次连接只处理一个请求（后面出现了<code>keep-alive</code>解决该问题）</li>
 <li>无状态：无法根据之前的状态来对应地处理本次请求</li>
 </ul>
 <h4 id="https">HTTPS</h4>
@@ -769,6 +859,66 @@
 <li>默认端口不同：<strong>HTTP是80，HTTPS是443</strong></li>
 <li>HTTPS需要进行加密和多次握手，性能不如HTTP</li>
 <li>HTTPS需要证书，证书功能越强大花费也越大</li>
+</ul>
+<h4 id="ssl加密">SSL加密</h4>
+<p>在HTTPS的加密中，采用的是对称加密+非对称加密，也就是混合加密</p>
+<ul>
+<li>
+<p>非对称加密解决密钥交换问题</p>
+<p>发送密文的一方使用对方的公钥进行加密处理，然后对方用自己的私钥拿来解密</p>
+</li>
+<li>
+<p>数字证书</p>
+<p>数字证书认证机构处于客户端与服务器双方都可信赖的第三方机构的立场</p>
+<p>服务器的运营人员申请数字证书，机构会对已申请的公钥做一个数字签名，服务器在通信时就把这份数字证书也一起发给客户端</p>
+</li>
+</ul>
+<h3 id="http版本">HTTP版本</h3>
+<h4 id="http10">HTTP1.0</h4>
+<p>与服务器只保持短暂的连接，每次请求都需要和服务器建立一个TCP连接</p>
+<p>想要建立长连接要手动设置<code>keep-alive</code></p>
+<h4 id="http11">HTTP1.1</h4>
+<p>到了1.1版本，默认支持长连接，建立一次连接，多次请求均由这个连接完成</p>
+<p>引入了更多缓存控制策略</p>
+<p>添加了一些新的请求方法，比如put，delete，options</p>
+<h4 id="http20">HTTP2.0</h4>
+<ul>
+<li>
+<p>多路复用</p>
+<p>HTTP2复用TCP连接，意味着在一个连接里，客户端和浏览器都可以同时发送多个请求或回应，且不用按照顺序一一对应，避免了队头堵塞</p>
+</li>
+<li>
+<p>二进制分帧</p>
+<p>采用二进制格式传输数据，解析更高效</p>
+</li>
+<li>
+<p>首部压缩</p>
+<p>在客户端和服务器之间使用首部表来跟踪和存储之前发送的键值对，对于相同的数据不再通过每次请求和响应发送</p>
+</li>
+<li>
+<p>服务器推送</p>
+<p>引入了服务器推送，允许服务器推送资源给客户端</p>
+</li>
+</ul>
+<h4 id="总结">总结</h4>
+<p>HTTP1.0：</p>
+<ul>
+<li>浏览器与服务器只保持短暂的连接，浏览器的每次请求都需要与服务器建立一个TCP连接</li>
+</ul>
+<p>HTTP1.1：</p>
+<ul>
+<li>引入了持久连接，即TCP连接默认不关闭，可以被多个请求复用</li>
+<li>在同一个TCP连接里面，客户端可以同时发送多个请求</li>
+<li>虽然允许复用TCP连接，但是同一个TCP连接里面，所有的数据通信是按次序进行的，服务器只有处理完一个请求，才会接着处理下一个请求。如果前面的处理特别慢，后面就会有许多请求排队等着</li>
+<li>新增了一些请求方法</li>
+<li>新增了一些请求头和响应头</li>
+</ul>
+<p>HTTP2.0：</p>
+<ul>
+<li>采用二进制格式而非文本格式</li>
+<li>完全多路复用，而非有序并阻塞的、只需一个连接即可实现并行</li>
+<li>使用报头压缩，降低开销</li>
+<li>服务器推送</li>
 </ul>
 <h3 id="url">URL</h3>
 <h4 id="组成部分">组成部分</h4>
@@ -839,6 +989,12 @@
 <li>操作系统返回给浏览器，同时加入自己的缓存</li>
 <li>浏览器得到IP地址，同时缓存</li>
 </ul>
+<h4 id="协议">协议</h4>
+<p>DNS占用53端口，同时使用UDP和TCP</p>
+<ul>
+<li>在区域传输的时候使用TCP</li>
+<li>在域名解析的时候使用UDP</li>
+</ul>
 <h3 id="cdn">CDN</h3>
 <p><strong>Content Delivery Network，内容分发网络，简单来说，CDN就是根据用户的位置来分配最近的资源</strong></p>
 <p>用户在上网时就无需访问源站，而只需要访问最近的一个CDN节点，也叫<strong>边缘节点</strong>，实质上就是一个缓存了源站资源的代理服务器</p>
@@ -860,11 +1016,45 @@
         title="image-20220203105033021" /></p>
 <h3 id="状态码">状态码</h3>
 <ul>
-<li>1 表示消息</li>
-<li>2 表示成功</li>
-<li>3 表示重定向</li>
-<li>4 表示请求错误</li>
-<li>5 表示服务器错误</li>
+<li>1 表示请求已被接收，需要继续处理，属于临时响应，只包含状态行和某些响应头信息
+<ul>
+<li>100：通知客户端部分请求已被服务器接收，应当继续发送剩余部分</li>
+<li>101：服务器根据客户端的请求切换协议，主要用于websocket或http升级</li>
+</ul>
+</li>
+<li>2 表示成功
+<ul>
+<li>200：成功，请求所希望的响应头或数据体将随此响应返回</li>
+<li>201：已创建，请求成功且服务器创建了新的资源</li>
+<li>204：无内容，服务器成功处理请求但没有返回任何内容</li>
+<li>206：部分内容，服务器成功处理了部分请求</li>
+</ul>
+</li>
+<li>3 表示重定向
+<ul>
+<li>301：永久移动，请求的资源已经永久移动到新位置</li>
+<li>302：临时移动，以后仍继续用原来地址请求</li>
+<li>305：告知请求者应使用代理</li>
+</ul>
+</li>
+<li>4 表示请求错误
+<ul>
+<li>400：错误请求，语法错误</li>
+<li>401：未授权，请求要求身份验证</li>
+<li>403：禁止</li>
+<li>404：找不到请求的资源</li>
+<li>405：方法被禁用</li>
+<li>408：请求超时</li>
+</ul>
+</li>
+<li>5 表示服务器错误
+<ul>
+<li>500：服务器内部错误</li>
+<li>502：错误网关</li>
+<li>503：服务不可用，一般是超载或者停机维护</li>
+<li>505：HTTP版本不支持</li>
+</ul>
+</li>
 </ul>
 <h3 id="get和post">GET和POST</h3>
 <p>GET方法请求一个指定资源，该方法只被用于获取数据</p>
@@ -908,7 +1098,7 @@
 </li>
 <li>
 <p>TCP连接</p>
-<p>通过DSN查询确定了IP地址后，经历三次握手建立TCP连接</p>
+<p>通过DNS查询确定了IP地址后，经历三次握手建立TCP连接</p>
 </li>
 <li>
 <p>HTTP请求</p>
@@ -916,6 +1106,7 @@
 </li>
 <li>
 <p>响应请求</p>
+<p>服务器响应客户端的请求，发回资源</p>
 </li>
 <li>
 <p>页面渲染</p>
@@ -1192,6 +1383,73 @@
 </div></li>
 </ul>
 <h3 id="flex布局">flex布局</h3>
+<p><code>Flexible Box</code>，简称<code>flex</code>，意为弹性布局</p>
+<p>容器中存在两条轴，主轴和交叉轴，二者垂直。容器中的元素默认沿主轴排列，可以通过<code>flex-direction</code>来决定主轴，默认是row</p>
+<h5 id="属性">属性</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+    <span class="k">flex-direction</span><span class="p">:</span> <span class="kc">row</span> <span class="o">|</span> <span class="kc">row-reverse</span> <span class="o">|</span> <span class="kc">column</span> <span class="o">|</span> <span class="kc">column-reverse</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/image-20220225144314631.png"
+        data-srcset="/images/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/image-20220225144314631.png, /images/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/image-20220225144314631.png 1.5x, /images/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/image-20220225144314631.png 2x"
+        data-sizes="auto"
+        alt="/images/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/image-20220225144314631.png"
+        title="image-20220225144314631" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+    <span class="k">flex-wrap</span><span class="p">:</span> <span class="kc">nowrap</span> <span class="o">|</span> <span class="kc">wrap</span> <span class="o">|</span> <span class="kc">wrap-reverse</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><code>justify-content</code>：项目在主轴上的对齐方式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+    <span class="k">justify-content</span><span class="p">:</span> <span class="kc">flex-start</span> <span class="o">|</span> <span class="kc">flex-end</span> <span class="o">|</span> <span class="kc">center</span> <span class="o">|</span> <span class="kc">space-between</span> <span class="o">|</span> <span class="kc">space-around</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><code>align-items</code>：项目在交叉轴上的对齐方式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+	<span class="k">align-items</span><span class="p">:</span> <span class="kc">flex-start</span> <span class="o">|</span> <span class="kc">flex-end</span> <span class="o">|</span> <span class="kc">center</span> <span class="o">|</span> <span class="kc">baseline</span> <span class="o">|</span> <span class="kc">stretch</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>复合属性flex</p>
+<p><code>flex</code>属性是<code>flex-grow</code>，<code>flex-shrink</code>，<code>flex-basis</code>的简写，默认为<code>0 1 auto</code></p>
+<h3 id="css画三角形">CSS画三角形</h3>
+<p>原理：边框实际上是个梯形</p>
 <h3 id="性能优化">性能优化</h3>
 <ul>
 <li>
@@ -1449,8 +1707,8 @@
 <h4 id="animation">animation</h4>
 <h4 id="二者区别">二者区别</h4>
 <ul>
-<li>transition是过渡属性，强调的是过渡，需要一个触发事件，比如焦点、点击等，才执行动画。只需设置开始帧和结束帧</li>
-<li>animation是动画属性，设定好时间后可以自己执行，且可以循环一个动画，可以设置多个关键帧(@keyframe)</li>
+<li>transition是过渡属性，强调的是<strong>过渡</strong>，<strong>需要一个触发事件</strong>，比如焦点、点击等，才执行动画。只需设置开始帧和结束帧</li>
+<li>animation是动画属性，<strong>设定好时间后可以自己执行</strong>，且可以循环一个动画，可以设置多个关键帧(@keyframe)</li>
 </ul>
 <h3 id="position">position</h3>
 <h4 id="static">static</h4>
@@ -1781,6 +2039,31 @@
 </span><span class="c1"></span>    <span class="nx">obj</span><span class="p">.</span><span class="mi">__</span><span class="nx">proto__</span> <span class="o">=</span> <span class="nx">Constructor</span><span class="p">.</span><span class="nx">prototype</span> <span class="c1">// 链接
 </span><span class="c1"></span>    <span class="kd">let</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">Constructor</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">)</span>
     <span class="k">return</span> <span class="k">typeof</span> <span class="nx">res</span> <span class="o">===</span> <span class="s1">&#39;object&#39;</span> <span class="o">?</span> <span class="nx">res</span> <span class="o">:</span> <span class="nx">obj</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="settimeout实现setinterval"><code>setTimeout</code>实现<code>setInterval</code></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">mySetInterval</span><span class="p">(</span><span class="nx">fn</span><span class="p">,</span> <span class="nx">interval</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// 设置递归函数，模拟定时器执行。
+</span><span class="c1"></span>  <span class="kd">function</span> <span class="nx">callback</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fn</span><span class="p">();</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">callback</span><span class="p">,</span> <span class="nx">interval</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="c1">// 启动定时器
+</span><span class="c1"></span>  <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">callback</span><span class="p">,</span> <span class="nx">interval</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
@@ -2490,6 +2773,13 @@
 <li>null</li>
 <li>symbol</li>
 </ul>
+<h4 id="symbol">Symbol</h4>
+<p>Symbol 是一种特殊的、不可变的数据类型，可以作为对象属性的标识符使用</p>
+<h5 id="作用">作用</h5>
+<ul>
+<li>元编程，更改原生js的行为</li>
+<li>作为key使用，用<code>Reflect.ownKeys()</code>拿到所用key属性</li>
+</ul>
 <h4 id="引用类型">引用类型</h4>
 <p>复杂类型统称<code>Object</code></p>
 <ul>
@@ -2785,7 +3075,21 @@
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="es6">ES6</h3>
+</div><h3 id="this指向">this指向</h3>
+<p>绝大多数情况下，函数的调用方式决定了this的指向</p>
+<p>在函数执行过程中，this一旦被确定了就不可以再更改</p>
+<h4 id="绑定规则">绑定规则</h4>
+<h5 id="默认绑定">默认绑定</h5>
+<p>非严格模式下，this默认绑定到全局对象</p>
+<h5 id="隐式绑定">隐式绑定</h5>
+<p>函数可以作为某个对象的方法来调用，此时this自然就指向<strong>上一级对象</strong></p>
+<h5 id="new绑定">new绑定</h5>
+<p>通过new生成一个实例对象，此时this就指向这个实例对象</p>
+<h5 id="显示修改">显示修改</h5>
+<p>apply，call，bind可以显示修改this的指向</p>
+<h4 id="箭头函数">箭头函数</h4>
+<p>ES6中的箭头函数，让我们能在代码书写的时候就确定好this的指向，即编译时绑定this</p>
+<h3 id="es6">ES6</h3>
 <h4 id="varlet和const">var，let和const</h4>
 <ul>
 <li>
@@ -2820,6 +3124,18 @@
 <p>const必须初始化，且变量值不能再修改</p>
 </li>
 </ul>
+<h4 id="set和map">Set和Map</h4>
+<p>共同点：都可以存储不重复的值</p>
+<p>不同点：集合Set以[值, 值]方式存储，字典Map以[键, 值]方式存储</p>
+<h5 id="set">Set</h5>
+<p>类似于数组，但是成员的值是唯一的</p>
+<p>常见方法</p>
+<ul>
+<li>add()，添加某个值，返回Set本身</li>
+<li>delete()，删除某个值，返回一个布尔值表示是否成功删除</li>
+<li>has()，判断是否包含某元素</li>
+<li>clear()，清楚成员</li>
+</ul>
 <h4 id="forin-和-forof-的区别">for&hellip;in 和 for&hellip;of 的区别</h4>
 <p>for&hellip;of是ES6新增的遍历方式，允许遍历一个含有iterator接口的数据结构，比如对象、数组，并且返回各项的值，和ES3中的for&hellip;in区别如下</p>
 <ul>
@@ -2827,6 +3143,15 @@
 <li>for&hellip;in会遍历对象的整个原型链，性能很差不推荐使用</li>
 <li>对于数组的遍历，for&hellip;in会返回数组中所有可枚举的属性，for&hellip;of只会返回下标对应的属性值</li>
 <li>一般使用for&hellip;of</li>
+</ul>
+<h4 id="箭头函数-1">箭头函数</h4>
+<ul>
+<li>更加简洁</li>
+<li>没有自己的this，只会在自己的上一层作用域继承this，所以箭头函数中的this在定义时就确定，之后不会改变，即使使用call和apply</li>
+<li>不能作为构造函数使用</li>
+<li>没有自己的arguments</li>
+<li>没有prototype</li>
+<li>不能作为Generator函数</li>
 </ul>
 <h4 id="proxy">Proxy</h4>
 <p>定义：用于定义基本操作的自定义行为</p>
@@ -2921,6 +3246,32 @@
 </ul>
 <h2 id="react">React</h2>
 <h2 id="vue">Vue</h2>
+<h3 id="vue3和vue2的区别">Vue3和Vue2的区别</h3>
+<h4 id="proxy替代defineproperty"><code>Proxy</code>替代<code>defineProperty</code></h4>
+<h5 id="objectdefineproperty"><code>Object.defineProperty()</code></h5>
+<p>该方法直接在对象上定义一个新属性或者修改现有属性，返回该对象</p>
+<p>实现响应式的途径是通过get和set两个属性</p>
+<p>缺点：</p>
+<ul>
+<li>检测不到对象属性的新增和删除</li>
+<li>数组的一些方法无法监听到</li>
+<li>需要对每个属性遍历监听，如果是嵌套对象需要深层监听，带来性能问题</li>
+</ul>
+<h5 id="proxy-1"><code>Proxy</code></h5>
+<p>监听是针对一个对象的，对这个对象的所有操作都会进入监听，就可以完整代理所有属性了</p>
+<p>缺点：兼容性差</p>
+<h4 id="composition-api替代options-api"><code>Composition API</code>替代<code>Options API</code></h4>
+<h5 id="options-api"><code>Options API</code></h5>
+<h5 id="composition-api"><code>Composition API</code></h5>
+<h5 id="优势">优势</h5>
+<ul>
+<li>逻辑复用</li>
+<li>类型推断</li>
+<li>代码更易压缩</li>
+<li>减少this指向不明的情况</li>
+</ul>
+<h4 id="性能提升">性能提升</h4>
+<h4 id="treeshaking">Treeshaking</h4>
 <h3 id="双向数据绑定">双向数据绑定</h3>
 <p><img
         class="lazyload"
@@ -2936,10 +3287,10 @@
 <li>解析器Compiler解析模板中的指令Directive，<strong>收集指令所依赖的方法和数据</strong>，等待数据变化后渲染</li>
 <li>Watcher属于Observer和Compiler的桥梁。<strong>将接收到的Observer产生的数据变化，根据Compiler提供的指令，来进行视图的渲染，使得数据变化反映在视图变化上</strong></li>
 </ul>
-<h4 id="objectdefineproperty"><code>Object.defineProperty</code></h4>
+<h4 id="objectdefineproperty-1"><code>Object.defineProperty</code></h4>
 <p>在Vue2中，数据劫持用的是<code>Object.defineProperty</code>。它的作用就是劫持对象的属性。通常对属性的getter和setter进行劫持，就能够在属性变化时进行特定的相应的操作。</p>
 <p>缺点：对某些属性进行操作时无法拦截。比如对于数组而言，大多操作都无法拦截，除非自己手动重写数组的方法</p>
-<h4 id="proxy-1">Proxy</h4>
+<h4 id="proxy-2">Proxy</h4>
 <p>Vue3中，改用Proxy来进行数据劫持</p>
 <h3 id="mvvm">MVVM</h3>
 <h4 id="定义-1">定义</h4>
@@ -3032,12 +3383,12 @@
 <h3 id="computed和watch">computed和watch</h3>
 <h4 id="computed">computed</h4>
 <p>computed是计算属性的，会根据所依赖的数据动态显示最新的计算结果，该结果将会被缓存起来。当依赖的数据发生改变，才重新调用getter来计算最新的结果。设计初衷是为了使模板中的逻辑运算更简单：<strong>复杂的计算逻辑放到computed中去计算</strong></p>
-<p>应用场景</p>
+<h5 id="应用场景-2">应用场景</h5>
 <ul>
 <li>重复使用数据或者复杂费时的运算</li>
 <li>若需要的数据依赖于其他数据，可以设计为computed中</li>
 </ul>
-<p>和methods的区别</p>
+<h5 id="和methods的区别">和methods的区别</h5>
 <ul>
 <li>computed是响应式的，只有依赖发生改变才重新求值，而methods每次调用都会重新求值，不是响应式的</li>
 <li>computed中的成员可以只定义一个函数作为只读属性, 也可以定义成 get/set变成可读写属性, 但是methods中的成员没有这样的</li>
@@ -3045,7 +3396,7 @@
 <h4 id="watch">watch</h4>
 <p>watch是一个对data的数据监听回调，当依赖的data的数据变化，会执行回调，回调中会传入<code>newVal</code>和<code>oldVal</code>两个参数</p>
 <p>Vue实例会在实例化的时候调用<code>$watch()</code>，遍历watch对象的每一个属性</p>
-<p>使用场景</p>
+<h5 id="使用场景">使用场景</h5>
 <p>当data中的某个数据变化时，需要做一些操作；或是需要在数据变化时执行异步或者开销大的操作</p>
 <h4 id="二者异同">二者异同</h4>
 <p>相同点</p>
@@ -3086,7 +3437,7 @@
 <p>要切换的组件作为子组件全屏渲染，父组件正常储存页面状态</p>
 </li>
 </ul>
-<h3 id="vue3和vue2的区别">Vue3和Vue2的区别</h3>
+<h3 id="vue3和vue2的区别-1">Vue3和Vue2的区别</h3>
 <h3 id="生命周期">生命周期</h3>
 <ul>
 <li><code>beforeCreate</code>：数据观测和初始化事件都没有开始，此时无法访问到data，computed，watch和methods上的数据</li>
@@ -3210,9 +3561,67 @@
 <li><code>$route</code>是<strong>路由信息对象</strong>，包括了path，params，hash，query，name等路由信息参数</li>
 <li><code>$router</code>是<strong>路由实例</strong>，包括了路由的跳转方法和钩子函数</li>
 </ul>
-<h3 id="vuex">Vuex</h3>
+<h4 id="history模式-1">history模式</h4>
+<p>使用的是传统的路由分发模式</p>
+<h5 id="特点">特点</h5>
+<ul>
+<li>URL没有#号，更好看</li>
+<li>需要后台配置支持，否则可能返回404</li>
+<li>会出现在HTTP请求中</li>
+</ul>
+<h5 id="原理">原理</h5>
+<h4 id="hash模式-1">hash模式</h4>
+<p>开发中默认的模式就是hash模式</p>
+<h5 id="特点-1">特点</h5>
+<ul>
+<li>hash值会出现在URL里面，但不会出现在HTTP请求中，对后端完全没有影响。所以改变hash值不会重载页面</li>
+<li>兼容性好，低版本的IE也支持</li>
+<li>被称为前端路由，是SPA的标配</li>
+</ul>
+<h5 id="原理-1">原理</h5>
+<p>监听<code>onhashchange()</code>事件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nb">window</span><span class="p">.</span><span class="nx">onhashchange</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">oldURL</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">newURL</span><span class="p">)</span>
+    <span class="kd">let</span> <span class="nx">hash</span> <span class="o">=</span> <span class="nx">location</span><span class="p">.</span><span class="nx">hash</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>hash值的变化对应的URL都会被浏览器记录下来，这样浏览器就能够实现页面的前进和后退</p>
+<h4 id="replace和push的区别">replace和push的区别</h4>
+<h5 id="thisrouterpush"><code>this.$router.push()</code></h5>
+<ol>
+<li>
+<p>跳转到指定URL，同时向URL栈添加一个新的记录，点击回退会返回上个页面</p>
+</li>
+<li>
+<p>参数可以是一个字符串路径，或者一个描述地址的对象</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="k">this</span><span class="p">.</span><span class="nx">$router</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;/index&#39;</span><span class="p">)</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">$router</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span><span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/index&#39;</span><span class="p">,</span> <span class="nx">query</span><span class="o">:</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;123&#39;</span><span class="p">}})</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h5 id="thisrouterreplace"><code>this.$router.replace()</code></h5>
+<ol>
+<li>跳转到指定URL，替换history栈中最后一个记录，点击回退会返回至上上个页面</li>
+</ol>
+<h3 id="vuex"><code>Vuex</code></h3>
 <h4 id="是什么-2">是什么</h4>
-<p>Vuex就是一个专门为Vue应用开发的<strong>状态管理模式</strong>。</p>
+<p><code>Vuex</code>就是一个专门为Vue应用开发的<strong>状态管理模式</strong>。</p>
 <p>它的核心是store，也就是一个容器，包含着应用中的各种state，它的状态存储是响应式的</p>
 <h4 id="action和mutation的区别">action和mutation的区别</h4>
 <p>mutation的操作，是一系列的同步函数，用来修改state的变量的状态。使用时需要通过commit来提交需要操作的内容。每个mutation都有一个字符串的事件类型(type)和一个回调函数(handler)，该回调函数就是实际上进行状态更改的地方，会接受state作为第一个参数</p>
@@ -3227,17 +3636,17 @@
 <li>视图更新时，先触发action，再触发mutation</li>
 <li>mutation的参数是state，action则是context，是state的父级</li>
 </ul>
-<h4 id="vuex和localstorage的区别">Vuex和localStorage的区别</h4>
+<h4 id="vuex和localstorage的区别"><code>Vuex</code>和<code>localStorage</code>的区别</h4>
 <ul>
-<li>vuex储存在内存中，localStorage则以文件形式存储在本地。所以读取vuex中的数据比较快</li>
-<li>Vuex用于组件间共享状态，localStorage一般在跨页面传递数据时使用</li>
-<li>Vuex是响应式的</li>
-<li>刷新时Vuex存储的值会丢失</li>
+<li><code>Vuex</code>储存在内存中，<code>localStorage</code>则以文件形式存储在本地。所以读取<code>vuex</code>中的数据比较快</li>
+<li><code>Vuex</code>用于组件间共享状态，<code>localStorage</code>一般在跨页面传递数据时使用</li>
+<li><code>Vuex</code>是响应式的</li>
+<li>刷新时<code>Vuex</code>存储的值会丢失</li>
 </ul>
-<h4 id="vuex和一个单纯的全局对象相比有什么优点">Vuex和一个单纯的全局对象相比有什么优点</h4>
+<h4 id="vuex和一个单纯的全局对象相比有什么优点"><code>Vuex</code>和一个单纯的全局对象相比有什么优点</h4>
 <ul>
-<li>Vuex状态存储是响应式的，当 Vue 组件从 store 中读取状态的时候，若 store 中的状态发生变化，那么相应的组件也会相应地得到高效更新</li>
-<li>Vuex限制不能直接改变store中的状态，更方便追踪状态变化</li>
+<li><code>Vuex</code>状态存储是响应式的，当 Vue 组件从 store 中读取状态的时候，若 store 中的状态发生变化，那么相应的组件也会相应地得到高效更新</li>
+<li><code>Vuex</code>限制不能直接改变store中的状态，更方便追踪状态变化</li>
 </ul>
 <h2 id="关键思想">关键思想</h2>
 <h3 id="虚拟dom">虚拟DOM</h3>
