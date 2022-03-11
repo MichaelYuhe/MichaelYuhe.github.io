@@ -4,7 +4,21 @@
         <link>https://MichaelYuhe.github.io/tags/%E9%9D%A2%E8%AF%95/</link>
         <description>面试 - 标签 - Yuhe&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 25 Feb 2022 08:00:10 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/tags/%E9%9D%A2%E8%AF%95/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 02 Mar 2022 23:38:52 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/tags/%E9%9D%A2%E8%AF%95/" rel="self" type="application/rss+xml" /><item>
+    <title>蚂蚁前端实习_二面</title>
+    <link>https://MichaelYuhe.github.io/%E8%9A%82%E8%9A%81%E5%89%8D%E7%AB%AF%E4%BA%8C%E9%9D%A2/</link>
+    <pubDate>Wed, 02 Mar 2022 23:38:52 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E8%9A%82%E8%9A%81%E5%89%8D%E7%AB%AF%E4%BA%8C%E9%9D%A2/</guid>
+    <description><![CDATA[蚂蚁前端二面 总时长十六分钟，与一面形成鲜明对比😆 聊天 高中怎么学的 平常喜欢干啥 为什么选前端 没有反问的机会，十五分钟直接结束让我等后面的hr面]]></description>
+</item><item>
+    <title>蚂蚁前端实习_一面</title>
+    <link>https://MichaelYuhe.github.io/%E8%9A%82%E8%9A%81%E5%89%8D%E7%AB%AF%E4%B8%80%E9%9D%A2/</link>
+    <pubDate>Tue, 01 Mar 2022 23:38:52 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E8%9A%82%E8%9A%81%E5%89%8D%E7%AB%AF%E4%B8%80%E9%9D%A2/</guid>
+    <description><![CDATA[蚂蚁前端一面 总时长一百分钟，三道coding四十分钟，面试六十分钟 Coding 数组交集 比较版本号 URL参数 实现一个类，有一些处理URL的方法 基础知识 网]]></description>
+</item><item>
     <title>钉钉前端实习_一面</title>
     <link>https://MichaelYuhe.github.io/%E9%92%89%E9%92%89%E4%B8%80%E9%9D%A2/</link>
     <pubDate>Fri, 25 Feb 2022 08:00:10 &#43;0800</pubDate>
@@ -60,19 +74,5 @@
     <author>作者</author>
     <guid>https://MichaelYuhe.github.io/%E6%9C%89%E8%B5%9E%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0_%E4%B8%80%E9%9D%A2/</guid>
     <description><![CDATA[有赞日常实习一面 11月2日 线上笔试 直播写代码 网站：showMeTheCode，有赞自己的平台 1、字符串相加 忘记处理最后一步的进位 1 2 3 4 5 6]]></description>
-</item><item>
-    <title>那些好用的前端学习网站/文档/博客</title>
-    <link>https://MichaelYuhe.github.io/resources/</link>
-    <pubDate>Fri, 29 Oct 2021 15:00:29 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/resources/</guid>
-    <description><![CDATA[面试专用 Web前端面试——面试官系列 简介 为语音打卡社群(JS每日一题)维护的前端面试题库，包含不限于Vue面试题，React面试题，JS面试]]></description>
-</item><item>
-    <title>知识点总结</title>
-    <link>https://MichaelYuhe.github.io/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</link>
-    <pubDate>Fri, 08 Oct 2021 11:21:17 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</guid>
-    <description><![CDATA[知识点总结 Javascript 讲一下闭包 闭包的定义 闭包是指那些能够访问自由变量的函数。 那么什么是自由变量？自由变量是指在函数中使用的，但既不是函数参数也不是函]]></description>
 </item></channel>
 </rss>

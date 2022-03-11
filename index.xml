@@ -4,9 +4,23 @@
         <link>https://MichaelYuhe.github.io/</link>
         <description>夏宇航的个人博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 25 Feb 2022 08:00:10 &#43;0800</lastBuildDate>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 02 Mar 2022 23:38:52 &#43;0800</lastBuildDate>
             <atom:link href="https://MichaelYuhe.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>蚂蚁前端实习_二面</title>
+    <link>https://MichaelYuhe.github.io/%E8%9A%82%E8%9A%81%E5%89%8D%E7%AB%AF%E4%BA%8C%E9%9D%A2/</link>
+    <pubDate>Wed, 02 Mar 2022 23:38:52 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E8%9A%82%E8%9A%81%E5%89%8D%E7%AB%AF%E4%BA%8C%E9%9D%A2/</guid>
+    <description><![CDATA[蚂蚁前端二面 总时长十六分钟，与一面形成鲜明对比😆 聊天 高中怎么学的 平常喜欢干啥 为什么选前端 没有反问的机会，十五分钟直接结束让我等后面的hr面]]></description>
+</item><item>
+    <title>蚂蚁前端实习_一面</title>
+    <link>https://MichaelYuhe.github.io/%E8%9A%82%E8%9A%81%E5%89%8D%E7%AB%AF%E4%B8%80%E9%9D%A2/</link>
+    <pubDate>Tue, 01 Mar 2022 23:38:52 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E8%9A%82%E8%9A%81%E5%89%8D%E7%AB%AF%E4%B8%80%E9%9D%A2/</guid>
+    <description><![CDATA[蚂蚁前端一面 总时长一百分钟，三道coding四十分钟，面试六十分钟 Coding 数组交集 比较版本号 URL参数 实现一个类，有一些处理URL的方法 基础知识 网]]></description>
+</item><item>
     <title>钉钉前端实习_一面</title>
     <link>https://MichaelYuhe.github.io/%E9%92%89%E9%92%89%E4%B8%80%E9%9D%A2/</link>
     <pubDate>Fri, 25 Feb 2022 08:00:10 &#43;0800</pubDate>
@@ -62,19 +76,5 @@
     <author>作者</author>
     <guid>https://MichaelYuhe.github.io/%E5%AE%9E%E4%B9%A0%E4%B8%80%E6%9C%88%E6%80%BB%E7%BB%93/</guid>
     <description><![CDATA[实习一月小结 写在前面 抱着试试看＋练习面试的想法，冲刺了几天面经，参与了几家公司的面试。只能说基础太不扎实了，许多js的基本问题都不能回答出来]]></description>
-</item><item>
-    <title>滴滴日常实习_一面</title>
-    <link>https://MichaelYuhe.github.io/%E6%BB%B4%E6%BB%B4%E6%97%A5%E5%B8%B8%E5%AE%9E%E4%B9%A0_%E4%B8%80%E9%9D%A2/</link>
-    <pubDate>Fri, 05 Nov 2021 08:03:08 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/%E6%BB%B4%E6%BB%B4%E6%97%A5%E5%B8%B8%E5%AE%9E%E4%B9%A0_%E4%B8%80%E9%9D%A2/</guid>
-    <description><![CDATA[滴滴日常实习一面 10月30日 自我介绍 项目 小游戏的难点，做了些什么，登陆相关 CSS 盒模型 怎么居中，尽可能多方法 flex布局讲一下 Javascript reduce用过]]></description>
-</item><item>
-    <title>有赞前端实习_二面</title>
-    <link>https://MichaelYuhe.github.io/%E6%9C%89%E8%B5%9E%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0_%E4%BA%8C%E9%9D%A2/</link>
-    <pubDate>Fri, 05 Nov 2021 08:00:13 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/%E6%9C%89%E8%B5%9E%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0_%E4%BA%8C%E9%9D%A2/</guid>
-    <description><![CDATA[有赞日常实习二面 11月4号 自我介绍 然后问了专业相关，聊到下学期才上计网，于是“那我计网只问你一些基础的吧” 计算机网络 讲一下HTTP，讲一下和]]></description>
 </item></channel>
 </rss>
