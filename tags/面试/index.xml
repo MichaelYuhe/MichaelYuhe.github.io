@@ -4,7 +4,14 @@
         <link>https://MichaelYuhe.github.io/tags/%E9%9D%A2%E8%AF%95/</link>
         <description>面试 - 标签 - Yuhe&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 02 Mar 2022 23:38:52 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/tags/%E9%9D%A2%E8%AF%95/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 13 Apr 2022 08:00:10 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/tags/%E9%9D%A2%E8%AF%95/" rel="self" type="application/rss+xml" /><item>
+    <title>阿里云OPENAPI前端实习_终面</title>
+    <link>https://MichaelYuhe.github.io/%E9%98%BF%E9%87%8C%E4%BA%91%E7%BB%88%E9%9D%A2/</link>
+    <pubDate>Wed, 13 Apr 2022 08:00:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E9%98%BF%E9%87%8C%E4%BA%91%E7%BB%88%E9%9D%A2/</guid>
+    <description><![CDATA[阿里云OpenAPI终面 项目 微信小游戏 具体做什么的 扮演的角色 MyBoom 有考虑过安全方面的问题吗 性能优化呢 实习 做了什么工作 自己做前端和公司做前端的区别]]></description>
+</item><item>
     <title>蚂蚁前端实习_二面</title>
     <link>https://MichaelYuhe.github.io/%E8%9A%82%E8%9A%81%E5%89%8D%E7%AB%AF%E4%BA%8C%E9%9D%A2/</link>
     <pubDate>Wed, 02 Mar 2022 23:38:52 &#43;0800</pubDate>
@@ -48,10 +55,10 @@
     <description><![CDATA[网易雷火一面 自我介绍 移动端自适应 小游戏性能优化 分包加载预加载 模型怎么优化 cocos内部怎么自适应，原理 webpack CSS动画 垂直居中，水平居中 this]]></description>
 </item><item>
     <title>阿里云OPENAPI前端实习_一面</title>
-    <link>https://MichaelYuhe.github.io/%E9%98%BF%E9%87%8C%E4%BA%91openapi%E4%B8%80%E9%9D%A2/</link>
+    <link>https://MichaelYuhe.github.io/%E9%98%BF%E9%87%8C%E4%BA%91%E4%B8%80%E9%9D%A2/</link>
     <pubDate>Mon, 14 Feb 2022 08:00:10 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/%E9%98%BF%E9%87%8C%E4%BA%91openapi%E4%B8%80%E9%9D%A2/</guid>
+    <guid>https://MichaelYuhe.github.io/%E9%98%BF%E9%87%8C%E4%BA%91%E4%B8%80%E9%9D%A2/</guid>
     <description><![CDATA[阿里云OpenAPI一面 绩点，排名，相关课程 面试官：你们绩点也太高了，这才百分三十几吗 自我介绍，要求介绍自己的优势 说自己学习能力强，上手快 简]]></description>
 </item><item>
     <title>滴滴日常实习_一面</title>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://MichaelYuhe.github.io/%E6%9C%89%E8%B5%9E%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0_%E4%BA%8C%E9%9D%A2/</guid>
     <description><![CDATA[有赞日常实习二面 11月4号 自我介绍 然后问了专业相关，聊到下学期才上计网，于是“那我计网只问你一些基础的吧” 计算机网络 讲一下HTTP，讲一下和]]></description>
-</item><item>
-    <title>有赞前端实习_一面</title>
-    <link>https://MichaelYuhe.github.io/%E6%9C%89%E8%B5%9E%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0_%E4%B8%80%E9%9D%A2/</link>
-    <pubDate>Fri, 05 Nov 2021 08:00:10 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/%E6%9C%89%E8%B5%9E%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0_%E4%B8%80%E9%9D%A2/</guid>
-    <description><![CDATA[有赞日常实习一面 11月2日 线上笔试 直播写代码 网站：showMeTheCode，有赞自己的平台 1、字符串相加 忘记处理最后一步的进位 1 2 3 4 5 6]]></description>
 </item></channel>
 </rss>
