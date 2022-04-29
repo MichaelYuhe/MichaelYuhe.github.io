@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/MichaelYuhe.github.io\/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0\/"
-        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "知识点","wordcount":  26150 ,
+        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "知识点","wordcount":  28052 ,
         "url": "https:\/\/MichaelYuhe.github.io\/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0\/","datePublished": "2022-02-21T23:13:12+08:00","dateModified": "2022-02-21T23:13:12+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/MichaelYuhe.github.io\/images\/avatar.png"},"author": {
@@ -120,8 +120,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">备战暑期实习</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>夏宇航</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E9%9D%A2%E8%AF%95/"><i class="far fa-folder fa-fw"></i>面试</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-21">2022-02-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 26150 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 53 分钟&nbsp;<span id="/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/" class="leancloud_visitors" data-flag-title="备战暑期实习">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-02-21">2022-02-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 28052 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 56 分钟&nbsp;<span id="/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/" class="leancloud_visitors" data-flag-title="备战暑期实习">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -476,7 +476,70 @@
         <li><a href="#数据类型-1">数据类型</a></li>
       </ul>
     </li>
-    <li><a href="#react">React</a></li>
+    <li><a href="#react">React</a>
+      <ul>
+        <li><a href="#react特性">React特性</a>
+          <ul>
+            <li><a href="#jsx语法">JSX语法</a></li>
+            <li><a href="#单向数据绑定">单向数据绑定</a></li>
+            <li><a href="#虚拟dom">虚拟DOM</a></li>
+            <li><a href="#声明式编程">声明式编程</a></li>
+            <li><a href="#组件">组件</a></li>
+          </ul>
+        </li>
+        <li><a href="#对hooks的理解">对Hooks的理解</a>
+          <ul>
+            <li><a href="#引入目的">引入目的</a></li>
+            <li><a href="#常见hooks">常见Hooks</a>
+              <ul>
+                <li><a href="#usestate"><code>useState</code></a></li>
+                <li><a href="#useeffect"><code>useEffect</code></a></li>
+                <li><a href="#usecontext"><code>useContext</code></a></li>
+                <li><a href="#usecallback"><code>useCallback</code></a></li>
+                <li><a href="#usememo"><code>useMemo</code></a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#react事件机制">React事件机制</a>
+          <ul>
+            <li><a href="#合成事件">合成事件</a></li>
+          </ul>
+        </li>
+        <li><a href="#react生命周期">React生命周期</a>
+          <ul>
+            <li><a href="#创建阶段">创建阶段</a></li>
+            <li><a href="#更新阶段">更新阶段</a></li>
+            <li><a href="#卸载阶段">卸载阶段</a></li>
+          </ul>
+        </li>
+        <li><a href="#react组件通信">React组件通信</a>
+          <ul>
+            <li><a href="#父组件向子组件传递">父组件向子组件传递</a></li>
+            <li><a href="#子组件向父组件传递">子组件向父组件传递</a></li>
+            <li><a href="#兄弟组件传值">兄弟组件传值</a></li>
+            <li><a href="#父组件向后代组件传值">父组件向后代组件传值</a></li>
+            <li><a href="#非关系组件传值">非关系组件传值</a></li>
+            <li><a href="#总结-1">总结</a></li>
+          </ul>
+        </li>
+        <li><a href="#受控组件和非受控组件">受控组件和非受控组件</a>
+          <ul>
+            <li><a href="#受控组件">受控组件</a></li>
+            <li><a href="#非受控组件">非受控组件</a></li>
+            <li><a href="#应用场景-2">应用场景</a></li>
+          </ul>
+        </li>
+        <li><a href="#react引入css的方式和区别">React引入CSS的方式和区别</a>
+          <ul>
+            <li><a href="#直接使用">直接使用</a></li>
+            <li><a href="#组件引入css文件">组件引入CSS文件</a></li>
+            <li><a href="#组件引入modulecss文件">组件引入<code>.module.css</code>文件</a></li>
+            <li><a href="#css-in-js">CSS in JS</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
     <li><a href="#vue">Vue</a>
       <ul>
         <li><a href="#vue3和vue2的区别">Vue3和Vue2的区别</a>
@@ -524,7 +587,7 @@
           <ul>
             <li><a href="#computed">computed</a>
               <ul>
-                <li><a href="#应用场景-2">应用场景</a></li>
+                <li><a href="#应用场景-3">应用场景</a></li>
                 <li><a href="#和methods的区别">和methods的区别</a></li>
               </ul>
             </li>
@@ -586,9 +649,21 @@
         </li>
       </ul>
     </li>
+    <li><a href="#操作系统">操作系统</a>
+      <ul>
+        <li><a href="#进程和线程">进程和线程</a>
+          <ul>
+            <li><a href="#进程">进程</a></li>
+            <li><a href="#线程">线程</a></li>
+            <li><a href="#二者关系">二者关系</a></li>
+            <li><a href="#二者区别-1">二者区别</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
     <li><a href="#关键思想">关键思想</a>
       <ul>
-        <li><a href="#虚拟dom">虚拟DOM</a>
+        <li><a href="#虚拟dom-1">虚拟DOM</a>
           <ul>
             <li><a href="#什么是虚拟dom">什么是虚拟DOM</a></li>
             <li><a href="#为什么要用虚拟dom">为什么要用虚拟DOM</a></li>
@@ -617,7 +692,6 @@
     <li><a href="#其他">其他</a>
       <ul>
         <li><a href="#前端新技术的了解">前端新技术的了解</a></li>
-        <li><a href="#最近在研究的东西">最近在研究的东西</a></li>
       </ul>
     </li>
     <li><a href="#自我介绍">自我介绍</a></li>
@@ -3245,6 +3319,165 @@
 <li>object</li>
 </ul>
 <h2 id="react">React</h2>
+<h3 id="react特性">React特性</h3>
+<h4 id="jsx语法">JSX语法</h4>
+<h4 id="单向数据绑定">单向数据绑定</h4>
+<h4 id="虚拟dom">虚拟DOM</h4>
+<h4 id="声明式编程">声明式编程</h4>
+<h4 id="组件">组件</h4>
+<h3 id="对hooks的理解">对Hooks的理解</h3>
+<p>Hook是React16.8的新特性，可以在不编写class的情况下使用state以及其他的React特性</p>
+<h4 id="引入目的">引入目的</h4>
+<ul>
+<li>解决难以重用和共享的组件中的与状态相关的逻辑</li>
+<li>逻辑复杂的组件难以开发与维护，每个生命周期函数可能会包含互不相关的逻辑在里面</li>
+<li>类组件的this增加学习成本</li>
+</ul>
+<h4 id="常见hooks">常见Hooks</h4>
+<h5 id="usestate"><code>useState</code></h5>
+<p>在函数组件内部通过<code>useState</code>来实现函数内部维护state</p>
+<h5 id="useeffect"><code>useEffect</code></h5>
+<p>用于在函数组件内部进行一些带有副作用的操作</p>
+<p>第一个参数接受一个回调函数，默认情况下，会在第一次渲染和更新后都执行</p>
+<p>第二个参数是用来跳过某些不必要的回调，仅在第二个参数改变时才执行回调</p>
+<h5 id="usecontext"><code>useContext</code></h5>
+<p>Context Object是被<code>createContext()</code>这个API所建立的，内部有两个子元件：Provider和Consumer</p>
+<ul>
+<li>Provider：传递Value</li>
+<li>Consumer：接收Value</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/image-20220428122629696.png"
+        data-srcset="/images/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/image-20220428122629696.png, /images/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/image-20220428122629696.png 1.5x, /images/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/image-20220428122629696.png 2x"
+        data-sizes="auto"
+        alt="/images/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/image-20220428122629696.png"
+        title="image-20220428122629696" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/image-20220428122655812.png"
+        data-srcset="/images/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/image-20220428122655812.png, /images/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/image-20220428122655812.png 1.5x, /images/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/image-20220428122655812.png 2x"
+        data-sizes="auto"
+        alt="/images/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/image-20220428122655812.png"
+        title="image-20220428122655812" /></p>
+<h5 id="usecallback"><code>useCallback</code></h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">useCallback</span><span class="p">(</span><span class="nx">fn</span><span class="p">,</span> <span class="nx">deps</span><span class="p">)</span> <span class="o">===</span> <span class="nx">useMemo</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">fn</span><span class="p">,</span> <span class="nx">deps</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="usememo"><code>useMemo</code></h5>
+<p>仅在某个依赖项改变时才重新计算，有助于避免在每次渲染时都进行高开销的计算</p>
+<p>要记住，在传入<code>useMemo</code>的函数会在渲染期间执行，所以不能在这个函数内部执行与渲染无关的操作</p>
+<h3 id="react事件机制">React事件机制</h3>
+<p>React基于浏览器的事件机制，自身实现了一套事件机制，被称为合成事件</p>
+<h4 id="合成事件">合成事件</h4>
+<p>合成事件是React模拟原生DOM事件所有能力的一个事件对象，即浏览器原生事件的跨浏览器包装器</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onclick</span><span class="o">=</span><span class="s2">&#34;handleClick()&#34;</span><span class="o">&gt;</span><span class="nx">按钮命名</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+
+<span class="kr">const</span> <span class="nx">button</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">handleClick</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">按钮命名</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>React上注册的事件最终会绑定在document这个DOM上，而不是React组件所对应的DOM，这一做法减少了内存开销</li>
+<li>自身实现了一套事件冒泡机制</li>
+<li>通过队列的形式，从触发的组件向父组件回溯，然后调用他们JSX中定义的callback</li>
+</ul>
+<h3 id="react生命周期">React生命周期</h3>
+<h4 id="创建阶段">创建阶段</h4>
+<h4 id="更新阶段">更新阶段</h4>
+<h4 id="卸载阶段">卸载阶段</h4>
+<h3 id="react组件通信">React组件通信</h3>
+<h4 id="父组件向子组件传递">父组件向子组件传递</h4>
+<p>由于单向数据绑定的机制，父组件向子组件传递数据是最常见的方式</p>
+<p>父组件在调用子组件时直接在标签内传递参数，子组件就能通过<code>props</code>接收</p>
+<h4 id="子组件向父组件传递">子组件向父组件传递</h4>
+<p>父组件向子组件传递一个函数，然后通过这个函数的回调，拿到子组件传来的值</p>
+<h4 id="兄弟组件传值">兄弟组件传值</h4>
+<p>父组件作为中间层</p>
+<h4 id="父组件向后代组件传值">父组件向后代组件传值</h4>
+<p>利用<code>useContext</code>这个Hook</p>
+<h4 id="非关系组件传值">非关系组件传值</h4>
+<p>全局管理，使用<code>redux</code> 或者<code>valtio</code>这种库</p>
+<h4 id="总结-1">总结</h4>
+<p>由于React是单向数据流，它的核心思想是<strong>组件不会改变接收的数据，只会监听数据的变化</strong>。当数据变化时它们就使用接收到的新的值，而不是去修改已有的值</p>
+<p>因此，可以看到通信过程中，数据的存储位置都是存放在父级</p>
+<h3 id="受控组件和非受控组件">受控组件和非受控组件</h3>
+<h4 id="受控组件">受控组件</h4>
+<p>组件的<strong>状态全程响应外部数据</strong></p>
+<p>需要一个初始状态，和一个状态更新事件函数</p>
+<h4 id="非受控组件">非受控组件</h4>
+<p>一般是在初始化的时候接受外部数据，然后自己在内部存储自身状态，当需要的时候，可以用<code>ref</code>查询<code>DOM</code>并查找当前值</p>
+<h4 id="应用场景-2">应用场景</h4>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>受控</th>
+<th>非受控</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一次性取值，例如submit</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>提交时验证</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>即时现场验证</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>有条件地禁用按钮</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>强制输入格式</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>一个数据的多个输入</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>动态输入</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<h3 id="react引入css的方式和区别">React引入CSS的方式和区别</h3>
+<h4 id="直接使用">直接使用</h4>
+<p>直接在组件内书写CSS样式，通过style属性直接引入</p>
+<p>优点：内联样式，样式间不会有冲突；可以动态获取当前state的状态</p>
+<p>缺点：大量的样式会导致代码混乱；无法编写复杂样式，比如伪类伪元素</p>
+<h4 id="组件引入css文件">组件引入CSS文件</h4>
+<p>将CSS单独写在一个文件中，然后组件直接引入</p>
+<p>缺点：样式全局生效，部分样式之间可能会相互影响</p>
+<h4 id="组件引入modulecss文件">组件引入<code>.module.css</code>文件</h4>
+<p>将CSS文件作为一个模块引入，这个模块中的CSS只作用于当前组件，不会影响后代组件</p>
+<h4 id="css-in-js">CSS in JS</h4>
 <h2 id="vue">Vue</h2>
 <h3 id="vue3和vue2的区别">Vue3和Vue2的区别</h3>
 <h4 id="proxy替代defineproperty"><code>Proxy</code>替代<code>defineProperty</code></h4>
@@ -3383,7 +3616,7 @@
 <h3 id="computed和watch">computed和watch</h3>
 <h4 id="computed">computed</h4>
 <p>computed是计算属性的，会根据所依赖的数据动态显示最新的计算结果，该结果将会被缓存起来。当依赖的数据发生改变，才重新调用getter来计算最新的结果。设计初衷是为了使模板中的逻辑运算更简单：<strong>复杂的计算逻辑放到computed中去计算</strong></p>
-<h5 id="应用场景-2">应用场景</h5>
+<h5 id="应用场景-3">应用场景</h5>
 <ul>
 <li>重复使用数据或者复杂费时的运算</li>
 <li>若需要的数据依赖于其他数据，可以设计为computed中</li>
@@ -3648,8 +3881,28 @@
 <li><code>Vuex</code>状态存储是响应式的，当 Vue 组件从 store 中读取状态的时候，若 store 中的状态发生变化，那么相应的组件也会相应地得到高效更新</li>
 <li><code>Vuex</code>限制不能直接改变store中的状态，更方便追踪状态变化</li>
 </ul>
+<h2 id="操作系统">操作系统</h2>
+<h3 id="进程和线程">进程和线程</h3>
+<h4 id="进程">进程</h4>
+<p>进程，是操作系统中最核心的概念，是对正在运行中的程序的一个抽象，是系统进行资源分配和调度的基本单位。</p>
+<p>操作系统的所有其他内容都是围绕着进程展开的，负责执行这些任务的是CPU</p>
+<h4 id="线程">线程</h4>
+<p>线程是操作系统能够进行运算调度的最小单位，其是进程中的一个执行任务（控制单元），负责当前进程中程序的执行</p>
+<h4 id="二者关系">二者关系</h4>
+<ul>
+<li>一个进程至少有一个线程，一个进程可以运行多个线程</li>
+<li>一个进程的线程之间共享同一块内存，可以共享对象和资源</li>
+</ul>
+<h4 id="二者区别-1">二者区别</h4>
+<ul>
+<li>本质：进程是操作系统资源分配的基本单位，线程是任务调度和执行的基本单位</li>
+<li>开销：每个进程都有独立的代码和数据空间；线程可以看做轻量化的进程；进程切换的开销大</li>
+<li>所处环境：操作系统中能同时运行多个进程，一个进程中有多个线程同时执行</li>
+<li>内存分配：系统在运行时为每个进程分配不同的内存空间，线程所使用的资源来自所属进程的资源</li>
+<li>包含关系：没有线程的进程可以看作是单线程的；线程是进程的一部分</li>
+</ul>
 <h2 id="关键思想">关键思想</h2>
-<h3 id="虚拟dom">虚拟DOM</h3>
+<h3 id="虚拟dom-1">虚拟DOM</h3>
 <h4 id="什么是虚拟dom">什么是虚拟DOM</h4>
 <p>本质上来说，虚拟DOM其实就是一个JavaScript对象。将页面抽象成JS对象的形式，使跨平台渲染成为可能，同时还能有效减少页面渲染的次数，减少修改DOM的重绘重排次数</p>
 <p><strong>虚拟DOM是对DOM的抽象</strong>，是一个更加轻量级的对DOM的描述</p>
@@ -3743,12 +3996,7 @@
 <li>Flutter</li>
 <li>元宇宙</li>
 </ul>
-<h3 id="最近在研究的东西">最近在研究的东西</h3>
-<ul>
-<li>想学Flutter</li>
-<li>区块链相关</li>
-<li>聊天室</li>
-</ul>
+<p>​</p>
 <h2 id="自我介绍">自我介绍</h2>
 <p>面试官好，我是夏宇航，福建泉州人，来自浙江大学信息与电子工程学院，现在在读大三。</p>
 <p>我的专业是信息工程，学校并不会教授前端方面的相关课程。我是从去年七月开始系统性地自学前端的，学习途径主要就是看网络上的教学视频，阅读一些技术书籍，以及自己写一些小项目来巩固学到的知识。</p>
