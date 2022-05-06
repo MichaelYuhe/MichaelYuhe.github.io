@@ -82,7 +82,7 @@ ES6入门教程的作者，阮一峰大佬的个人博客，十分经典，除�
 
 自动生成优雅的CSS代码，可以手动调节大小、圆角等参数。
 
-[Dunmmyimage](https://dummyimage.com/)
+### [Dunmmyimage](https://dummyimage.com/)
 
 生成占位图。
 
@@ -90,4 +90,11 @@ ES6入门教程的作者，阮一峰大佬的个人博客，十分经典，除�
 
 许多优秀精美的CSS小组件
 
+### [CheckListDesign](https://www.checklist.design/?ref=usniemvuilaptrinh)
+
+A collection of the best design practices.
+
+### [Google Fonts](https://fonts.google.com/)
+
+一些好看的字体，可以直接用CDN引用
 
