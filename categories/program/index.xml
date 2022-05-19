@@ -4,7 +4,14 @@
         <link>https://MichaelYuhe.github.io/categories/program/</link>
         <description>program - 分类 - Yuhe&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 27 Oct 2021 10:52:09 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/categories/program/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 06 May 2022 20:39:52 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/categories/program/" rel="self" type="application/rss+xml" /><item>
+    <title>Learning TypeScript</title>
+    <link>https://MichaelYuhe.github.io/typescript%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
+    <pubDate>Fri, 06 May 2022 20:39:52 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/typescript%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
+    <description><![CDATA[Learning TypeScript type &amp; interface type A type alias is exactly that - a name for any type. We can use a type alias to give a name to any type at all, not just an object type. 1 type ID = number | string; But note that, aliases are only aliases. We can&rsquo;t use type aliases to create different/distinct versions of the same type. Interface An interface declaration is]]></description>
+</item><item>
     <title>Node.js初体验</title>
     <link>https://MichaelYuhe.github.io/email/</link>
     <pubDate>Wed, 27 Oct 2021 10:52:09 &#43;0800</pubDate>

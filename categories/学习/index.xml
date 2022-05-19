@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>JavaScript - 标签 - Yuhe&#39;s Blog</title>
-        <link>https://MichaelYuhe.github.io/tags/javascript/</link>
-        <description>JavaScript - 标签 - Yuhe&#39;s Blog</description>
+        <title>学习 - 分类 - Yuhe&#39;s Blog</title>
+        <link>https://MichaelYuhe.github.io/categories/%E5%AD%A6%E4%B9%A0/</link>
+        <description>学习 - 分类 - Yuhe&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 19 May 2022 08:00:10 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/tags/javascript/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 19 May 2022 08:00:10 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/categories/%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
     <title>Promise</title>
     <link>https://MichaelYuhe.github.io/promise/</link>
     <pubDate>Thu, 19 May 2022 08:00:10 &#43;0800</pubDate>

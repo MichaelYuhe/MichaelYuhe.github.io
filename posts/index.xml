@@ -4,7 +4,28 @@
         <link>https://MichaelYuhe.github.io/posts/</link>
         <description>所有文章 | Yuhe&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 13 Apr 2022 08:00:10 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 19 May 2022 08:00:10 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Promise</title>
+    <link>https://MichaelYuhe.github.io/promise/</link>
+    <pubDate>Thu, 19 May 2022 08:00:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/promise/</guid>
+    <description><![CDATA[Promise Promise是什么 Promise 对象用于表示一个异步操作的最终完成 (或失败)及其结果值。 一个Promise对象代表一个在这个promise被创建出来]]></description>
+</item><item>
+    <title>事件循环</title>
+    <link>https://MichaelYuhe.github.io/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</link>
+    <pubDate>Wed, 18 May 2022 08:00:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</guid>
+    <description><![CDATA[事件循环 什么是事件循环 众所周知，JavaScript是单线程的，一次只能运行一个任务。幸运的是，浏览器为我们提供了Web API，包含了DOM]]></description>
+</item><item>
+    <title>Learning TypeScript</title>
+    <link>https://MichaelYuhe.github.io/typescript%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
+    <pubDate>Fri, 06 May 2022 20:39:52 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/typescript%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
+    <description><![CDATA[Learning TypeScript type &amp; interface type A type alias is exactly that - a name for any type. We can use a type alias to give a name to any type at all, not just an object type. 1 type ID = number | string; But note that, aliases are only aliases. We can&rsquo;t use type aliases to create different/distinct versions of the same type. Interface An interface declaration is]]></description>
+</item><item>
     <title>阿里云OPENAPI前端实习_终面</title>
     <link>https://MichaelYuhe.github.io/%E9%98%BF%E9%87%8C%E4%BA%91%E7%BB%88%E9%9D%A2/</link>
     <pubDate>Wed, 13 Apr 2022 08:00:10 &#43;0800</pubDate>
@@ -53,26 +74,5 @@
     <author>作者</author>
     <guid>https://MichaelYuhe.github.io/%E7%BD%91%E6%98%93%E9%9B%B7%E7%81%AB%E4%BA%8C%E9%9D%A2/</guid>
     <description><![CDATA[网易雷火二面 项目 实习干了啥，怎么做的 略 怎么想到做微信小游戏 难点 讲了3d和零基础 音乐播放器的后端怎么做的 现成的.. 原生音视频控制方法知道哪些 p]]></description>
-</item><item>
-    <title>网易雷火前端实习_一面</title>
-    <link>https://MichaelYuhe.github.io/%E7%BD%91%E6%98%93%E9%9B%B7%E7%81%AB%E4%B8%80%E9%9D%A2/</link>
-    <pubDate>Mon, 14 Feb 2022 09:00:10 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/%E7%BD%91%E6%98%93%E9%9B%B7%E7%81%AB%E4%B8%80%E9%9D%A2/</guid>
-    <description><![CDATA[网易雷火一面 自我介绍 移动端自适应 小游戏性能优化 分包加载预加载 模型怎么优化 cocos内部怎么自适应，原理 webpack CSS动画 垂直居中，水平居中 this]]></description>
-</item><item>
-    <title>阿里云OPENAPI前端实习_一面</title>
-    <link>https://MichaelYuhe.github.io/%E9%98%BF%E9%87%8C%E4%BA%91%E4%B8%80%E9%9D%A2/</link>
-    <pubDate>Mon, 14 Feb 2022 08:00:10 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/%E9%98%BF%E9%87%8C%E4%BA%91%E4%B8%80%E9%9D%A2/</guid>
-    <description><![CDATA[阿里云OpenAPI一面 绩点，排名，相关课程 面试官：你们绩点也太高了，这才百分三十几吗 自我介绍，要求介绍自己的优势 说自己学习能力强，上手快 简]]></description>
-</item><item>
-    <title>实习总结</title>
-    <link>https://MichaelYuhe.github.io/%E5%AE%9E%E4%B9%A0%E6%80%BB%E7%BB%93/</link>
-    <pubDate>Sat, 15 Jan 2022 12:41:41 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/%E5%AE%9E%E4%B9%A0%E6%80%BB%E7%BB%93/</guid>
-    <description><![CDATA[实习总结 写在前面 11.16进入入职，1.15离职，不算考试周，刚好凑足了两个月。交完电脑工牌，签了离职文件，最后和大家合照，就正式离开这第一]]></description>
 </item></channel>
 </rss>
