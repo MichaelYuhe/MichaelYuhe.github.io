@@ -9,7 +9,7 @@
 
 - 当我们调用一个函数，它会先**被添加到执行栈中**。当函数返回一个值的时候，就被移出执行栈。
 
-  ![event-loop1](C:\Users\Administrator\Desktop\event-loop1.gif)
+  ![img](../../static/images/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/event-loop1.gif)
 
   如上图，respond函数返回了一个`setTimeout`函数，允许我们在不打破主线程的情况下延迟执行任务。我们传递给`setTimeout`的回调函数就被添加到了`Web API`中。
 
