@@ -4,7 +4,14 @@
         <link>https://MichaelYuhe.github.io/posts/</link>
         <description>所有文章 | Yuhe&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 19 May 2022 08:00:10 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 20 May 2022 08:00:10 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>React事件机制</title>
+    <link>https://MichaelYuhe.github.io/react%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6/</link>
+    <pubDate>Fri, 20 May 2022 08:00:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/react%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6/</guid>
+    <description><![CDATA[React事件机制 DOM事件流 要学习React的事件机制前，需要先回顾一下DOM事件流。它包含三个流程：事件捕获，处于目标，事件冒泡。 事件捕]]></description>
+</item><item>
     <title>Promise</title>
     <link>https://MichaelYuhe.github.io/promise/</link>
     <pubDate>Thu, 19 May 2022 08:00:10 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://MichaelYuhe.github.io/%E5%A4%87%E6%88%98%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0/</guid>
     <description><![CDATA[备战暑期实习 计算机网络 TCP三次握手四次挥手 三次握手 三次握手，指的就是建立一个TCP链接时，需要客户端和服务器共发送三个包，主要作用是确认双]]></description>
-</item><item>
-    <title>网易雷火前端实习_二面</title>
-    <link>https://MichaelYuhe.github.io/%E7%BD%91%E6%98%93%E9%9B%B7%E7%81%AB%E4%BA%8C%E9%9D%A2/</link>
-    <pubDate>Mon, 21 Feb 2022 09:00:10 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/%E7%BD%91%E6%98%93%E9%9B%B7%E7%81%AB%E4%BA%8C%E9%9D%A2/</guid>
-    <description><![CDATA[网易雷火二面 项目 实习干了啥，怎么做的 略 怎么想到做微信小游戏 难点 讲了3d和零基础 音乐播放器的后端怎么做的 现成的.. 原生音视频控制方法知道哪些 p]]></description>
 </item></channel>
 </rss>

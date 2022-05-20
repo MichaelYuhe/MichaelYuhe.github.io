@@ -4,7 +4,14 @@
         <link>https://MichaelYuhe.github.io/tags/javascript/</link>
         <description>JavaScript - 标签 - Yuhe&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 19 May 2022 08:00:10 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/tags/javascript/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 20 May 2022 08:00:10 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/tags/javascript/" rel="self" type="application/rss+xml" /><item>
+    <title>React事件机制</title>
+    <link>https://MichaelYuhe.github.io/react%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6/</link>
+    <pubDate>Fri, 20 May 2022 08:00:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/react%E4%BA%8B%E4%BB%B6%E6%9C%BA%E5%88%B6/</guid>
+    <description><![CDATA[React事件机制 DOM事件流 要学习React的事件机制前，需要先回顾一下DOM事件流。它包含三个流程：事件捕获，处于目标，事件冒泡。 事件捕]]></description>
+</item><item>
     <title>Promise</title>
     <link>https://MichaelYuhe.github.io/promise/</link>
     <pubDate>Thu, 19 May 2022 08:00:10 &#43;0800</pubDate>
