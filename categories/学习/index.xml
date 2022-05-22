@@ -32,5 +32,12 @@
     <author>作者</author>
     <guid>https://MichaelYuhe.github.io/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</guid>
     <description><![CDATA[事件循环 什么是事件循环 众所周知，JavaScript是单线程的，一次只能运行一个任务。幸运的是，浏览器为我们提供了Web API，包含了DOM]]></description>
+</item><item>
+    <title>Web前端安全之XSS和CSRF</title>
+    <link>https://MichaelYuhe.github.io/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</link>
+    <pubDate>Wed, 03 Nov 2021 11:03:28 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</guid>
+    <description><![CDATA[Web前端安全之XSS和CSRF 写在前面 昨晚（2021 / 11 / 2），面试有赞实习，面试官提问了XSS和CSRF，从没了解过的我只能尴尬地回答：]]></description>
 </item></channel>
 </rss>
