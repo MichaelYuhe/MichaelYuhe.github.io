@@ -4,7 +4,14 @@
         <link>https://MichaelYuhe.github.io/categories/%E5%AD%A6%E4%B9%A0/</link>
         <description>学习 - 分类 - Yuhe&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 22 May 2022 11:03:28 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/categories/%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 23 May 2022 08:00:10 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/categories/%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
+    <title>React生命周期</title>
+    <link>https://MichaelYuhe.github.io/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</link>
+    <pubDate>Mon, 23 May 2022 08:00:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</guid>
+    <description><![CDATA[React生命周期 生命周期流程 React的生命周期可以分为三个阶段。 创建阶段 创建阶段主要有以下几个生命周期方法 constructor getDerivedStateFromProps render componentDidMount constructor 创建实例过程会自动调]]></description>
+</item><item>
     <title>HTTP各版本区别</title>
     <link>https://MichaelYuhe.github.io/http%E5%90%84%E7%89%88%E6%9C%AC%E5%8C%BA%E5%88%AB/</link>
     <pubDate>Sun, 22 May 2022 11:03:28 &#43;0800</pubDate>
