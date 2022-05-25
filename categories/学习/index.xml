@@ -4,7 +4,14 @@
         <link>https://MichaelYuhe.github.io/categories/%E5%AD%A6%E4%B9%A0/</link>
         <description>学习 - 分类 - Yuhe&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 23 May 2022 08:00:10 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/categories/%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 25 May 2022 08:00:10 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/categories/%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
+    <title>Tailwind</title>
+    <link>https://MichaelYuhe.github.io/tailwind/</link>
+    <pubDate>Wed, 25 May 2022 08:00:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/tailwind/</guid>
+    <description><![CDATA[Tailwind 写在前面 做外包项目的时候，第一次使用了 Tailwind 第一感受就是：方便，再也不用写一大堆 CSS 和类名 然而面试的时候，面试官问我 Tailwind 的优点有哪些，我也只答得上]]></description>
+</item><item>
     <title>React生命周期</title>
     <link>https://MichaelYuhe.github.io/react%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</link>
     <pubDate>Mon, 23 May 2022 08:00:10 &#43;0800</pubDate>
