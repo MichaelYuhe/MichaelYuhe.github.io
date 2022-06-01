@@ -4,9 +4,16 @@
         <link>https://MichaelYuhe.github.io/</link>
         <description>夏宇航的个人博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 25 May 2022 08:00:10 &#43;0800</lastBuildDate>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 01 Jun 2022 10:52:09 &#43;0800</lastBuildDate>
             <atom:link href="https://MichaelYuhe.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>图片懒加载</title>
+    <link>https://MichaelYuhe.github.io/%E6%87%92%E5%8A%A0%E8%BD%BD/</link>
+    <pubDate>Wed, 01 Jun 2022 10:52:09 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E6%87%92%E5%8A%A0%E8%BD%BD/</guid>
+    <description><![CDATA[懒加载 什么是懒加载 懒加载就是延时加载，也称为按需加载 具体表现 懒加载最常用于图片。当用户访问页面时，先将图片的路径用占位图的路径代替，这样就只]]></description>
+</item><item>
     <title>Tailwind</title>
     <link>https://MichaelYuhe.github.io/tailwind/</link>
     <pubDate>Wed, 25 May 2022 08:00:10 &#43;0800</pubDate>
@@ -69,12 +76,5 @@
     <author>作者</author>
     <guid>https://MichaelYuhe.github.io/%E8%9A%82%E8%9A%81%E5%89%8D%E7%AB%AF%E4%BA%8C%E9%9D%A2/</guid>
     <description><![CDATA[蚂蚁前端二面 总时长十六分钟，与一面形成鲜明对比😆 聊天 高中怎么学的 平常喜欢干啥 为什么选前端 没有反问的机会，十五分钟直接结束让我等后面的hr面]]></description>
-</item><item>
-    <title>蚂蚁前端实习_一面</title>
-    <link>https://MichaelYuhe.github.io/%E8%9A%82%E8%9A%81%E5%89%8D%E7%AB%AF%E4%B8%80%E9%9D%A2/</link>
-    <pubDate>Tue, 01 Mar 2022 23:38:52 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/%E8%9A%82%E8%9A%81%E5%89%8D%E7%AB%AF%E4%B8%80%E9%9D%A2/</guid>
-    <description><![CDATA[蚂蚁前端一面 总时长一百分钟，三道coding四十分钟，面试六十分钟 Coding 数组交集 比较版本号 URL参数 实现一个类，有一些处理URL的方法 基础知识 网]]></description>
 </item></channel>
 </rss>
