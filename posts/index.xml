@@ -4,7 +4,14 @@
         <link>https://MichaelYuhe.github.io/posts/</link>
         <description>所有文章 | Yuhe&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 01 Jun 2022 10:52:09 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 02 Jun 2022 08:00:10 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>new操作符详解</title>
+    <link>https://MichaelYuhe.github.io/new%E6%93%8D%E4%BD%9C%E7%AC%A6%E8%AF%A6%E8%A7%A3/</link>
+    <pubDate>Thu, 02 Jun 2022 08:00:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/new%E6%93%8D%E4%BD%9C%E7%AC%A6%E8%AF%A6%E8%A7%A3/</guid>
+    <description><![CDATA[new操作符详解 new操作符是什么 在 JavaScript 中，new 操作符用于创建一个给定构造函数的实例对象 创建出来的实例对象可以访问到构造函数中的属性 可以访问]]></description>
+</item><item>
     <title>图片懒加载</title>
     <link>https://MichaelYuhe.github.io/%E6%87%92%E5%8A%A0%E8%BD%BD/</link>
     <pubDate>Wed, 01 Jun 2022 10:52:09 &#43;0800</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://MichaelYuhe.github.io/%E9%98%BF%E9%87%8C%E4%BA%91%E7%BB%88%E9%9D%A2/</guid>
     <description><![CDATA[阿里云OpenAPI终面 项目 微信小游戏 具体做什么的 扮演的角色 MyBoom 有考虑过安全方面的问题吗 性能优化呢 实习 做了什么工作 自己做前端和公司做前端的区别]]></description>
-</item><item>
-    <title>蚂蚁前端实习_二面</title>
-    <link>https://MichaelYuhe.github.io/%E8%9A%82%E8%9A%81%E5%89%8D%E7%AB%AF%E4%BA%8C%E9%9D%A2/</link>
-    <pubDate>Wed, 02 Mar 2022 23:38:52 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/%E8%9A%82%E8%9A%81%E5%89%8D%E7%AB%AF%E4%BA%8C%E9%9D%A2/</guid>
-    <description><![CDATA[蚂蚁前端二面 总时长十六分钟，与一面形成鲜明对比😆 聊天 高中怎么学的 平常喜欢干啥 为什么选前端 没有反问的机会，十五分钟直接结束让我等后面的hr面]]></description>
 </item></channel>
 </rss>

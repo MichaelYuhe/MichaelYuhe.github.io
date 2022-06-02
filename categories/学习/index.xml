@@ -4,7 +4,14 @@
         <link>https://MichaelYuhe.github.io/categories/%E5%AD%A6%E4%B9%A0/</link>
         <description>学习 - 分类 - Yuhe&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 01 Jun 2022 10:52:09 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/categories/%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 02 Jun 2022 08:00:10 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/categories/%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
+    <title>new操作符详解</title>
+    <link>https://MichaelYuhe.github.io/new%E6%93%8D%E4%BD%9C%E7%AC%A6%E8%AF%A6%E8%A7%A3/</link>
+    <pubDate>Thu, 02 Jun 2022 08:00:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/new%E6%93%8D%E4%BD%9C%E7%AC%A6%E8%AF%A6%E8%A7%A3/</guid>
+    <description><![CDATA[new操作符详解 new操作符是什么 在 JavaScript 中，new 操作符用于创建一个给定构造函数的实例对象 创建出来的实例对象可以访问到构造函数中的属性 可以访问]]></description>
+</item><item>
     <title>图片懒加载</title>
     <link>https://MichaelYuhe.github.io/%E6%87%92%E5%8A%A0%E8%BD%BD/</link>
     <pubDate>Wed, 01 Jun 2022 10:52:09 &#43;0800</pubDate>
