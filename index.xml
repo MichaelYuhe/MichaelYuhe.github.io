@@ -4,9 +4,16 @@
         <link>https://MichaelYuhe.github.io/</link>
         <description>夏宇航的个人博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 02 Jun 2022 08:00:10 &#43;0800</lastBuildDate>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 03 Jun 2022 08:00:10 &#43;0800</lastBuildDate>
             <atom:link href="https://MichaelYuhe.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>输入URL后发生了什么</title>
+    <link>https://MichaelYuhe.github.io/%E8%BE%93%E5%85%A5url%E5%90%8E%E5%8F%91%E7%94%9F%E7%9A%84%E4%BA%8B%E6%83%85/</link>
+    <pubDate>Fri, 03 Jun 2022 08:00:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E8%BE%93%E5%85%A5url%E5%90%8E%E5%8F%91%E7%94%9F%E7%9A%84%E4%BA%8B%E6%83%85/</guid>
+    <description><![CDATA[输入URL后发生的事情 查找 IP 地址 请求一旦发起，浏览器所做的第一件事就是解析这个域名 浏览器会先查看本地缓存的 hosts 文件，查看是否有对应这个域名的规]]></description>
+</item><item>
     <title>new操作符详解</title>
     <link>https://MichaelYuhe.github.io/new%E6%93%8D%E4%BD%9C%E7%AC%A6%E8%AF%A6%E8%A7%A3/</link>
     <pubDate>Thu, 02 Jun 2022 08:00:10 &#43;0800</pubDate>
@@ -69,12 +76,5 @@
     <author>作者</author>
     <guid>https://MichaelYuhe.github.io/typescript%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
     <description><![CDATA[Learning TypeScript type &amp; interface type A type alias is exactly that - a name for any type. We can use a type alias to give a name to any type at all, not just an object type. 1 type ID = number | string; But note that, aliases are only aliases. We can&rsquo;t use type aliases to create different/distinct versions of the same type. Interface An interface declaration is]]></description>
-</item><item>
-    <title>阿里云OPENAPI前端实习_终面</title>
-    <link>https://MichaelYuhe.github.io/%E9%98%BF%E9%87%8C%E4%BA%91%E7%BB%88%E9%9D%A2/</link>
-    <pubDate>Wed, 13 Apr 2022 08:00:10 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/%E9%98%BF%E9%87%8C%E4%BA%91%E7%BB%88%E9%9D%A2/</guid>
-    <description><![CDATA[阿里云OpenAPI终面 项目 微信小游戏 具体做什么的 扮演的角色 MyBoom 有考虑过安全方面的问题吗 性能优化呢 实习 做了什么工作 自己做前端和公司做前端的区别]]></description>
 </item></channel>
 </rss>
