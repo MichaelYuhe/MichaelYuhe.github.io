@@ -4,7 +4,14 @@
         <link>https://MichaelYuhe.github.io/tags/javascript/</link>
         <description>JavaScript - 标签 - Yuhe&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 02 Jun 2022 08:00:10 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/tags/javascript/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 05 Jun 2022 08:00:10 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/tags/javascript/" rel="self" type="application/rss+xml" /><item>
+    <title>call 和 apply 的模拟实现</title>
+    <link>https://MichaelYuhe.github.io/call-%E5%92%8C-apply-%E7%9A%84%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0/</link>
+    <pubDate>Sun, 05 Jun 2022 08:00:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/call-%E5%92%8C-apply-%E7%9A%84%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0/</guid>
+    <description><![CDATA[call 和 apply 的模拟实现 call call 是什么 call()方法在使用一个指定的 this 值和若干个指定的参数值的前提下，调用某个函数或方法。 1 2 3 4 5 6 7 8 9 10 const foo = {]]></description>
+</item><item>
     <title>new操作符详解</title>
     <link>https://MichaelYuhe.github.io/new%E6%93%8D%E4%BD%9C%E7%AC%A6%E8%AF%A6%E8%A7%A3/</link>
     <pubDate>Thu, 02 Jun 2022 08:00:10 &#43;0800</pubDate>

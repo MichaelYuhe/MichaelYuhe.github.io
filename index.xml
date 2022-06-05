@@ -4,9 +4,16 @@
         <link>https://MichaelYuhe.github.io/</link>
         <description>夏宇航的个人博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 03 Jun 2022 08:00:10 &#43;0800</lastBuildDate>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 05 Jun 2022 08:00:10 &#43;0800</lastBuildDate>
             <atom:link href="https://MichaelYuhe.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>call 和 apply 的模拟实现</title>
+    <link>https://MichaelYuhe.github.io/call-%E5%92%8C-apply-%E7%9A%84%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0/</link>
+    <pubDate>Sun, 05 Jun 2022 08:00:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/call-%E5%92%8C-apply-%E7%9A%84%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0/</guid>
+    <description><![CDATA[call 和 apply 的模拟实现 call call 是什么 call()方法在使用一个指定的 this 值和若干个指定的参数值的前提下，调用某个函数或方法。 1 2 3 4 5 6 7 8 9 10 const foo = {]]></description>
+</item><item>
     <title>输入URL后发生了什么</title>
     <link>https://MichaelYuhe.github.io/%E8%BE%93%E5%85%A5url%E5%90%8E%E5%8F%91%E7%94%9F%E7%9A%84%E4%BA%8B%E6%83%85/</link>
     <pubDate>Fri, 03 Jun 2022 08:00:10 &#43;0800</pubDate>
@@ -69,12 +76,5 @@
     <author>作者</author>
     <guid>https://MichaelYuhe.github.io/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</guid>
     <description><![CDATA[事件循环 什么是事件循环 众所周知，JavaScript是单线程的，一次只能运行一个任务。幸运的是，浏览器为我们提供了Web API，包含了DOM]]></description>
-</item><item>
-    <title>Learning TypeScript</title>
-    <link>https://MichaelYuhe.github.io/typescript%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
-    <pubDate>Fri, 06 May 2022 20:39:52 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/typescript%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
-    <description><![CDATA[Learning TypeScript type &amp; interface type A type alias is exactly that - a name for any type. We can use a type alias to give a name to any type at all, not just an object type. 1 type ID = number | string; But note that, aliases are only aliases. We can&rsquo;t use type aliases to create different/distinct versions of the same type. Interface An interface declaration is]]></description>
 </item></channel>
 </rss>
