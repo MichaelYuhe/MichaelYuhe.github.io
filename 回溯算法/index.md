@@ -1,4 +1,5 @@
-# 
+# 回溯算法
+
 
 # 回溯法
 
@@ -110,7 +111,7 @@ var combine = function (n, k) {
     const backtracking = (n, k, start) => {
         const len = path.length
         if (len === k) {
-            res.push(path)
+            res.push([...path])
             return
         }
         for (let i = start; i <= n - (k - len) + 1; i++) {
@@ -122,6 +123,117 @@ var combine = function (n, k) {
     backtracking(n, k, 1)
     return res
 };
+```
+
+
+
+### [电话号码的字母组合](https://leetcode.cn/problems/letter-combinations-of-a-phone-number/)
+
+```
+给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。
+
+给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母
+```
+
+#### 思路
+
+具体思路和上面的题目其实是一样的，只是要先定义一下数字到字母的映射
+
+定义这种映射一般使用 Map 结构，但本题其实只有 2-9 这几个数字，用数组其实是最方便的
+
+#### 题解
+
+```javascript
+/**
+ * @param {string} digits
+ * @return {string[]}
+ */
+var letterCombinations = function (digits) {
+    const digitsLen = digits.length
+    if (digitsLen === 0) return []
+    const digitsMap = ['', '', 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz']
+    const res = [], path = []
+    const backtracking = (index) => {
+        if (path.length === digitsLen) {
+            res.push(path.join(''))
+            return
+        }
+        for (const ch of digitsMap[digits[index]]) {
+            path.push(ch)
+            backtracking(index + 1)
+            path.pop()
+        }
+    }
+    backtracking(0)
+    return res
+};
+```
+
+### [组合总和](https://leetcode.cn/problems/combination-sum/)
+
+```
+给你一个 无重复元素 的整数数组 candidates 和一个目标整数 target ，
+找出 candidates 中可以使数字和为目标数 target 的 所有 不同组合 ，并以列表形式返回。
+你可以按 任意顺序 返回这些组合。
+
+candidates 中的 同一个 数字可以 无限制重复被选取 。
+如果至少一个数字的被选数量不同，则两种组合是不同的。 
+
+对于给定的输入，保证和为 target 的不同组合数少于 150 个。
+```
+
+#### 思路
+
+同样，经典的组合问题
+
+难点在于这次的元素是可以重用的，所以递归什么时候要继续往下不能像之前那样写
+
+同时还可以利用剪枝进行一些优化
+
+#### 题解
+
+```javascript
+/**
+ * @param {number[]} candidates
+ * @param {number} target
+ * @return {number[][]}
+ */
+const combinationSum = function (candidates, target) {
+    const candidatesLen = candidates.length
+    if (candidatesLen === 0) return []
+    // 排序
+    candidates.sort((a, b) => {
+        return a - b
+    })
+    const res = [], path = []
+    // 回溯算法
+    const backtracking = (index) => {
+        const arrSum = getArrSum(path)
+        if (arrSum === target) {
+            res.push([...path])
+            return
+        }
+        // 剪枝
+        if (arrSum > target || index === candidatesLen) {
+            return
+        }
+        for (let i = index; i < candidatesLen; i++) {
+            path.push(candidates[i])
+            // 元素可以重用
+            backtracking(i)
+            path.pop()
+        }
+    }
+    backtracking(0)
+    return res
+};
+
+// 求和
+const getArrSum = (arr) => {
+    return arr.length ? arr.reduce((pre, cur) => {
+        return pre + cur
+    }) : 0
+}
 ```
 
 

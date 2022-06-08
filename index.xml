@@ -4,9 +4,16 @@
         <link>https://MichaelYuhe.github.io/</link>
         <description>夏宇航的个人博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 05 Jun 2022 08:00:10 &#43;0800</lastBuildDate>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 08 Jun 2022 08:00:10 &#43;0800</lastBuildDate>
             <atom:link href="https://MichaelYuhe.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>回溯算法</title>
+    <link>https://MichaelYuhe.github.io/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/</link>
+    <pubDate>Wed, 08 Jun 2022 08:00:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/</guid>
+    <description><![CDATA[回溯法 什么是回溯法 回溯法是一种搜索的方式，也称回溯搜索法 回溯是递归的副产品，只要有递归，就会有回溯 回溯法的效率 回溯的本质是穷举，回溯法本身效]]></description>
+</item><item>
     <title>call 和 apply 的模拟实现</title>
     <link>https://MichaelYuhe.github.io/call-%E5%92%8C-apply-%E7%9A%84%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0/</link>
     <pubDate>Sun, 05 Jun 2022 08:00:10 &#43;0800</pubDate>
@@ -69,12 +76,5 @@
     <author>作者</author>
     <guid>https://MichaelYuhe.github.io/promise/</guid>
     <description><![CDATA[Promise Promise是什么 Promise 对象用于表示一个异步操作的最终完成 (或失败)及其结果值。 一个Promise对象代表一个在这个promise被创建出来]]></description>
-</item><item>
-    <title>事件循环</title>
-    <link>https://MichaelYuhe.github.io/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</link>
-    <pubDate>Wed, 18 May 2022 08:00:10 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</guid>
-    <description><![CDATA[事件循环 什么是事件循环 众所周知，JavaScript是单线程的，一次只能运行一个任务。幸运的是，浏览器为我们提供了Web API，包含了DOM]]></description>
 </item></channel>
 </rss>

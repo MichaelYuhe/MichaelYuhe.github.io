@@ -5,30 +5,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title> - Yuhe&#39;s Blog</title><meta name="Description" content="夏宇航的个人博客"><meta property="og:title" content="" />
+        <title>回溯算法 - Yuhe&#39;s Blog</title><meta name="Description" content="夏宇航的个人博客"><meta property="og:title" content="回溯算法" />
 <meta property="og:description" content="回溯法 什么是回溯法 回溯法是一种搜索的方式，也称回溯搜索法 回溯是递归的副产品，只要有递归，就会有回溯 回溯法的效率 回溯的本质是穷举，回溯法本身效" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://MichaelYuhe.github.io/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" /><meta property="article:section" content="posts" />
-
-
+<meta property="article:published_time" content="2022-06-08T08:00:10+08:00" />
+<meta property="article:modified_time" content="2022-06-08T08:00:10+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
+<meta name="twitter:title" content="回溯算法"/>
 <meta name="twitter:description" content="回溯法 什么是回溯法 回溯法是一种搜索的方式，也称回溯搜索法 回溯是递归的副产品，只要有递归，就会有回溯 回溯法的效率 回溯的本质是穷举，回溯法本身效"/>
 <meta name="application-name" content="Yuhe&#39;s Blog">
 <meta name="apple-mobile-web-app-title" content="Yuhe&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://MichaelYuhe.github.io/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" /><link rel="prev" href="https://MichaelYuhe.github.io/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E4%B8%80%E9%9D%A2/" /><link rel="next" href="https://MichaelYuhe.github.io/%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://MichaelYuhe.github.io/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" /><link rel="prev" href="https://MichaelYuhe.github.io/call-%E5%92%8C-apply-%E7%9A%84%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "",
+        "headline": "回溯算法",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/MichaelYuhe.github.io\/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95\/"
-        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","wordcount":  767 ,
-        "url": "https:\/\/MichaelYuhe.github.io\/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95\/","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "算法, 回溯","wordcount":  1421 ,
+        "url": "https:\/\/MichaelYuhe.github.io\/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95\/","datePublished": "2022-06-08T08:00:10+08:00","dateModified": "2022-06-08T08:00:10+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/MichaelYuhe.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -118,10 +118,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX"></h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>夏宇航</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 767 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" class="leancloud_visitors" data-flag-title="">
+        </div><article class="page single"><h1 class="single-title animated flipInX">回溯算法</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>夏宇航</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0/"><i class="far fa-folder fa-fw"></i>学习</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-08">2022-06-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1421 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" class="leancloud_visitors" data-flag-title="回溯算法">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -149,6 +149,18 @@
           <ul>
             <li><a href="#思路">思路</a></li>
             <li><a href="#题解">题解</a></li>
+          </ul>
+        </li>
+        <li><a href="#电话号码的字母组合httpsleetcodecnproblemsletter-combinations-of-a-phone-number"><a href="https://leetcode.cn/problems/letter-combinations-of-a-phone-number/">电话号码的字母组合</a></a>
+          <ul>
+            <li><a href="#思路-1">思路</a></li>
+            <li><a href="#题解-1">题解</a></li>
+          </ul>
+        </li>
+        <li><a href="#组合总和httpsleetcodecnproblemscombination-sum"><a href="https://leetcode.cn/problems/combination-sum/">组合总和</a></a>
+          <ul>
+            <li><a href="#思路-2">思路</a></li>
+            <li><a href="#题解-2">题解</a></li>
           </ul>
         </li>
       </ul>
@@ -305,7 +317,7 @@
     <span class="kr">const</span> <span class="nx">backtracking</span> <span class="o">=</span> <span class="p">(</span><span class="nx">n</span><span class="p">,</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">start</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
         <span class="kr">const</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">length</span>
         <span class="k">if</span> <span class="p">(</span><span class="nx">len</span> <span class="o">===</span> <span class="nx">k</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">res</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">path</span><span class="p">)</span>
+            <span class="nx">res</span><span class="p">.</span><span class="nx">push</span><span class="p">([...</span><span class="nx">path</span><span class="p">])</span>
             <span class="k">return</span>
         <span class="p">}</span>
         <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">start</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">n</span> <span class="o">-</span> <span class="p">(</span><span class="nx">k</span> <span class="o">-</span> <span class="nx">len</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
@@ -319,11 +331,196 @@
 <span class="p">};</span>
 </code></pre></td></tr></table>
 </div>
+</div><h3 id="电话号码的字母组合httpsleetcodecnproblemsletter-combinations-of-a-phone-number"><a href="https://leetcode.cn/problems/letter-combinations-of-a-phone-number/" target="_blank" rel="noopener noreffer">电话号码的字母组合</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。
+
+给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="思路-1">思路</h4>
+<p>具体思路和上面的题目其实是一样的，只是要先定义一下数字到字母的映射</p>
+<p>定义这种映射一般使用 Map 结构，但本题其实只有 2-9 这几个数字，用数组其实是最方便的</p>
+<h4 id="题解-1">题解</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="cm">/**
+</span><span class="cm"> * @param {string} digits
+</span><span class="cm"> * @return {string[]}
+</span><span class="cm"> */</span>
+<span class="kd">var</span> <span class="nx">letterCombinations</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">digits</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">digitsLen</span> <span class="o">=</span> <span class="nx">digits</span><span class="p">.</span><span class="nx">length</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">digitsLen</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="p">[]</span>
+    <span class="kr">const</span> <span class="nx">digitsMap</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="s1">&#39;def&#39;</span><span class="p">,</span> <span class="s1">&#39;ghi&#39;</span><span class="p">,</span> <span class="s1">&#39;jkl&#39;</span><span class="p">,</span> <span class="s1">&#39;mno&#39;</span><span class="p">,</span> <span class="s1">&#39;pqrs&#39;</span><span class="p">,</span> <span class="s1">&#39;tuv&#39;</span><span class="p">,</span> <span class="s1">&#39;wxyz&#39;</span><span class="p">]</span>
+    <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="p">[],</span> <span class="nx">path</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="kr">const</span> <span class="nx">backtracking</span> <span class="o">=</span> <span class="p">(</span><span class="nx">index</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">path</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="nx">digitsLen</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">res</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">))</span>
+            <span class="k">return</span>
+        <span class="p">}</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">ch</span> <span class="k">of</span> <span class="nx">digitsMap</span><span class="p">[</span><span class="nx">digits</span><span class="p">[</span><span class="nx">index</span><span class="p">]])</span> <span class="p">{</span>
+            <span class="nx">path</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">ch</span><span class="p">)</span>
+            <span class="nx">backtracking</span><span class="p">(</span><span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="nx">path</span><span class="p">.</span><span class="nx">pop</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="nx">backtracking</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">res</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="组合总和httpsleetcodecnproblemscombination-sum"><a href="https://leetcode.cn/problems/combination-sum/" target="_blank" rel="noopener noreffer">组合总和</a></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">给你一个 无重复元素 的整数数组 candidates 和一个目标整数 target ，
+找出 candidates 中可以使数字和为目标数 target 的 所有 不同组合 ，并以列表形式返回。
+你可以按 任意顺序 返回这些组合。
+
+candidates 中的 同一个 数字可以 无限制重复被选取 。
+如果至少一个数字的被选数量不同，则两种组合是不同的。 
+
+对于给定的输入，保证和为 target 的不同组合数少于 150 个。
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="思路-2">思路</h4>
+<p>同样，经典的组合问题</p>
+<p>难点在于这次的元素是可以重用的，所以递归什么时候要继续往下不能像之前那样写</p>
+<p>同时还可以利用剪枝进行一些优化</p>
+<h4 id="题解-2">题解</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="cm">/**
+</span><span class="cm"> * @param {number[]} candidates
+</span><span class="cm"> * @param {number} target
+</span><span class="cm"> * @return {number[][]}
+</span><span class="cm"> */</span>
+<span class="kr">const</span> <span class="nx">combinationSum</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">candidates</span><span class="p">,</span> <span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">candidatesLen</span> <span class="o">=</span> <span class="nx">candidates</span><span class="p">.</span><span class="nx">length</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">candidatesLen</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="p">[]</span>
+    <span class="c1">// 排序
+</span><span class="c1"></span>    <span class="nx">candidates</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span>
+    <span class="p">})</span>
+    <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="p">[],</span> <span class="nx">path</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1">// 回溯算法
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">backtracking</span> <span class="o">=</span> <span class="p">(</span><span class="nx">index</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">arrSum</span> <span class="o">=</span> <span class="nx">getArrSum</span><span class="p">(</span><span class="nx">path</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">arrSum</span> <span class="o">===</span> <span class="nx">target</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">res</span><span class="p">.</span><span class="nx">push</span><span class="p">([...</span><span class="nx">path</span><span class="p">])</span>
+            <span class="k">return</span>
+        <span class="p">}</span>
+        <span class="c1">// 剪枝
+</span><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">arrSum</span> <span class="o">&gt;</span> <span class="nx">target</span> <span class="o">||</span> <span class="nx">index</span> <span class="o">===</span> <span class="nx">candidatesLen</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span>
+        <span class="p">}</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">index</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">candidatesLen</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">path</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">candidates</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+            <span class="c1">// 元素可以重用
+</span><span class="c1"></span>            <span class="nx">backtracking</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+            <span class="nx">path</span><span class="p">.</span><span class="nx">pop</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="nx">backtracking</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">res</span>
+<span class="p">};</span>
+
+<span class="c1">// 求和
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">getArrSum</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">?</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">pre</span><span class="p">,</span> <span class="nx">cur</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">pre</span> <span class="o">+</span> <span class="nx">cur</span>
+    <span class="p">})</span> <span class="o">:</span> <span class="mi">0</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
 </div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 0001-01-01</span>
+                <span>更新于 2022-06-08</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -332,20 +529,19 @@
                             <a class="link-to-markdown" href="/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://MichaelYuhe.github.io/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" data-title="" data-via="Coooolxyh"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://MichaelYuhe.github.io/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" data-title="" data-ralateuid="u/7327190619"><i class="fab fa-weibo fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://MichaelYuhe.github.io/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" data-title="回溯算法" data-via="Coooolxyh" data-hashtags="算法,回溯"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://MichaelYuhe.github.io/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/" data-title="回溯算法" data-ralateuid="u/7327190619"><i class="fab fa-weibo fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>,&nbsp;<a href="/tags/%E5%9B%9E%E6%BA%AF/">回溯</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E4%B8%80%E9%9D%A2/" class="prev" rel="prev" title=""><i class="fas fa-angle-left fa-fw"></i></a>
-            <a href="/%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87/" class="next" rel="next" title=""><i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/call-%E5%92%8C-apply-%E7%9A%84%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0/" class="prev" rel="prev" title="call 和 apply 的模拟实现"><i class="fas fa-angle-left fa-fw"></i>call 和 apply 的模拟实现</a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
