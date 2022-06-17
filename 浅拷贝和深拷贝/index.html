@@ -6,19 +6,19 @@
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title> - Yuhe&#39;s Blog</title><meta name="Description" content="夏宇航的个人博客"><meta property="og:title" content="" />
-<meta property="og:description" content="记录第一次部署前后端项目 写在前面 这学期上了一个人工智能实验课，最后的大作业是人脸识别，同时要求要有交互界面 前端人当然不能去用qt写啦，直接R" />
+<meta property="og:description" content="浅拷贝和深拷贝 概述 浅拷贝是创建一个新对象，这个对象有着原始对象属性值的一份精确拷贝。如果属性是基本类型，拷贝的就是基本类型的值，如果属性是引" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://MichaelYuhe.github.io/%E8%AE%B0%E5%BD%95%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%83%A8%E7%BD%B2%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://MichaelYuhe.github.io/%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/" /><meta property="article:section" content="posts" />
 
 
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="记录第一次部署前后端项目 写在前面 这学期上了一个人工智能实验课，最后的大作业是人脸识别，同时要求要有交互界面 前端人当然不能去用qt写啦，直接R"/>
+<meta name="twitter:description" content="浅拷贝和深拷贝 概述 浅拷贝是创建一个新对象，这个对象有着原始对象属性值的一份精确拷贝。如果属性是基本类型，拷贝的就是基本类型的值，如果属性是引"/>
 <meta name="application-name" content="Yuhe&#39;s Blog">
 <meta name="apple-mobile-web-app-title" content="Yuhe&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://MichaelYuhe.github.io/%E8%AE%B0%E5%BD%95%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%83%A8%E7%BD%B2%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE/" /><link rel="next" href="https://MichaelYuhe.github.io/%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://MichaelYuhe.github.io/%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/" /><link rel="prev" href="https://MichaelYuhe.github.io/%E8%AE%B0%E5%BD%95%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%83%A8%E7%BD%B2%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE/" /><link rel="next" href="https://MichaelYuhe.github.io/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAapp/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -26,9 +26,9 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/MichaelYuhe.github.io\/%E8%AE%B0%E5%BD%95%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%83%A8%E7%BD%B2%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE\/"
-        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","wordcount":  612 ,
-        "url": "https:\/\/MichaelYuhe.github.io\/%E8%AE%B0%E5%BD%95%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%83%A8%E7%BD%B2%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE\/","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@id": "https:\/\/MichaelYuhe.github.io\/%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D\/"
+        },"image": ["https:\/\/MichaelYuhe.github.io\/images\/Apple-Devices-Preview.png"],"genre": "posts","wordcount":  242 ,
+        "url": "https:\/\/MichaelYuhe.github.io\/%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D\/","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/MichaelYuhe.github.io\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -120,8 +120,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX"></h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>夏宇航</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 612 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/%E8%AE%B0%E5%BD%95%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%83%A8%E7%BD%B2%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE/" class="leancloud_visitors" data-flag-title="">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 242 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/" class="leancloud_visitors" data-flag-title="">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -131,66 +131,39 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#写在前面">写在前面</a></li>
-    <li><a href="#配置服务器">配置服务器</a></li>
-    <li><a href="#项目运行">项目运行</a>
-      <ul>
-        <li><a href="#后端">后端</a></li>
-        <li><a href="#前端">前端</a></li>
-      </ul>
-    </li>
+    <li><a href="#概述">概述</a></li>
+    <li><a href="#浅拷贝">浅拷贝</a></li>
+    <li><a href="#深拷贝">深拷贝</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="记录第一次部署前后端项目">记录第一次部署前后端项目</h1>
-<h2 id="写在前面">写在前面</h2>
-<p>这学期上了一个人工智能实验课，最后的大作业是人脸识别，同时要求要有交互界面</p>
-<p>前端人当然不能去用<code>qt</code>写啦，直接<code>React</code>一把梭，<code>python</code>那边用<code>Flask</code>作后端的框架</p>
-<p>除了算法和训练，前后端的搭建没什么难度，很快半天就搭好了，本地测试通过</p>
-<p>但要上交作业给老师，总不能让老师自己安装个<code>node</code>环境来跑吧😂</p>
-<p>尝试用<code>vercel</code>部署了一下，部署完前端部分才发现<code>vercel</code>只能做<code>serverless</code>的服务，不适合本项目，想要部署就需要有自己的服务器。刚好最近发现，微软的Azure有提供教育版的100刀金额，比较便宜的服务器一个月10刀……于是卷王就这样诞生了……</p>
-<h2 id="配置服务器">配置服务器</h2>
-<p>之前买过一次腾讯云的服务器，这次就算是第二次配置服务器，比较轻车熟路</p>
-<p>装好<code>node</code>、<code>python</code>的基础环境，再配置一下<code>git</code>，把代码拉到服务器，再安装一下相关的依赖。就完成了所有前置工作了</p>
-<h2 id="项目运行">项目运行</h2>
-<h3 id="后端">后端</h3>
-<p>使用<code>pip</code>安装好依赖，尝试开启后端服务<code>python3 app.py</code></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">WARNING: This is a development server. Do not use it in a production deployment.
-Use a production WSGI server instead
-</code></pre></td></tr></table>
-</div>
-</div><p>看起来之前写的代码只适用于开发环境，不适合用在开发环境，引入个<code>waitress</code>库即可</p>
+            </div><div class="content" id="content"><h1 id="浅拷贝和深拷贝">浅拷贝和深拷贝</h1>
+<h2 id="概述">概述</h2>
+<ul>
+<li>浅拷贝是创建一个新对象，这个对象有着原始对象属性值的一份精确拷贝。如果属性是基本类型，拷贝的就是基本类型的值，如果属性是引用类型，拷贝的就是内存地址 ，所以<strong>如果其中一个对象改变了这个地址，就会影响到另一个对象</strong></li>
+<li>深拷贝是将一个对象从内存中完整的拷贝一份出来,从堆内存中开辟一个新的区域存放新对象,且<strong>修改新对象不会影响原对象</strong>。</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">waitress</span> <span class="kn">import</span> <span class="n">serve</span>
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">a1</span> <span class="o">=</span> <span class="p">{</span><span class="nx">b</span><span class="o">:</span> <span class="p">{</span><span class="nx">c</span><span class="o">:</span> <span class="p">{}};</span>
 
-<span class="n">serve</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s1">&#39;0.0.0.0&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8080</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<span class="kr">const</span> <span class="nx">a2</span> <span class="o">=</span> <span class="nx">shallowClone</span><span class="p">(</span><span class="nx">a1</span><span class="p">);</span> <span class="c1">// 浅拷贝方法
+</span><span class="c1"></span><span class="nx">a2</span><span class="p">.</span><span class="nx">b</span><span class="p">.</span><span class="nx">c</span> <span class="o">===</span> <span class="nx">a1</span><span class="p">.</span><span class="nx">b</span><span class="p">.</span><span class="nx">c</span> <span class="c1">// true 新旧对象还是共享同一块内存
+</span><span class="c1"></span>
+<span class="kr">const</span> <span class="nx">a3</span> <span class="o">=</span> <span class="nx">deepClone</span><span class="p">(</span><span class="nx">a3</span><span class="p">);</span> <span class="c1">// 深拷贝方法
+</span><span class="c1"></span><span class="nx">a3</span><span class="p">.</span><span class="nx">b</span><span class="p">.</span><span class="nx">c</span> <span class="o">===</span> <span class="nx">a1</span><span class="p">.</span><span class="nx">b</span><span class="p">.</span><span class="nx">c</span> <span class="c1">// false 新对象跟原对象不共享内存
+</span></code></pre></td></tr></table>
 </div>
-</div><p>然后使用<code>nohup</code>来持久运行这个脚本，后端服务就开启在了服务器的8080端口了</p>
-<h3 id="前端">前端</h3>
-<p>进入前端目录，安装好相关依赖，然后进行打包<code>npm run build</code></p>
-<p>啪，又报错了</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">react-scripts: not found
-</code></pre></td></tr></table>
-</div>
-</div><p>好家伙，原来服务器上还要另外自己装<code>react-scripts</code>的吗</p>
-<p>手动安装一下，</p>
+</div><h2 id="浅拷贝">浅拷贝</h2>
+<h2 id="深拷贝">深拷贝</h2>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -201,10 +174,10 @@ Use a production WSGI server instead
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/%E8%AE%B0%E5%BD%95%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%83%A8%E7%BD%B2%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://MichaelYuhe.github.io/%E8%AE%B0%E5%BD%95%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%83%A8%E7%BD%B2%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE/" data-title="" data-via="Coooolxyh"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://MichaelYuhe.github.io/%E8%AE%B0%E5%BD%95%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%83%A8%E7%BD%B2%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE/" data-title="" data-ralateuid="u/7327190619"><i class="fab fa-weibo fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://MichaelYuhe.github.io/%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/" data-title="" data-via="Coooolxyh"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://MichaelYuhe.github.io/%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/" data-title="" data-ralateuid="u/7327190619"><i class="fab fa-weibo fa-fw"></i></a></span>
             </div>
         </div>
     </div>
@@ -216,8 +189,8 @@ Use a production WSGI server instead
         </section>
     </div>
 
-    <div class="post-nav">
-            <a href="/%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/" class="next" rel="next" title=""><i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/%E8%AE%B0%E5%BD%95%E7%AC%AC%E4%B8%80%E6%AC%A1%E9%83%A8%E7%BD%B2%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE/" class="prev" rel="prev" title=""><i class="fas fa-angle-left fa-fw"></i></a>
+            <a href="/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAapp/" class="next" rel="next" title=""><i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
