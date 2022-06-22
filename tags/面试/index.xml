@@ -4,13 +4,27 @@
         <link>https://MichaelYuhe.github.io/tags/%E9%9D%A2%E8%AF%95/</link>
         <description>面试 - 标签 - Yuhe&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>xiayuhang1106@gmail.com (夏宇航)</managingEditor>
-            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 13 Apr 2022 08:00:10 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/tags/%E9%9D%A2%E8%AF%95/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>xiayuhang1106@gmail.com (夏宇航)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 22 Jun 2022 08:00:10 &#43;0800</lastBuildDate><atom:link href="https://MichaelYuhe.github.io/tags/%E9%9D%A2%E8%AF%95/" rel="self" type="application/rss+xml" /><item>
+    <title>Tp-Link前端一面</title>
+    <link>https://MichaelYuhe.github.io/tp-link-%E4%B8%80%E9%9D%A2/</link>
+    <pubDate>Wed, 22 Jun 2022 08:00:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/tp-link-%E4%B8%80%E9%9D%A2/</guid>
+    <description><![CDATA[TP-Link 一面 居然是个后端的来面。。 网络 TCP 和 UDP 的区别，我们现在视频是什么，为什么，怎么确定 微信发消息的流程 网络模型 编程 找出二进制中第一个 1 算根号十三]]></description>
+</item><item>
     <title>阿里云OPENAPI前端实习_终面</title>
     <link>https://MichaelYuhe.github.io/%E9%98%BF%E9%87%8C%E4%BA%91%E7%BB%88%E9%9D%A2/</link>
     <pubDate>Wed, 13 Apr 2022 08:00:10 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://MichaelYuhe.github.io/%E9%98%BF%E9%87%8C%E4%BA%91%E7%BB%88%E9%9D%A2/</guid>
     <description><![CDATA[阿里云OpenAPI终面 项目 微信小游戏 具体做什么的 扮演的角色 MyBoom 有考虑过安全方面的问题吗 性能优化呢 实习 做了什么工作 自己做前端和公司做前端的区别]]></description>
+</item><item>
+    <title>字节跳动前端实习一面</title>
+    <link>https://MichaelYuhe.github.io/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E4%B8%80%E9%9D%A2/</link>
+    <pubDate>Sat, 02 Apr 2022 08:00:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://MichaelYuhe.github.io/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E4%B8%80%E9%9D%A2/</guid>
+    <description><![CDATA[字节跳动一面 个人 学习路线 怎么学的 有看什么网站么 讲一下最近看到的一个知识点 专业 学了啥 排名 项目 小游戏讲讲 3D怎么做的 算法 setTimeout实现]]></description>
 </item><item>
     <title>蚂蚁前端实习_二面</title>
     <link>https://MichaelYuhe.github.io/%E8%9A%82%E8%9A%81%E5%89%8D%E7%AB%AF%E4%BA%8C%E9%9D%A2/</link>
@@ -60,19 +74,5 @@
     <author>作者</author>
     <guid>https://MichaelYuhe.github.io/%E9%98%BF%E9%87%8C%E4%BA%91%E4%B8%80%E9%9D%A2/</guid>
     <description><![CDATA[阿里云OpenAPI一面 绩点，排名，相关课程 面试官：你们绩点也太高了，这才百分三十几吗 自我介绍，要求介绍自己的优势 说自己学习能力强，上手快 简]]></description>
-</item><item>
-    <title>滴滴日常实习_一面</title>
-    <link>https://MichaelYuhe.github.io/%E6%BB%B4%E6%BB%B4%E6%97%A5%E5%B8%B8%E5%AE%9E%E4%B9%A0_%E4%B8%80%E9%9D%A2/</link>
-    <pubDate>Fri, 05 Nov 2021 08:03:08 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/%E6%BB%B4%E6%BB%B4%E6%97%A5%E5%B8%B8%E5%AE%9E%E4%B9%A0_%E4%B8%80%E9%9D%A2/</guid>
-    <description><![CDATA[滴滴日常实习一面 10月30日 自我介绍 项目 小游戏的难点，做了些什么，登陆相关 CSS 盒模型 怎么居中，尽可能多方法 flex布局讲一下 Javascript reduce用过]]></description>
-</item><item>
-    <title>有赞前端实习_二面</title>
-    <link>https://MichaelYuhe.github.io/%E6%9C%89%E8%B5%9E%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0_%E4%BA%8C%E9%9D%A2/</link>
-    <pubDate>Fri, 05 Nov 2021 08:00:13 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://MichaelYuhe.github.io/%E6%9C%89%E8%B5%9E%E5%89%8D%E7%AB%AF%E5%AE%9E%E4%B9%A0_%E4%BA%8C%E9%9D%A2/</guid>
-    <description><![CDATA[有赞日常实习二面 11月4号 自我介绍 然后问了专业相关，聊到下学期才上计网，于是“那我计网只问你一些基础的吧” 计算机网络 讲一下HTTP，讲一下和]]></description>
 </item></channel>
 </rss>
